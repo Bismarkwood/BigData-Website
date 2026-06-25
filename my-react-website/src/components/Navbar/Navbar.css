@@ -1,0 +1,151 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 24px 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease, border-color 0.35s ease;
+}
+
+/* Scrolled state — white glass transparent */
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  padding: 16px 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar__logo-icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  margin: -12px 0;
+}
+
+.navbar__logo-wave {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  object-fit: contain;
+  animation: navWaveSpin 10s linear infinite;
+}
+
+.navbar__logo-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34%;
+  height: 34%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.navbar__logo-text {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.35s ease;
+}
+
+/* On hero (not scrolled) make logo white */
+.navbar:not(.navbar--scrolled) .navbar__logo-wave,
+.navbar:not(.navbar--scrolled) .navbar__logo-center,
+.navbar:not(.navbar--scrolled) .navbar__logo-text {
+  filter: brightness(0) invert(1);
+}
+
+@keyframes navWaveSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__logo-wave {
+    animation: none;
+  }
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.navbar__menu-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: background 0.35s ease;
+}
+
+.navbar--scrolled .navbar__menu-line {
+  background: #0f2b1f;
+}
+
+.navbar__cta {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(26, 107, 74, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__cta:hover {
+  background: rgba(26, 107, 74, 1);
+  transform: scale(1.08);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .navbar--scrolled {
+    padding: 14px 20px;
+  }
+
+  .navbar__logo-img {
+    height: 28px;
+  }
+
+  .navbar__cta {
+    width: 34px;
+    height: 34px;
+  }
+}

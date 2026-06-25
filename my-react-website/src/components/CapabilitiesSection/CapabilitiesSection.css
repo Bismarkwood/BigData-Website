@@ -1,0 +1,178 @@
+.capabilities {
+  width: 100%;
+  background: #ffffff;
+  padding: 100px 48px 100px;
+}
+
+/* Header */
+.capabilities__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 72px;
+}
+
+.capabilities__heading {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 500;
+  color: #0f2b1f;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 0;
+  max-width: 520px;
+  flex-shrink: 0;
+}
+
+.capabilities__sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 360px;
+  padding-top: 8px;
+}
+
+/* Cards grid */
+.capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.capabilities__card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capabilities__card:hover {
+  border-color: rgba(46, 168, 114, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Card image area — dark visual boxes */
+.capabilities__card-visual {
+  width: 100%;
+  height: 280px;
+  background: #0c1218;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+}
+
+.capabilities__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.capabilities__card-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(46, 168, 114, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capabilities__card-placeholder-inner {
+  width: 18px;
+  height: 18px;
+  background: rgba(46, 168, 114, 0.5);
+  border-radius: 4px;
+}
+
+/* Card content */
+.capabilities__card-content {
+  padding: 28px 28px 36px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.capabilities__card-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(17px, 1.4vw, 21px);
+  font-weight: 700;
+  color: #0f2b1f;
+  margin: 0 0 10px;
+}
+
+.capabilities__card-desc {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.capabilities__card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a6b4a;
+  text-decoration: none;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.capabilities__card-cta:hover {
+  color: #2ea872;
+  gap: 10px;
+}
+
+.capabilities__card-cta-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.capabilities__card-cta:hover .capabilities__card-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .capabilities {
+    padding: 80px 32px 60px;
+  }
+
+  .capabilities__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .capabilities {
+    padding: 60px 20px 48px;
+  }
+
+  .capabilities__heading {
+    margin-bottom: 48px;
+  }
+
+  .capabilities__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .capabilities__card-visual {
+    height: 200px;
+  }
+}
