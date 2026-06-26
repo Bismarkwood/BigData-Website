@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import bdgWave from '../../assets/intro/bdg-wave.png'
 import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import bdgText from '../../assets/intro/bdg-text.png'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Solutions', href: '#solutions' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Case Studies', href: '#case-studies' },
   { label: 'Insights', href: '#insights' },
@@ -39,13 +41,13 @@ function Navbar() {
     <>
       <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${menuOpen ? 'navbar--menu-open' : ''}`}>
         <div className="navbar__inner">
-          <div className="navbar__logo">
+          <Link to="/" className="navbar__logo">
             <div className="navbar__logo-icon">
               <img src={bdgWave} alt="" className="navbar__logo-wave" />
               <img src={bdgCenter} alt="" className="navbar__logo-center" />
             </div>
             <img src={bdgText} alt="BDG" className="navbar__logo-text" />
-          </div>
+          </Link>
 
           <div className="navbar__right">
             <button
@@ -72,16 +74,29 @@ function Navbar() {
           {/* Left: Navigation links */}
           <div className="nav-menu__links">
             {navLinks.map((link, i) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="nav-menu__link"
-                style={{ transitionDelay: `${i * 0.05 + 0.1}s` }}
-                onClick={() => setMenuOpen(false)}
-              >
-                <span className="nav-menu__link-text">{link.label}</span>
-                <span className="nav-menu__link-plus">+</span>
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="nav-menu__link"
+                  style={{ transitionDelay: `${i * 0.05 + 0.1}s` }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span className="nav-menu__link-text">{link.label}</span>
+                  <span className="nav-menu__link-plus">+</span>
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="nav-menu__link"
+                  style={{ transitionDelay: `${i * 0.05 + 0.1}s` }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span className="nav-menu__link-text">{link.label}</span>
+                  <span className="nav-menu__link-plus">+</span>
+                </a>
+              )
             ))}
           </div>
 

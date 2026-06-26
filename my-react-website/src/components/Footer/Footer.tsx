@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
 import footerBg from '../../assets/Footer/footer.jpg'
 import bdgWave from '../../assets/intro/bdg-wave.png'
 import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import './Footer.css'
 
 const navLinks = [
-  { label: 'Solutions', href: '#solutions' },
+  { label: 'Services', href: '/services' },
   { label: 'Industries', href: '#industries' },
   { label: 'Case Studies', href: '#case-studies' },
   { label: 'Insights', href: '#insights' },
@@ -32,9 +33,15 @@ function Footer() {
         </div>
         <nav className="footer__nav">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="footer__nav-link">
-              {link.label}
-            </a>
+            link.href.startsWith('/') ? (
+              <Link key={link.label} to={link.href} className="footer__nav-link">
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.label} href={link.href} className="footer__nav-link">
+                {link.label}
+              </a>
+            )
           ))}
         </nav>
       </div>
