@@ -5,6 +5,7 @@ import ChatWidget from './components/ChatWidget'
 import Homepage from './pages/Homepage'
 import Services from './pages/Services'
 import Geospatial from './pages/Geospatial'
+import CloudPlatforms from './pages/CloudPlatforms'
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/geospatial" element={<Geospatial />} />
+            <Route path="/cloud-platforms" element={<CloudPlatforms />} />
           </Routes>
           <ChatWidget />
         </>

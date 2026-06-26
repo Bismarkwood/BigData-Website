@@ -26,6 +26,7 @@ const defaultCards: CardData[] = [
     title: 'Cloud and data platforms',
     description: 'Scale on infrastructure built for growth. We design, build and manage cloud and data platforms.',
     image: cloudImg,
+    link: '/cloud-platforms',
   },
   {
     title: 'Data analytics and AI',

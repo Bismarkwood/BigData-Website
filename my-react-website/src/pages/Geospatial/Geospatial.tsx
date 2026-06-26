@@ -3,6 +3,8 @@ import Footer from '../../components/Footer'
 import CtaBanner from '../../components/CtaBanner'
 import GeoHeroSection from '../../components/GeoHero'
 import customerProblemImg from '../../assets/Geo intelligence Page/The customer problem.png'
+import betterDecisionImg from '../../assets/Geo intelligence Page/The better decision.png'
+import bdgServiceImg from '../../assets/Geo intelligence Page/The BDG service.png'
 import './Geospatial.css'
 
 function Geospatial() {
@@ -38,7 +40,7 @@ function Geospatial() {
 
           <div className="geo-overview__card">
             <div className="geo-overview__card-img">
-              <div className="geo-overview__card-img-placeholder" />
+              <img src={betterDecisionImg} alt="The better decision" className="geo-overview__card-image" />
             </div>
             <div className="geo-overview__card-tags">
               <span className="geo-overview__card-tag">02</span>
@@ -52,7 +54,7 @@ function Geospatial() {
 
           <div className="geo-overview__card">
             <div className="geo-overview__card-img">
-              <div className="geo-overview__card-img-placeholder" />
+              <img src={bdgServiceImg} alt="The BDG service" className="geo-overview__card-image" />
             </div>
             <div className="geo-overview__card-tags">
               <span className="geo-overview__card-tag">03</span>
