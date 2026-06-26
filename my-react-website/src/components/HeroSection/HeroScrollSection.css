@@ -142,7 +142,7 @@ video.hero-scroll__circle-img {
 .hero-scroll__label {
   display: inline-block;
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 12px;
+  font-size: var(--fs-small);
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -159,7 +159,7 @@ video.hero-scroll__circle-img {
 
 .hero-scroll__title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(40px, 5vw, 80px);
+  font-size: var(--fs-display);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.05;
@@ -180,7 +180,7 @@ video.hero-scroll__circle-img {
 
 .hero-scroll__desc {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(15px, 1.3vw, 19px);
+  font-size: var(--fs-subtitle);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
   margin: 0;

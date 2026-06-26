@@ -116,7 +116,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(26, 107, 74, 0.8);
+  background: linear-gradient(135deg, #1a6b4a, #2ea872);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,7 +126,7 @@
 }
 
 .navbar__cta:hover {
-  background: rgba(26, 107, 74, 1);
+  background: linear-gradient(135deg, #2ea872, #3fc98a);
   transform: scale(1.08);
 }
 
@@ -147,5 +147,188 @@
   .navbar__cta {
     width: 34px;
     height: 34px;
+  }
+}
+
+/* ─── Menu open state for navbar ─── */
+.navbar--menu-open .navbar__menu-line,
+.navbar--menu-open.navbar--scrolled .navbar__menu-line {
+  background: #ffffff;
+}
+
+.navbar--menu-open .navbar__logo-wave,
+.navbar--menu-open .navbar__logo-center,
+.navbar--menu-open .navbar__logo-text {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Hamburger → X animation */
+.navbar__menu-btn--open .navbar__menu-line:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.navbar__menu-btn--open .navbar__menu-line:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ─── Full-page menu overlay ─── */
+.nav-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #0c1210;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+              visibility 0s linear 0.4s;
+}
+
+.nav-menu--open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+              visibility 0s linear 0s;
+}
+
+.nav-menu__content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 48px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ─── Navigation links ─── */
+.nav-menu__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+}
+
+.nav-menu--open .nav-menu__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-menu__link-text {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu__link:hover .nav-menu__link-text {
+  color: #2ea872;
+}
+
+.nav-menu__link-plus {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu__link:hover .nav-menu__link-plus {
+  color: #2ea872;
+  transform: rotate(45deg);
+}
+
+/* ─── Contact info (right side) ─── */
+.nav-menu__info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 20px;
+}
+
+.nav-menu__info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-menu__info-heading {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-subtitle);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.nav-menu__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-menu__info-label {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.nav-menu__info-value {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-body);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-menu__socials {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-menu__social {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-menu__social:hover {
+  color: #ffffff;
+  border-color: #2ea872;
+}
+
+/* ─── Mobile menu ─── */
+@media (max-width: 768px) {
+  .nav-menu__content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 100px 24px 32px;
+  }
+
+  .nav-menu__link-text {
+    font-size: 28px;
+  }
+
+  .nav-menu__link {
+    padding: 16px 0;
   }
 }

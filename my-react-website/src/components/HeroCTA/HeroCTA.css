@@ -16,7 +16,7 @@
   background: #3fa06b;
   border-radius: 999px;
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 16px;
+  font-size: var(--fs-cta);
   font-weight: 600;
   color: #ffffff;
 }

@@ -11,7 +11,7 @@
 
 .discover-header__heading {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(42px, 6vw, 86px);
+  font-size: var(--fs-display);
   font-weight: 400;
   color: #0f2b1f;
   line-height: 1.08;
@@ -22,7 +22,7 @@
 
 .discover-header__sub {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #3d4a44;
   line-height: 1.65;
@@ -93,7 +93,7 @@
   bottom: 32px;
   left: 32px;
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(28px, 3vw, 44px);
+  font-size: var(--fs-h1);
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -115,7 +115,7 @@
 
 .discover__card-desc {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #3d4a44;
   line-height: 1.65;
@@ -125,7 +125,7 @@
 
 .discover__card-number {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 13px;
+  font-size: var(--fs-small);
   font-weight: 600;
   color: rgba(15, 43, 31, 0.4);
   letter-spacing: 0.08em;

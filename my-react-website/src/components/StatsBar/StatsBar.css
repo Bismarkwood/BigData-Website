@@ -22,7 +22,7 @@
 
 .stats-bar__number {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: var(--fs-h1);
   font-weight: 800;
   color: #0f2b1f;
   letter-spacing: -1px;
@@ -31,7 +31,7 @@
 
 .stats-bar__label {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(13px, 1.1vw, 16px);
+  font-size: var(--fs-body);
   font-weight: 500;
   color: #5a6b63;
   line-height: 1.3;

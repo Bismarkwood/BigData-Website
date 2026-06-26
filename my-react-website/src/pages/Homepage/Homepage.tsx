@@ -3,6 +3,9 @@ import StatsBar from '../../components/StatsBar'
 import DiscoverSection from '../../components/DiscoverSection'
 import AISection from '../../components/AISection'
 import CapabilitiesSection from '../../components/CapabilitiesSection'
+import CtaBanner from '../../components/CtaBanner'
+import InsightsSection from '../../components/InsightsSection'
+import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 
 function Homepage() {
@@ -14,6 +17,9 @@ function Homepage() {
       <DiscoverSection />
       <AISection />
       <CapabilitiesSection />
+      <CtaBanner />
+      <InsightsSection />
+      <Footer />
       {/* Add more homepage sections below as you build them */}
     </main>
   )
