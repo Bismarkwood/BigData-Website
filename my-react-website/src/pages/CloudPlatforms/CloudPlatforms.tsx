@@ -1,7 +1,9 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import CloudStatsBar from '../../components/CloudStatsBar'
 import CtaBanner from '../../components/CtaBanner'
 import CloudHeroSection from '../../components/CloudHero'
+import CloudServices from '../../components/CloudServices'
 import './CloudPlatforms.css'
 
 function CloudPlatforms() {
@@ -10,6 +12,10 @@ function CloudPlatforms() {
       <Navbar />
       {/* WebGL Cloud Architecture Hero */}
       <CloudHeroSection />
+
+      <CloudStatsBar />
+
+      <CloudServices />
 
       {/* Overview Section */}
       <section className="cloud-overview">

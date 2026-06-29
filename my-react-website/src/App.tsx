@@ -2,10 +2,14 @@ import { useState, useCallback } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import IntroLoader from './components/IntroLoader'
 import ChatWidget from './components/ChatWidget'
+import PageTransition from './components/PageTransition'
 import Homepage from './pages/Homepage'
 import Services from './pages/Services'
 import Geospatial from './pages/Geospatial'
 import CloudPlatforms from './pages/CloudPlatforms'
+import Proof from './pages/Proof'
+import Insights from './pages/Insights'
+import ProjectDetail from './pages/ProjectDetail'
 import './App.css'
 
 function App() {
@@ -23,11 +27,15 @@ function App() {
       {/* Routes — rendered after intro completes */}
       {introComplete && (
         <>
+          <PageTransition />
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/geospatial" element={<Geospatial />} />
             <Route path="/cloud-platforms" element={<CloudPlatforms />} />
+            <Route path="/proof" element={<Proof />} />
+            <Route path="/proof/:slug" element={<ProjectDetail />} />
+            <Route path="/insights" element={<Insights />} />
           </Routes>
           <ChatWidget />
         </>

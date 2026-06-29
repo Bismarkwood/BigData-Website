@@ -1,0 +1,216 @@
+/* ─── Panel Transition Overlay ─── */
+.panel-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: all;
+}
+
+/* ─── Panels Container ─── */
+.panel-transition__panels {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 0;
+}
+
+/* ─── Individual Panel ─── */
+.panel-transition__panel {
+  flex: 1;
+  height: 100%;
+  border-radius: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transform: translateY(110%);
+  transition: transform 1100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-transition__panel--1 {
+  background: #ffffff;
+  transition-delay: 0ms;
+}
+
+.panel-transition__panel--2 {
+  background: #fafafa;
+  transition-delay: 120ms;
+}
+
+.panel-transition__panel--3 {
+  background: #fafafa;
+  transition-delay: 240ms;
+}
+
+.panel-transition__panel--4 {
+  background: #ffffff;
+  transition-delay: 360ms;
+}
+
+/* Entering: panels scroll up to cover */
+.panel-transition--entering .panel-transition__panel,
+.panel-transition--active .panel-transition__panel {
+  transform: translateY(0);
+}
+
+/* Exiting: panels scroll down to exit (same as intro direction) */
+.panel-transition--exiting .panel-transition__panel {
+  transform: translateY(110%);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.panel-transition--exiting .panel-transition__panel--1 { transition-delay: 0ms; }
+.panel-transition--exiting .panel-transition__panel--2 { transition-delay: 100ms; }
+.panel-transition--exiting .panel-transition__panel--3 { transition-delay: 200ms; }
+.panel-transition--exiting .panel-transition__panel--4 { transition-delay: 300ms; }
+
+/* ─── Center (Logo + Ripples) ─── */
+.panel-transition__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.panel-transition--active .panel-transition__center {
+  opacity: 1;
+}
+
+.panel-transition--exiting .panel-transition__center {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+/* ─── Logo ─── */
+.panel-transition__logo {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  z-index: 4;
+}
+
+.panel-transition__wave {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  object-fit: contain;
+  transform: scale(0.9) rotate(0deg);
+  opacity: 0;
+  animation: panelLogoSpin 1200ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.panel-transition__satellite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 34%;
+  height: 34%;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  animation: panelSatIn 800ms cubic-bezier(0.4, 0, 0.2, 1) 300ms forwards;
+}
+
+@keyframes panelLogoSpin {
+  0% { transform: scale(0.9) rotate(0deg); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes panelSatIn {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* ─── Glow ─── */
+.panel-transition__glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46, 168, 114, 0.1) 0%, rgba(26, 107, 74, 0.05) 50%, transparent 70%);
+  transform: scale(0.5);
+  opacity: 0;
+  animation: panelGlowIn 500ms ease 100ms forwards;
+}
+
+@keyframes panelGlowIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ─── Ripples ─── */
+.panel-transition__ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.panel-transition--active .panel-transition__ripple--1 {
+  width: 160px;
+  height: 160px;
+  border: 1px solid rgba(46, 168, 114, 0.3);
+  animation: panelRipple 700ms cubic-bezier(0.16, 1, 0.3, 1) 150ms forwards;
+}
+
+.panel-transition--active .panel-transition__ripple--2 {
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(26, 107, 74, 0.2);
+  animation: panelRipple 750ms cubic-bezier(0.16, 1, 0.3, 1) 250ms forwards;
+}
+
+.panel-transition--active .panel-transition__ripple--3 {
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(15, 43, 31, 0.1);
+  animation: panelRipple 800ms cubic-bezier(0.16, 1, 0.3, 1) 350ms forwards;
+}
+
+@keyframes panelRipple {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .panel-transition__panel {
+    transition-duration: 150ms;
+    border-radius: 0;
+  }
+
+  .panel-transition__wave {
+    animation: none;
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  .panel-transition__satellite {
+    animation: none;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .panel-transition__ripple--1,
+  .panel-transition__ripple--2,
+  .panel-transition__ripple--3 {
+    display: none;
+  }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .panel-transition__panel {
+    border-radius: 20px;
+  }
+
+  .panel-transition__logo {
+    width: 200px;
+    height: 200px;
+  }
+}

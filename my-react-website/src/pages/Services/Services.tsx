@@ -3,7 +3,7 @@ import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
 import ServiceScroll from '../../components/ServiceScroll'
 import ProjectsHeader from '../../components/ProjectsHeader'
-import CapabilitiesSection from '../../components/CapabilitiesSection'
+import SolutionsSlider from '../../components/SolutionsSlider'
 import CtaBanner from '../../components/CtaBanner'
 import serviceHeroBg from '../../assets/Service Page/Hero section.jpg'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
@@ -76,26 +76,38 @@ function Services() {
 
       <ProjectsHeader />
 
-      <CapabilitiesSection hideHeader customCards={[
+      <SolutionsSlider solutions={[
         {
-          title: 'Location',
-          description: 'Where should we build, expand, invest or operate?',
+          label: 'LOCATION',
+          title: 'Where should we build, expand, invest or operate?',
+          description: 'BDG turns Ghana\'s geography into competitive intelligence. Land, location, risk and opportunity — all visible before you commit.',
           image: geospatialImg,
+          cardLabel: 'Location',
+          link: '/geospatial',
         },
         {
-          title: 'Risk',
-          description: 'What risks are hidden in our assets, plans or portfolio?',
+          label: 'RISK',
+          title: 'What risks are hidden in our assets, plans or portfolio?',
+          description: 'We map what others cannot see — flood zones, encroachment patterns, land disputes, infrastructure gaps — so you invest with confidence.',
           image: cloudImg,
+          cardLabel: 'Risk',
+          link: '#',
         },
         {
-          title: 'Cloud and data',
-          description: 'How do we build the infrastructure to use data better?',
+          label: 'CLOUD AND DATA',
+          title: 'How do we build the infrastructure to use data better?',
+          description: 'We design, build and manage cloud and data platforms for organisations that need to move fast, scale further and process more intelligence.',
           image: analyticsImg,
+          cardLabel: 'Cloud and data',
+          link: '/cloud-platforms',
         },
         {
-          title: 'Analytics and AI',
-          description: 'What is our data telling us, and what is likely to happen next?',
+          label: 'ANALYTICS AND AI',
+          title: 'What is our data telling us, and what is likely to happen next?',
+          description: 'BDG turns raw data into competitive decisions and manual workflows into automated systems that accelerate your team.',
           image: biImg,
+          cardLabel: 'Analytics and AI',
+          link: '#',
         },
       ]} />
 
