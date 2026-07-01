@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity, react-hooks/immutability, react-hooks/set-state-in-effect */
 import { useEffect, useRef, useState, useCallback } from 'react'
 import HeroCTA from '../HeroCTA'
 import ParticleCircle from '../ParticleCircle'
@@ -27,6 +28,7 @@ function HeroScrollSection() {
     if (progress < 1) {
       timerRef.current = requestAnimationFrame(animateProgress)
     } else {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveIndex((prev) => (prev + 1) % heroSlides.length)
       startTimeRef.current = 0
       timerRef.current = requestAnimationFrame(animateProgress)

@@ -79,7 +79,7 @@ function ParticleWaveBackground() {
     scene.add(particles)
 
     let frameId: number
-    let startTime = performance.now()
+    const startTime = performance.now()
 
     const animate = () => {
       const time = (performance.now() - startTime) * 0.001

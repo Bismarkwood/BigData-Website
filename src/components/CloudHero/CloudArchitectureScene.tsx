@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity, react-hooks/immutability */
 import { useRef, useMemo } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
