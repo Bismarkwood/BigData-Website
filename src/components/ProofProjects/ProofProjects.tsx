@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import card1Img from '../../assets/Proof/card-1.jpg'
 import card2Img from '../../assets/Proof/card-2.jpg'
 import card3Img from '../../assets/Proof/Card-3.png'
-import card4Img from '../../assets/Proof/Card-4.jpg'
 import card5Img from '../../assets/Proof/card-5.jpg'
+import mlnrImg from '../../assets/Proof/Forest Trace AI/MLNR Spatial Platform.png'
 import sendlineImg from '../../assets/Proof/SendilineSMS/sendlinesms product card.png'
 import './ProofProjects.css'
 
@@ -17,7 +17,7 @@ function ProofProjects() {
     { title: 'National Flood Intelligence Platform', tag: 'Product', image: card1Img, slug: 'national-flood-intelligence-platform' },
     { title: 'National Forest Monitoring System', tag: 'Product', image: card2Img, slug: 'agricultural-yield-prediction-system' },
     { title: 'BigConnect AI', tag: 'Project', image: card3Img, slug: 'real-time-logistics-optimisation' },
-    { title: 'Spatial Data Infrastructure for MLNR', tag: 'Project', image: card4Img, slug: 'spatial-data-infrastructure-for-mlnr' },
+    { title: 'Spatial Data Infrastructure for MLNR', tag: 'Project', image: mlnrImg, slug: 'spatial-data-infrastructure-for-mlnr' },
     { title: 'Data Analysis for Indomie', tag: 'Product', image: card5Img, slug: 'climate-risk-assessment-tool' },
     { title: 'Geospatial Land Registry Platform', tag: 'Project', image: card1Img, slug: 'national-flood-intelligence-platform' },
     { title: 'Sendline SMS', tag: 'Product', image: sendlineImg, slug: 'sendline-sms' },

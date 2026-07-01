@@ -8,6 +8,7 @@ import card3Img from '../../assets/Proof/Card-3.png'
 import card4Img from '../../assets/Proof/Card-4.jpg'
 import card5Img from '../../assets/Proof/card-5.jpg'
 import bigconnectImg from '../../assets/Proof/Bigconnect AI image card/BigConnectAI-1.png'
+import mlnrImg from '../../assets/Proof/Forest Trace AI/MLNR Spatial Platform.png'
 import './ProjectDetail.css'
 import '../../components/ProofProjects/ProofProjects.css'
 
@@ -58,7 +59,7 @@ const projectsData: Record<string, {
     description: 'A national-scale spatial data infrastructure built for the Ministry of Lands and Natural Resources. Digitises land records, maps boundaries, and provides geospatial decision support for land administration.',
     year: '2022',
     services: 'Geospatial Intelligence, Cloud Platform',
-    image: card4Img,
+    image: mlnrImg,
   },
   'climate-risk-assessment-tool': {
     name: 'Data Analysis',

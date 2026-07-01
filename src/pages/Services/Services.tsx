@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
-import ServiceScroll from '../../components/ServiceScroll'
+import CapabilitiesSection from '../../components/CapabilitiesSection'
 import ProjectsHeader from '../../components/ProjectsHeader'
 import SolutionsSlider from '../../components/SolutionsSlider'
 import CtaBanner from '../../components/CtaBanner'
@@ -71,8 +71,8 @@ function Services() {
       </section>
       <StatsBar />
 
-      {/* Pinned scroll services */}
-      <ServiceScroll services={services} />
+      {/* Service cards from homepage */}
+      <CapabilitiesSection />
 
       <ProjectsHeader />
 
