@@ -1,0 +1,190 @@
+.intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* ─── Curtain panels ─── */
+.intro-loader__panels {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+}
+
+.intro-loader__panel {
+  width: 25%;
+  height: 100%;
+  background: #ffffff;
+  will-change: transform;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+  border-left: 1px solid rgba(26, 107, 74, 0.04);
+}
+
+/* ─── Content layer (logo, tagline) — above panels ─── */
+.intro-loader__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Soft green ambient glow */
+.intro-loader__glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(26, 107, 74, 0.09) 0%,
+    rgba(26, 107, 74, 0.04) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ─── Logo layout: icon + text side by side ─── */
+.bdg-logo-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+/* Icon container — holds wave + satellite */
+.bdg-icon-wrap {
+  position: relative;
+  width: clamp(180px, 18vw, 280px);
+  height: clamp(180px, 18vw, 280px);
+  flex-shrink: 0;
+}
+
+/* Wave/weave ring — larger than container for dominant presence */
+.bdg-wave {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  object-fit: contain;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 14px rgba(46, 168, 114, 0.2));
+}
+
+/* Satellite/dot — small, centered inside wave */
+.bdg-satellite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28%;
+  height: 28%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+}
+
+/* BDG text — sized to match icon height */
+.bdg-text {
+  height: clamp(140px, 14vw, 210px);
+  width: auto;
+  object-fit: contain;
+  opacity: 0;
+  will-change: clip-path, opacity;
+}
+
+/* Tagline */
+.intro-loader__tagline {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: #1a3d2e;
+  margin: 0;
+  text-align: center;
+  padding: 0 20px;
+  opacity: 0;
+  will-change: transform, opacity, clip-path;
+}
+
+/* Underline track */
+.intro-loader__underline-track {
+  position: relative;
+  width: 140px;
+  height: 3px;
+}
+
+/* Underline bar */
+.intro-loader__underline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #1a6b4a, #2ea872, #1a6b4a);
+  border-radius: 4px;
+  transform-origin: center;
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+/* ─── Responsive ─── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .bdg-icon-wrap {
+    width: clamp(150px, 22vw, 230px);
+    height: clamp(150px, 22vw, 230px);
+  }
+
+  .bdg-text {
+    height: clamp(120px, 18vw, 180px);
+  }
+
+  .bdg-logo-intro {
+    gap: 0px;
+  }
+
+  .intro-loader__glow {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .intro-loader__content {
+    gap: 20px;
+  }
+
+  .bdg-logo-intro {
+    gap: 0px;
+  }
+
+  .bdg-icon-wrap {
+    width: clamp(110px, 28vw, 170px);
+    height: clamp(110px, 28vw, 170px);
+  }
+
+  .bdg-text {
+    height: clamp(90px, 22vw, 140px);
+  }
+
+  .intro-loader__tagline {
+    font-size: clamp(16px, 4.5vw, 22px);
+  }
+
+  .intro-loader__glow {
+    width: 250px;
+    height: 250px;
+  }
+
+  .intro-loader__underline-track {
+    width: 100px;
+  }
+}

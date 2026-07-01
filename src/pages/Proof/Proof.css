@@ -1,0 +1,143 @@
+/* ─── Hero: 4 image cards grid with overlay ─── */
+.proof-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 4 cards scrolling horizontally - infinite loop */
+.proof-hero__grid {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.proof-hero__track {
+  display: flex;
+  gap: 0;
+  height: 100%;
+  width: max-content;
+  animation: proofScroll 30s linear infinite;
+}
+
+.proof-hero__card {
+  flex-shrink: 0;
+  width: 35vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes proofScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.proof-hero__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.proof-hero__card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+}
+
+/* Dark gradient overlay - progressive from bottom to top */
+.proof-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 2;
+}
+
+/* Content on top */
+.proof-hero__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 1100px;
+  padding: 0 24px;
+  margin-top: 20vh;
+}
+
+.proof-hero__title {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: clamp(40px, 7vw, 90px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.proof-hero__sub {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: var(--fs-subtitle);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.proof-hero__cta-wrap {
+  margin-top: 28px;
+}
+
+.proof-hero__scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.proof-hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.proof-hero__scroll-dot {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 1px;
+  height: 12px;
+  background: #ffffff;
+  animation: proofScrollBounce 1.8s ease-in-out infinite;
+}
+
+.proof-hero__scroll-text {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+@keyframes proofScrollBounce {
+  0% { top: -6px; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 42px; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .proof-hero__title {
+    font-size: 48px;
+  }
+
+  .proof-hero__grid {
+    flex-direction: column;
+  }
+}
