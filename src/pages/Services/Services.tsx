@@ -5,6 +5,7 @@ import CapabilitiesSection from '../../components/CapabilitiesSection'
 import ProjectsHeader from '../../components/ProjectsHeader'
 import SolutionsSlider from '../../components/SolutionsSlider'
 import CtaBanner from '../../components/CtaBanner'
+import JoinCta from '../../components/JoinCta'
 import serviceHeroBg from '../../assets/Service Page/Hero section.jpg'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
 import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
@@ -113,6 +114,7 @@ function Services() {
 
       <CtaBanner />
 
+      <JoinCta />
       <Footer />
     </main>
   )

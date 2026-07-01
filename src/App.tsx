@@ -9,6 +9,7 @@ import Geospatial from './pages/Geospatial'
 import CloudPlatforms from './pages/CloudPlatforms'
 import Proof from './pages/Proof'
 import Insights from './pages/Insights'
+import About from './pages/About'
 import ProjectDetail from './pages/ProjectDetail'
 import './App.css'
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/proof" element={<Proof />} />
             <Route path="/proof/:slug" element={<ProjectDetail />} />
             <Route path="/insights" element={<Insights />} />
+            <Route path="/about" element={<About />} />
           </Routes>
           <ChatWidget />
         </>

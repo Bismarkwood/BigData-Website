@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import CloudStatsBar from '../../components/CloudStatsBar'
 import CtaBanner from '../../components/CtaBanner'
+import JoinCta from '../../components/JoinCta'
 import CloudHeroSection from '../../components/CloudHero'
 import CloudServices from '../../components/CloudServices'
 import './CloudPlatforms.css'
@@ -86,6 +87,7 @@ function CloudPlatforms() {
       </section>
 
       <CtaBanner />
+      <JoinCta />
       <Footer />
     </main>
   )

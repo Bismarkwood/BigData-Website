@@ -5,6 +5,7 @@ import AISection from '../../components/AISection'
 import CapabilitiesSection from '../../components/CapabilitiesSection'
 import CtaBanner from '../../components/CtaBanner'
 import InsightsSection from '../../components/InsightsSection'
+import JoinCta from '../../components/JoinCta'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 
@@ -19,6 +20,7 @@ function Homepage() {
       <CapabilitiesSection />
       <CtaBanner />
       <InsightsSection />
+      <JoinCta />
       <Footer />
       {/* Add more homepage sections below as you build them */}
     </main>

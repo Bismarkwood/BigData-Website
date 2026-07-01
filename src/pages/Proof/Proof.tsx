@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/ProofStatsBar'
 import ProofProjects from '../../components/ProofProjects'
+import JoinCta from '../../components/JoinCta'
 import HeroCTA from '../../components/HeroCTA'
 import card1Img from '../../assets/Proof/card-1.jpg'
 import card2Img from '../../assets/Proof/card-2.jpg'
@@ -74,6 +75,7 @@ function Proof() {
       </section>
       <StatsBar />
       <ProofProjects />
+      <JoinCta />
       <Footer />
     </main>
   )

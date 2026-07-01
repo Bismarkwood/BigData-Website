@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import HeroCTA from '../HeroCTA'
-import whyBdgBg from '../../assets/Why Big Data Ghana.png'
+import whyBdgBg from '../../assets/Why Big Data Ghana.jpg'
 import './CtaBanner.css'
 
 function CtaBanner() {

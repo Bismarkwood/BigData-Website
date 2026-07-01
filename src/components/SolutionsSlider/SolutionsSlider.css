@@ -128,9 +128,9 @@
 }
 
 .solutions-slider__divider::before {
-  background: #e63946;
+  background: #1E8A00;
   animation-delay: 0s;
-  box-shadow: 0 0 4px #e63946;
+  box-shadow: 0 0 4px #1E8A00;
 }
 
 .solutions-slider__divider::after {

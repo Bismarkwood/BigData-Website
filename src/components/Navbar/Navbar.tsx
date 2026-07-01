@@ -15,7 +15,7 @@ const navLinks = [
   { label: 'Proof', href: '/proof' },
   { label: 'Industries', href: '#industries', hasDropdown: true },
   { label: 'Insights', href: '/insights' },
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '#contact' },
 ]
 

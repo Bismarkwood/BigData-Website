@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import CtaBanner from '../../components/CtaBanner'
+import JoinCta from '../../components/JoinCta'
 import GeoHeroSection from '../../components/GeoHero'
 import customerProblemImg from '../../assets/Geo intelligence Page/The customer problem.png'
 import betterDecisionImg from '../../assets/Geo intelligence Page/The better decision.png'
@@ -83,6 +84,7 @@ function Geospatial() {
       </section>
 
       <CtaBanner />
+      <JoinCta />
       <Footer />
     </main>
   )

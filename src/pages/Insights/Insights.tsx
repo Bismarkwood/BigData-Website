@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import InsightsSection from '../../components/InsightsSection'
+import JoinCta from '../../components/JoinCta'
 import './Insights.css'
 
 function Insights() {
@@ -16,6 +17,7 @@ function Insights() {
         </div>
       </section>
       <InsightsSection />
+      <JoinCta />
       <Footer />
     </main>
   )
