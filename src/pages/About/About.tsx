@@ -2,10 +2,11 @@ import { useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
-import CtaBanner from '../../components/CtaBanner'
 import JoinCta from '../../components/JoinCta'
 import HeroCTA from '../../components/HeroCTA'
 import aboutHeroImg from '../../assets/About/About Hero section.jpg'
+import whyBdgImg from '../../assets/Why Big Data Ghana.jpg'
+import missionImg from '../../assets/Mission & Vision/Mission & Vision.jpg'
 import './About.css'
 
 const values = [
@@ -44,28 +45,6 @@ function About() {
   const mainRef = useRef<HTMLElement>(null)
   const heroRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const main = mainRef.current
-    if (!main) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('about--visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
-    )
-
-    const elements = main.querySelectorAll('.about__animate')
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   // Parallax scroll effect for hero
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +81,7 @@ function About() {
           <p className="about-hero__sub">
             Ghana-specific decision intelligence, built over eight years.
           </p>
-          <HeroCTA text="Meet Our Team" href="#team" />
+          <HeroCTA text="Meet Our Team" href="/team" />
         </div>
         <div className="about-hero__scroll-indicator">
           <span className="about-hero__scroll-dot" />
@@ -112,32 +91,66 @@ function About() {
       {/* Stats */}
       <StatsBar />
 
-      {/* Mission & Vision */}
-      <section className="about-mission">
-        <div className="about-mission__grid">
-          <div className="about-mission__card about__animate">
-            <span className="about-mission__label">Our Mission</span>
-            <h2 className="about-mission__heading">Empower decisions with intelligence</h2>
-            <p className="about-mission__text">
-              To provide organisations with geospatial, data, and AI-powered solutions that transform how they understand risk, allocate resources, and plan for the future. We bring clarity to complexity.
+      {/* Our Story */}
+      <section className="about-story">
+        <div className="about-story__inner">
+          <div className="about-story__text">
+            <span className="about-story__label">WHO WE ARE</span>
+            <h2 className="about-story__heading">A Ghanaian technology and intelligence company.</h2>
+            <p className="about-story__desc">
+              We combine geospatial intelligence, cloud technologies, data analytics and AI to help organisations understand the places, systems, assets and risks behind their most important decisions.
             </p>
           </div>
-          <div className="about-mission__card about__animate">
-            <span className="about-mission__label">Our Vision</span>
-            <h2 className="about-mission__heading">Africa's leading intelligence company</h2>
+          <div className="about-story__image">
+            <img src={whyBdgImg} alt="BigData Ghana team at work" />
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="about-mission">
+        <div className="about-mission__divider" />
+        <div className="about-mission__grid">
+          <div className="about-mission__card">
+            <div className="about-mission__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E8A00" strokeWidth="1.5">
+                <path d="M4 5h4v14H4z" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 5l8-2v6l-8 2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h2 className="about-mission__heading">Who we are</h2>
             <p className="about-mission__text">
-              To be the most trusted data and geospatial intelligence partner in West Africa — building platforms that governments, businesses, and communities rely on for critical decisions.
+              A Ghanaian technology and intelligence company. We combine geospatial intelligence, cloud technologies, data analytics and AI to help organisations understand the places, systems, assets and risks behind their most important decisions.
             </p>
+          </div>
+          <div className="about-mission__separator" />
+          <div className="about-mission__card">
+            <div className="about-mission__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E8A00" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="12" cy="12" r="8"/>
+                <path d="M12 4v1M12 19v1M4 12h1M19 12h1" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <h2 className="about-mission__heading">Our advantage</h2>
+            <p className="about-mission__text">
+              Global platforms can show you a map. BDG helps you understand what that map means in Ghana. Our work is grounded in eight years of spatial data, technical delivery and local operating knowledge. No competitor holds what we hold.
+            </p>
+          </div>
+        </div>
+        <div className="about-mission__images">
+          <div className="about-mission__img-wrap">
+            <img src={missionImg} alt="BigData Ghana" />
           </div>
         </div>
       </section>
 
       {/* Values */}
       <section className="about-values">
-        <h2 className="about-values__title about__animate">What drives us</h2>
+        <h2 className="about-values__title">What drives us</h2>
         <div className="about-values__grid">
           {values.map((value) => (
-            <div className="about-values__card about__animate" key={value.number}>
+            <div className="about-values__card" key={value.number}>
               <span className="about-values__num">({value.number})</span>
               <h3 className="about-values__card-title">{value.title}</h3>
               <p className="about-values__card-text">{value.description}</p>
@@ -148,10 +161,10 @@ function About() {
 
       {/* Timeline / Journey */}
       <section className="about-timeline">
-        <h2 className="about-timeline__title about__animate">Our Journey</h2>
+        <h2 className="about-timeline__title">Our Journey</h2>
         <div className="about-timeline__list">
           {timeline.map((item) => (
-            <div className="about-timeline__item about__animate" key={item.year}>
+            <div className="about-timeline__item" key={item.year}>
               <span className="about-timeline__year">{item.year}</span>
               <div className="about-timeline__line" />
               <p className="about-timeline__event">{item.event}</p>
@@ -161,7 +174,6 @@ function About() {
       </section>
 
       {/* CTA */}
-      <CtaBanner />
       <JoinCta />
 
       <Footer />

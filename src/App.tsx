@@ -10,6 +10,8 @@ import CloudPlatforms from './pages/CloudPlatforms'
 import Proof from './pages/Proof'
 import Insights from './pages/Insights'
 import About from './pages/About'
+import Team from './pages/Team'
+import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail'
 import './App.css'
 
@@ -38,6 +40,8 @@ function App() {
             <Route path="/proof/:slug" element={<ProjectDetail />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <ChatWidget />
         </>

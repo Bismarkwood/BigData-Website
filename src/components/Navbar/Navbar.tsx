@@ -12,11 +12,12 @@ import './Navbar.css'
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Proof', href: '/proof' },
+  { label: 'Solutions', href: '/proof' },
   { label: 'Industries', href: '#industries', hasDropdown: true },
   { label: 'Insights', href: '/insights' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Team', href: '/team' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 const industries = [
