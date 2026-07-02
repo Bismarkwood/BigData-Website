@@ -2,22 +2,20 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
-import CapabilitiesSection from '../../components/CapabilitiesSection'
 import ProjectsHeader from '../../components/ProjectsHeader'
 import SolutionsSlider from '../../components/SolutionsSlider'
 import CtaBanner from '../../components/CtaBanner'
 import JoinCta from '../../components/JoinCta'
-import heroVideo1 from '../../assets/Service Page/exceedict_pindown.io_1782990761.mp4'
-import heroVideo2 from '../../assets/Service Page/pinflik.com__Earth.mp4'
-import heroVideo3 from '../../assets/Service Page/pinflik.com__G20_meeting_aesthetic___G20_group__Digital_world_t.mp4'
-import heroVideo4 from '../../assets/Service Page/20d5a09a9048bcbf8ef4cc35d25a0c49.mp4'
+import heroVideo1 from '../../assets/Service Page/20d5a09a9048bcbf8ef4cc35d25a0c49.mp4'
+import heroVideo2 from '../../assets/Service Page/71696-540442444_tiny.mp4'
+import heroVideo3 from '../../assets/Service Page/pinflik.com__Earth.mp4'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
 import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
 import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
 import biImg from '../../assets/capabilities/Business intelligence.jpg'
 import './Services.css'
 
-const heroVideos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4]
+const heroVideos = [heroVideo1, heroVideo2, heroVideo3]
 
 const services = [
   {
@@ -52,25 +50,33 @@ const services = [
 
 function Services() {
   const [currentVideo, setCurrentVideo] = useState(0)
+  const [fading, setFading] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    const handleEnded = () => {
-      setCurrentVideo((prev) => (prev + 1) % heroVideos.length)
+    const switchVideo = () => {
+      setFading(true)
+      setTimeout(() => {
+        setCurrentVideo((prev) => (prev + 1) % heroVideos.length)
+        setFading(false)
+      }, 600)
     }
 
-    video.addEventListener('ended', handleEnded)
-    return () => video.removeEventListener('ended', handleEnded)
-  }, [])
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
     video.src = heroVideos[currentVideo]
-    video.play()
+    video.load()
+    video.play().catch(() => {})
+
+    video.addEventListener('ended', switchVideo)
+
+    const fallback = setTimeout(switchVideo, 8000)
+
+    return () => {
+      video.removeEventListener('ended', switchVideo)
+      clearTimeout(fallback)
+    }
   }, [currentVideo])
 
   return (
@@ -80,7 +86,7 @@ function Services() {
       <section className="services-hero">
         <video
           ref={videoRef}
-          className="services-hero__video"
+          className={`services-hero__video ${fading ? 'services-hero__video--fading' : ''}`}
           src={heroVideos[0]}
           autoPlay
           muted
@@ -104,8 +110,207 @@ function Services() {
       </section>
       <StatsBar />
 
-      {/* Service cards from homepage */}
-      <CapabilitiesSection />
+      {/* ─── Service Sections (5-element structure) ─── */}
+
+      {/* 01 — Geospatial Intelligence & Earth Observation */}
+      <section className="service-block">
+        <div className="service-block__inner">
+          <div className="service-block__header">
+            <span className="service-block__num">Earth observation</span>
+            <h2 className="service-block__title">Geospatial intelligence<br />and earth observation</h2>
+            <p className="service-block__hero-text">
+              See further. Move faster. Invest smarter.
+            </p>
+          </div>
+          <div className="service-block__body">
+            <div className="service-block__outcomes">
+              <h3 className="service-block__section-label">What you get</h3>
+              <ul className="service-block__outcome-list">
+                <li>Location risk eliminated before capital is committed</li>
+                <li>Spatial intelligence competitors cannot access</li>
+                <li>Evidence-based site selection backed by 8 years of data</li>
+              </ul>
+            </div>
+            <div className="service-block__services">
+              <h3 className="service-block__section-label">Services included</h3>
+              <ul className="service-block__service-list">
+                <li>Land suitability analysis</li>
+                <li>Flood & climate risk mapping</li>
+                <li>Satellite imagery processing</li>
+                <li>Boundary & encroachment detection</li>
+                <li>Custom spatial platforms</li>
+              </ul>
+            </div>
+          </div>
+          <div className="service-block__ctas">
+            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
+          </div>
+        </div>
+        <div className="service-block__image">
+          <img src={geospatialImg} alt="Geospatial Intelligence" />
+        </div>
+      </section>
+
+      {/* 02 — Data Analytics */}
+      <section className="service-block service-block--reversed">
+        <div className="service-block__inner">
+          <div className="service-block__header">
+            <span className="service-block__num">Analytics</span>
+            <h2 className="service-block__title">Data analytics</h2>
+            <p className="service-block__hero-text">
+              Unlock the growth already sitting in your data.
+            </p>
+          </div>
+          <div className="service-block__body">
+            <div className="service-block__outcomes">
+              <h3 className="service-block__section-label">What you get</h3>
+              <ul className="service-block__outcome-list">
+                <li>Raw data transformed into competitive decisions</li>
+                <li>Patterns and trends visible before your competitors see them</li>
+                <li>Clear, actionable reporting for leadership</li>
+              </ul>
+            </div>
+            <div className="service-block__services">
+              <h3 className="service-block__section-label">Services included</h3>
+              <ul className="service-block__service-list">
+                <li>Data pipeline engineering</li>
+                <li>Statistical modelling</li>
+                <li>Dashboard & visualisation</li>
+                <li>Data quality & governance</li>
+                <li>Reporting automation</li>
+              </ul>
+            </div>
+          </div>
+          <div className="service-block__ctas">
+            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
+          </div>
+        </div>
+        <div className="service-block__image">
+          <img src={analyticsImg} alt="Data Analytics" />
+        </div>
+      </section>
+
+      {/* 03 — AI and Automation */}
+      <section className="service-block">
+        <div className="service-block__inner">
+          <div className="service-block__header">
+            <span className="service-block__num">AI and automation</span>
+            <h2 className="service-block__title">AI and automation</h2>
+            <p className="service-block__hero-text">
+              Automate the routine. Accelerate what matters.
+            </p>
+          </div>
+          <div className="service-block__body">
+            <div className="service-block__outcomes">
+              <h3 className="service-block__section-label">What you get</h3>
+              <ul className="service-block__outcome-list">
+                <li>Manual workflows replaced with intelligent automation</li>
+                <li>Predictive models that forecast what happens next</li>
+                <li>AI systems built for your specific business context</li>
+              </ul>
+            </div>
+            <div className="service-block__services">
+              <h3 className="service-block__section-label">Services included</h3>
+              <ul className="service-block__service-list">
+                <li>Machine learning models</li>
+                <li>Natural language processing</li>
+                <li>Process automation</li>
+                <li>AI-powered voice & chat systems</li>
+                <li>Predictive analytics</li>
+              </ul>
+            </div>
+          </div>
+          <div className="service-block__ctas">
+            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
+          </div>
+        </div>
+        <div className="service-block__image">
+          <img src={biImg} alt="AI and Automation" />
+        </div>
+      </section>
+
+      {/* 04 — Cloud Computing */}
+      <section className="service-block service-block--reversed">
+        <div className="service-block__inner">
+          <div className="service-block__header">
+            <span className="service-block__num">Cloud · AWS</span>
+            <h2 className="service-block__title">Cloud computing</h2>
+            <p className="service-block__hero-text">
+              Scale faster on infrastructure built for where you are going.
+            </p>
+          </div>
+          <div className="service-block__body">
+            <div className="service-block__outcomes">
+              <h3 className="service-block__section-label">What you get</h3>
+              <ul className="service-block__outcome-list">
+                <li>Cloud infrastructure that processes intelligence at speed</li>
+                <li>Data accessible in real time, not trapped in silos</li>
+                <li>Systems that scale without rebuilding</li>
+              </ul>
+            </div>
+            <div className="service-block__services">
+              <h3 className="service-block__section-label">Services included</h3>
+              <ul className="service-block__service-list">
+                <li>Cloud architecture & migration</li>
+                <li>Data lake & warehouse design</li>
+                <li>API development & integration</li>
+                <li>Security & compliance</li>
+                <li>Managed cloud operations</li>
+              </ul>
+            </div>
+          </div>
+          <div className="service-block__ctas">
+            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/cloud-platforms" className="service-block__cta-secondary">Learn more →</a>
+          </div>
+        </div>
+        <div className="service-block__image">
+          <img src={cloudImg} alt="Cloud Computing" />
+        </div>
+      </section>
+
+      {/* 05 — Risk Intelligence */}
+      <section className="service-block">
+        <div className="service-block__inner">
+          <div className="service-block__header">
+            <span className="service-block__num">Cross-service lens</span>
+            <h2 className="service-block__title">Risk intelligence</h2>
+            <p className="service-block__hero-text">
+              See risk before it becomes loss.
+            </p>
+          </div>
+          <div className="service-block__body">
+            <div className="service-block__outcomes">
+              <h3 className="service-block__section-label">What you get</h3>
+              <ul className="service-block__outcome-list">
+                <li>Risk visible across geography, operations and assets</li>
+                <li>Early warning systems that protect before events occur</li>
+                <li>Decision confidence backed by multi-layer intelligence</li>
+              </ul>
+            </div>
+            <div className="service-block__services">
+              <h3 className="service-block__section-label">Services included</h3>
+              <ul className="service-block__service-list">
+                <li>Climate & flood risk assessment</li>
+                <li>Asset exposure analysis</li>
+                <li>Supply chain risk mapping</li>
+                <li>Environmental monitoring</li>
+                <li>Risk scoring & reporting</li>
+              </ul>
+            </div>
+          </div>
+          <div className="service-block__ctas">
+            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
+          </div>
+        </div>
+        <div className="service-block__image">
+          <img src={geospatialImg} alt="Risk Intelligence" />
+        </div>
+      </section>
 
       <ProjectsHeader />
 

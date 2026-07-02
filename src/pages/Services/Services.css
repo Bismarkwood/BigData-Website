@@ -14,6 +14,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.services-hero__video--fading {
+  opacity: 0;
 }
 
 .services-hero__bg {
@@ -151,5 +157,222 @@
   .services-hero__divider {
     max-width: 90%;
     margin: 20px 0;
+  }
+}
+
+/* ─── Service Block (5-element structure) ─── */
+.service-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  min-height: 600px;
+  border-top: 1px solid #e8ece9;
+}
+
+.service-block--reversed {
+  direction: rtl;
+}
+
+.service-block--reversed > * {
+  direction: ltr;
+}
+
+.service-block__inner {
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.service-block__header {
+  margin-bottom: 40px;
+}
+
+.service-block__num {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E8A00;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.service-block__title {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  color: #0f2b1f;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.service-block__hero-text {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: var(--fs-subtitle, 18px);
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 480px;
+}
+
+.service-block__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.service-block__section-label {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca8a1;
+  margin: 0 0 16px;
+}
+
+.service-block__outcome-list,
+.service-block__service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-block__outcome-list li {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f2b1f;
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.service-block__outcome-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1E8A00;
+}
+
+.service-block__service-list li {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.service-block__service-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #9ca8a1;
+}
+
+.service-block__ctas {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.service-block__cta-primary {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 28px;
+  background: #1E8A00;
+  color: #ffffff;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-block__cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 138, 0, 0.25);
+}
+
+.service-block__cta-secondary {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f2b1f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.service-block__cta-secondary:hover {
+  color: #1E8A00;
+}
+
+/* Image side */
+.service-block__image {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Service Block Responsive ─── */
+@media (max-width: 1024px) {
+  .service-block {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .service-block--reversed {
+    direction: ltr;
+  }
+
+  .service-block__image {
+    height: 300px;
+  }
+
+  .service-block__inner {
+    padding: 60px 32px;
+  }
+
+  .service-block__body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-block__inner {
+    padding: 48px 20px;
+  }
+
+  .service-block__image {
+    height: 240px;
+  }
+
+  .service-block__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 }
