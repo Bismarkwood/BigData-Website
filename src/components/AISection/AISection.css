@@ -75,7 +75,7 @@
 
 .ai-hero-label {
   display: block;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -87,7 +87,7 @@
 
 .ai-hero-content h2 {
   color: #ffffff;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   line-height: 1.2;
   letter-spacing: -0.03em;

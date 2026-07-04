@@ -41,7 +41,7 @@
 }
 
 .geo-hero__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -53,7 +53,7 @@
 }
 
 .geo-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(36px, 6vw, 80px);
   font-weight: 600;
   color: #ffffff;
@@ -75,7 +75,7 @@
 }
 
 .geo-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -112,7 +112,7 @@
 }
 
 .geo-overview__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 500;
   color: #0f2b1f;
@@ -124,7 +124,7 @@
 }
 
 .geo-overview__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;
@@ -178,7 +178,7 @@
 }
 
 .geo-overview__card-tag {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 500;
   color: #2ea872;
@@ -188,7 +188,7 @@
 }
 
 .geo-overview__card-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 600;
   color: #0f2b1f;
@@ -197,7 +197,7 @@
 }
 
 .geo-overview__card-desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;

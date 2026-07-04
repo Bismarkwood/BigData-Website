@@ -73,7 +73,7 @@
 }
 
 .about-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(40px, 7vw, 80px);
   font-weight: 600;
   color: #ffffff;
@@ -89,7 +89,7 @@
 }
 
 .about-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
@@ -102,7 +102,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -178,7 +178,7 @@
 }
 
 .about-story__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -189,7 +189,7 @@
 }
 
 .about-story__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 600;
   color: #0f2b1f;
@@ -198,7 +198,7 @@
 }
 
 .about-story__desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body, 16px);
   font-weight: 400;
   color: #5a6b63;
@@ -252,7 +252,7 @@
 }
 
 .about-mission__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   color: #0f2b1f;
@@ -261,7 +261,7 @@
 }
 
 .about-mission__text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body, 16px);
   font-weight: 400;
   color: #5a6b63;
@@ -311,7 +311,7 @@
 }
 
 .about-values__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1, 48px);
   font-weight: 600;
   color: #0f2b1f;
@@ -336,7 +336,7 @@
 .about-values__card:nth-child(4) { }
 
 .about-values__num {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #9ca8a1;
@@ -345,7 +345,7 @@
 }
 
 .about-values__card-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 600;
   color: #0f2b1f;
@@ -353,7 +353,7 @@
 }
 
 .about-values__card-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body, 16px);
   font-weight: 400;
   color: #5a6b63;
@@ -369,7 +369,7 @@
 }
 
 .about-timeline__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1, 48px);
   font-weight: 600;
   color: #ffffff;
@@ -394,7 +394,7 @@
 }
 
 .about-timeline__year {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #1E8A00;
@@ -409,7 +409,7 @@
 }
 
 .about-timeline__event {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body, 16px);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);

@@ -55,7 +55,7 @@
 }
 
 .proj-cards__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -66,7 +66,7 @@
 }
 
 .proj-cards__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(18px, 2vw, 28px);
   font-weight: 600;
   color: #ffffff;
@@ -133,7 +133,7 @@
   align-items: center;
   gap: 6px;
   margin-top: 14px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 600;
   color: #ffffff;

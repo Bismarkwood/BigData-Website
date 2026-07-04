@@ -7,10 +7,10 @@
 
 .join-cta__inner {
   display: grid;
-  grid-template-columns: 1.8fr 0.8fr 0.8fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 24px;
   max-width: 100%;
-  height: 420px;
+  height: 520px;
 }
 
 /* ─── Text Side ─── */
@@ -46,7 +46,7 @@
 }
 
 .join-cta__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 }
 
 .join-cta__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(28px, 3vw, 38px);
   font-weight: 600;
   color: #ffffff;
@@ -68,7 +68,7 @@
 }
 
 .join-cta__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -107,14 +107,14 @@
 }
 
 .join-cta__person-name {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
 }
 
 .join-cta__person-role {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -164,7 +164,7 @@
 }
 
 .join-cta__brand-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 700;
   color: #ffffff;

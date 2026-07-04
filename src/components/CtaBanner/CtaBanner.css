@@ -43,7 +43,7 @@
 }
 
 .cta-banner__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 700;
   color: #ffffff;
@@ -53,7 +53,7 @@
 }
 
 .cta-banner__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
@@ -61,7 +61,7 @@
 }
 
 .cta-banner__desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);

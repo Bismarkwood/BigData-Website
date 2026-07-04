@@ -10,7 +10,7 @@
 }
 
 .team-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(48px, 8vw, 100px);
   font-weight: 600;
   color: #0f2b1f;
@@ -20,7 +20,7 @@
 }
 
 .team-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 400;
   color: #5a6b63;
@@ -97,7 +97,7 @@
 }
 
 .team-card__name {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -107,7 +107,7 @@
 }
 
 .team-card__role {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -144,7 +144,7 @@
 }
 
 .team-culture__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -155,7 +155,7 @@
 }
 
 .team-culture__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 600;
   color: #ffffff;
@@ -164,7 +164,7 @@
 }
 
 .team-culture__desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body, 16px);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -185,7 +185,7 @@
 }
 
 .team-culture__stat-num {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 48px;
   font-weight: 700;
   color: #ffffff;
@@ -193,7 +193,7 @@
 }
 
 .team-culture__stat-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);

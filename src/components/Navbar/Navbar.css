@@ -127,7 +127,7 @@
 }
 
 .navbar__link {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
@@ -289,7 +289,7 @@
 }
 
 .nav-menu__link-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(24px, 3vw, 38px);
   font-weight: 700;
   color: #ffffff;
@@ -328,7 +328,7 @@
 }
 
 .nav-menu__info-heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 600;
   color: #ffffff;
@@ -342,7 +342,7 @@
 }
 
 .nav-menu__info-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -351,7 +351,7 @@
 }
 
 .nav-menu__info-value {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   color: rgba(255, 255, 255, 0.85);
 }
@@ -363,7 +363,7 @@
 }
 
 .nav-menu__social {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -508,7 +508,7 @@
 }
 
 .navbar__dropdown-card-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #ffffff;
@@ -517,7 +517,7 @@
 }
 
 .navbar__dropdown-card-desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);

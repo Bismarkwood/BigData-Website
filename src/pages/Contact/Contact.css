@@ -10,7 +10,7 @@
 }
 
 .contact-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(48px, 8vw, 80px);
   font-weight: 600;
   color: #0f2b1f;
@@ -20,7 +20,7 @@
 }
 
 .contact-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 400;
   color: #5a6b63;
@@ -57,7 +57,7 @@
 }
 
 .contact-form__field label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #0f2b1f;
@@ -74,7 +74,7 @@
   padding: 0 16px;
   border: 1px solid #dbe3f0;
   border-radius: 14px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   color: #07152f;
   background: #ffffff;
@@ -124,7 +124,7 @@
   align-items: center;
   justify-content: center;
   border-right: 1px solid #dbe3f0;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #07152f;
@@ -137,7 +137,7 @@
   border: none;
   outline: none;
   padding: 0 16px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   color: #07152f;
   background: transparent;
@@ -162,7 +162,7 @@
   border: none;
   border-radius: 999px;
   background: #1E8A00;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-cta, 15px);
   font-weight: 600;
   color: #ffffff;

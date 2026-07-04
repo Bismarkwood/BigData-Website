@@ -79,7 +79,7 @@
 }
 
 .footer__brand-name {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(56px, 10vw, 140px);
   font-weight: 200;
   color: rgba(255, 255, 255, 0.85);
@@ -89,7 +89,7 @@
 }
 
 .footer__brand-tagline {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(14px, 1.5vw, 20px);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.4);
@@ -107,7 +107,7 @@
 }
 
 .footer__nav-link {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
@@ -131,7 +131,7 @@
 }
 
 .footer__address {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
@@ -165,7 +165,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   color: rgba(255, 255, 255, 0.6);
 }
@@ -189,7 +189,7 @@
 }
 
 .footer__bottom-links a {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
@@ -206,7 +206,7 @@
   padding: 10px 24px;
   background: #8db83a;
   border-radius: 50px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 500;
   color: #0c1210;

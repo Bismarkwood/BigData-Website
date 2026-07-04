@@ -13,7 +13,7 @@
 }
 
 .proof-projects__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 500;
   color: #2B1A18;
@@ -36,7 +36,7 @@
 }
 
 .proof-projects__tab {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #6B4A45;
@@ -130,7 +130,7 @@
 
 .proof-projects__card-overlay::after {
   content: 'View Details';
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -167,7 +167,7 @@
 }
 
 .proof-projects__card-tag {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 500;
   color: #FFF8F0;

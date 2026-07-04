@@ -21,7 +21,7 @@
 }
 
 .stats-bar__number {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 800;
   color: #0f2b1f;
@@ -30,7 +30,7 @@
 }
 
 .stats-bar__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 500;
   color: #5a6b63;

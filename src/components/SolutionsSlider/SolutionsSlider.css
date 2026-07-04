@@ -21,7 +21,7 @@
 }
 
 .solutions-slider__label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -54,7 +54,7 @@
 }
 
 .solutions-slider__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 500;
   color: #0f2b1f;
@@ -65,7 +65,7 @@
 }
 
 .solutions-slider__desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;
@@ -202,7 +202,7 @@
 }
 
 .solutions-slider__card-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 600;
   color: #0f2b1f;

@@ -1,4 +1,9 @@
 import { useRef } from 'react'
+import insightCard1 from '../../assets/Insight/Screenshot_2026-07-02_075619.jpg'
+import insightCard2 from '../../assets/Insight/Card 2.jpg'
+import insightCard3 from '../../assets/Insight/Card 3.jpg'
+import insightCard4 from '../../assets/Insight/Card 4.jpg'
+import insightCard5 from '../../assets/Insight/Card 5.jpg'
 import './InsightsSection.css'
 
 const insights = [
@@ -6,31 +11,31 @@ const insights = [
     tag: 'Geospatial · Real estate',
     title: 'The hidden geography of Ghana\'s investment risk',
     description: 'The land Ghana\'s private sector is betting on is not always the land it thinks it is buying. How spatial blind spots cost developers and investors across Accra\'s fastest-growing corridors.',
-    image: '',
+    image: insightCard1,
   },
   {
     tag: 'Banking · Climate risk',
     title: 'Your loan portfolio has a geography. Most banks do not know what it is.',
     description: 'The Bank of Ghana Climate Related Financial Risk Directive is active. The spatial data that satisfies it does not exist inside any bank\'s current risk system. This is the gap in numbers.',
-    image: '',
+    image: insightCard2,
   },
   {
     tag: 'Agriculture · Data',
     title: 'The yield gap: why Ghana\'s agricultural investments underperform',
     description: 'Most agricultural investment is made without a single spatial data point on the specific land. The gap between projected and actual yield is almost always an information gap.',
-    image: '',
+    image: insightCard5,
   },
   {
     tag: 'Urban growth · Logistics',
     title: 'Where Accra is growing next',
     description: 'Eight years of spatial data reveals the corridors where commercial density is accelerating fastest. The businesses that get there first are reading the geography, not guessing.',
-    image: '',
+    image: insightCard4,
   },
   {
     tag: 'AI · Competitive intelligence',
     title: 'The data-driven organisations quietly winning in Ghana',
     description: 'They are not doing anything complicated. They just know something their competitors do not, and the gap is widening.',
-    image: '',
+    image: insightCard3,
   },
 ]
 

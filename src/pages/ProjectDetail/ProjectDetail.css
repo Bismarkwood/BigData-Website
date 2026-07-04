@@ -13,7 +13,7 @@ im.project-detail {
 }
 
 .project-detail__desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #4a4a4a;
@@ -29,7 +29,7 @@ im.project-detail {
 }
 
 .project-detail__name {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 400;
   color: #b0b0b0;
@@ -39,7 +39,7 @@ im.project-detail {
 }
 
 .project-detail__subtitle {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 500;
   color: #0f0f0f;
@@ -64,14 +64,14 @@ im.project-detail {
 }
 
 .project-detail__meta-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #999999;
 }
 
 .project-detail__meta-value {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 600;
   color: #0f0f0f;
@@ -140,7 +140,7 @@ im.project-detail {
 }
 
 .project-detail__section-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -150,7 +150,7 @@ im.project-detail {
 }
 
 .project-detail__section-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #0f0f0f;
@@ -231,7 +231,7 @@ im.project-detail {
 }
 
 .project-detail__related-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h2);
   font-weight: 600;
   color: #0f0f0f;
@@ -239,7 +239,7 @@ im.project-detail {
 }
 
 .project-detail__related-link {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 600;
   color: #0f0f0f;
@@ -306,7 +306,7 @@ im.project-detail {
 
 .project-detail__related-card-overlay::after {
   content: 'View Details';
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -332,7 +332,7 @@ im.project-detail {
 .project-detail__related-card-label {
   display: block;
   padding: 16px 0 0;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 600;
   color: #0f0f0f;

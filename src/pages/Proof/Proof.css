@@ -68,7 +68,7 @@
 }
 
 .proof-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(40px, 7vw, 90px);
   font-weight: 700;
   color: #ffffff;
@@ -78,7 +78,7 @@
 }
 
 .proof-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -117,7 +117,7 @@
 }
 
 .proof-hero__scroll-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;

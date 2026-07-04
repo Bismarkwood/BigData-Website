@@ -40,7 +40,7 @@
 }
 
 .cloud-hero-webgl__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(36px, 6vw, 80px);
   font-weight: 600;
   color: #ffffff;
@@ -63,7 +63,7 @@
 }
 
 .cloud-hero-webgl__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
@@ -103,7 +103,7 @@
 }
 
 .cloud-hero-webgl__scroll-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;

@@ -13,7 +13,7 @@
 }
 
 .capv2__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 500;
   color: #0f2b1f;
@@ -25,7 +25,7 @@
 }
 
 .capv2__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;
@@ -88,7 +88,7 @@
 }
 
 .capv2__card-tag {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -99,7 +99,7 @@
 }
 
 .capv2__card-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 600;
   color: #0f2b1f;
@@ -107,7 +107,7 @@
 }
 
 .capv2__card-desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 400;
   color: #5a6b63;
@@ -119,7 +119,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 600;
   color: #1a6b4a;

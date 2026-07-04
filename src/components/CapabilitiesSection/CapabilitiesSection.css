@@ -14,7 +14,7 @@
 }
 
 .capabilities__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 500;
   color: #0f2b1f;
@@ -26,7 +26,7 @@
 }
 
 .capabilities__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;
@@ -102,7 +102,7 @@
 }
 
 .capabilities__card-title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h2);
   font-weight: 700;
   color: #0f2b1f;
@@ -110,7 +110,7 @@
 }
 
 .capabilities__card-desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-body);
   font-weight: 400;
   color: #5a6b63;
@@ -123,7 +123,7 @@
   align-items: center;
   gap: 6px;
   margin-top: 18px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 600;
   color: #1a6b4a;

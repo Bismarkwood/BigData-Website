@@ -55,7 +55,7 @@
 }
 
 .services-hero__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(40px, 7vw, 90px);
   font-weight: 600;
   color: #ffffff;
@@ -78,7 +78,7 @@
 }
 
 .services-hero__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.75);
@@ -132,7 +132,7 @@
 }
 
 .services-hero__scroll-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -166,8 +166,51 @@
   grid-template-columns: 1fr 1fr;
   gap: 0;
   width: 100%;
-  min-height: 600px;
+  min-height: 420px;
   border-top: 1px solid #e8ece9;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-block--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-block--visible .service-block__inner {
+  animation: serviceContentSlide 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.service-block--visible .service-block__image {
+  animation: serviceImageReveal 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.service-block--visible .service-block__outcome-list li {
+  animation: serviceListFade 0.6s ease both;
+}
+
+.service-block--visible .service-block__outcome-list li:nth-child(1) { animation-delay: 0.4s; }
+.service-block--visible .service-block__outcome-list li:nth-child(2) { animation-delay: 0.5s; }
+.service-block--visible .service-block__outcome-list li:nth-child(3) { animation-delay: 0.6s; }
+
+.service-block--visible .service-block__ctas {
+  animation: serviceListFade 0.6s ease 0.7s both;
+}
+
+@keyframes serviceContentSlide {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes serviceImageReveal {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes serviceListFade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .service-block--reversed {
@@ -191,7 +234,7 @@
 }
 
 .service-block__num {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: #1E8A00;
@@ -201,7 +244,7 @@
 }
 
 .service-block__title {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 600;
   color: #0f2b1f;
@@ -210,7 +253,7 @@
 }
 
 .service-block__hero-text {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 400;
   color: #5a6b63;
@@ -227,7 +270,7 @@
 }
 
 .service-block__section-label {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -247,7 +290,7 @@
 }
 
 .service-block__outcome-list li {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #0f2b1f;
@@ -268,7 +311,7 @@
 }
 
 .service-block__service-list li {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #5a6b63;
@@ -297,7 +340,7 @@
   padding: 0 28px;
   background: #1E8A00;
   color: #ffffff;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   border-radius: 999px;
@@ -311,7 +354,7 @@
 }
 
 .service-block__cta-secondary {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #0f2b1f;
@@ -334,6 +377,15 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.service-block__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  inset: 0;
 }
 
 /* ─── Service Block Responsive ─── */

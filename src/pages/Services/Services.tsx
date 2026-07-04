@@ -9,6 +9,7 @@ import JoinCta from '../../components/JoinCta'
 import heroVideo1 from '../../assets/Service Page/20d5a09a9048bcbf8ef4cc35d25a0c49.mp4'
 import heroVideo2 from '../../assets/Service Page/71696-540442444_tiny.mp4'
 import heroVideo3 from '../../assets/Service Page/pinflik.com__Earth.mp4'
+import earthObsVideo from '../../assets/Service Page/Earth observation/ChengYiUniverse888_pindown.io_1782997840.mp4'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
 import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
 import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
@@ -79,6 +80,24 @@ function Services() {
     }
   }, [currentVideo])
 
+  // Scroll animation for service blocks
+  useEffect(() => {
+    const blocks = document.querySelectorAll('.service-block')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('service-block--visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -80px 0px' }
+    )
+    blocks.forEach((block) => observer.observe(block))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <main>
       <Navbar />
@@ -131,16 +150,7 @@ function Services() {
                 <li>Evidence-based site selection backed by 8 years of data</li>
               </ul>
             </div>
-            <div className="service-block__services">
-              <h3 className="service-block__section-label">Services included</h3>
-              <ul className="service-block__service-list">
-                <li>Land suitability analysis</li>
-                <li>Flood & climate risk mapping</li>
-                <li>Satellite imagery processing</li>
-                <li>Boundary & encroachment detection</li>
-                <li>Custom spatial platforms</li>
-              </ul>
-            </div>
+
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Talk to us</a>
@@ -148,7 +158,7 @@ function Services() {
           </div>
         </div>
         <div className="service-block__image">
-          <img src={geospatialImg} alt="Geospatial Intelligence" />
+          <video src={earthObsVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 
@@ -171,16 +181,7 @@ function Services() {
                 <li>Clear, actionable reporting for leadership</li>
               </ul>
             </div>
-            <div className="service-block__services">
-              <h3 className="service-block__section-label">Services included</h3>
-              <ul className="service-block__service-list">
-                <li>Data pipeline engineering</li>
-                <li>Statistical modelling</li>
-                <li>Dashboard & visualisation</li>
-                <li>Data quality & governance</li>
-                <li>Reporting automation</li>
-              </ul>
-            </div>
+
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Talk to us</a>
@@ -211,16 +212,7 @@ function Services() {
                 <li>AI systems built for your specific business context</li>
               </ul>
             </div>
-            <div className="service-block__services">
-              <h3 className="service-block__section-label">Services included</h3>
-              <ul className="service-block__service-list">
-                <li>Machine learning models</li>
-                <li>Natural language processing</li>
-                <li>Process automation</li>
-                <li>AI-powered voice & chat systems</li>
-                <li>Predictive analytics</li>
-              </ul>
-            </div>
+
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Talk to us</a>
@@ -251,16 +243,7 @@ function Services() {
                 <li>Systems that scale without rebuilding</li>
               </ul>
             </div>
-            <div className="service-block__services">
-              <h3 className="service-block__section-label">Services included</h3>
-              <ul className="service-block__service-list">
-                <li>Cloud architecture & migration</li>
-                <li>Data lake & warehouse design</li>
-                <li>API development & integration</li>
-                <li>Security & compliance</li>
-                <li>Managed cloud operations</li>
-              </ul>
-            </div>
+
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Talk to us</a>
@@ -291,16 +274,7 @@ function Services() {
                 <li>Decision confidence backed by multi-layer intelligence</li>
               </ul>
             </div>
-            <div className="service-block__services">
-              <h3 className="service-block__section-label">Services included</h3>
-              <ul className="service-block__service-list">
-                <li>Climate & flood risk assessment</li>
-                <li>Asset exposure analysis</li>
-                <li>Supply chain risk mapping</li>
-                <li>Environmental monitoring</li>
-                <li>Risk scoring & reporting</li>
-              </ul>
-            </div>
+
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Talk to us</a>

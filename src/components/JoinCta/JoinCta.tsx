@@ -1,7 +1,5 @@
 import HeroCTA from '../HeroCTA'
-import ctaImg from '../../assets/CTA Banner/CTA.jpg'
 import henryImg from '../../assets/CTA Banner/CTA Banner Mr. Henry.jpg'
-import bdgWave from '../../assets/intro/bdg-wave.png'
 import './JoinCta.css'
 
 function JoinCta() {
@@ -26,16 +24,6 @@ function JoinCta() {
           <div className="join-cta__person-info">
             <span className="join-cta__person-name">Mr. Henry Baffoe</span>
             <span className="join-cta__person-role">Managing Director</span>
-          </div>
-        </div>
-
-        {/* Branded image card */}
-        <div className="join-cta__brand">
-          <img src={ctaImg} alt="" className="join-cta__brand-bg" />
-          <div className="join-cta__brand-overlay" />
-          <div className="join-cta__brand-content">
-            <img src={bdgWave} alt="" className="join-cta__brand-logo" />
-            <h3 className="join-cta__brand-text">Decide<br />Better</h3>
           </div>
         </div>
       </div>

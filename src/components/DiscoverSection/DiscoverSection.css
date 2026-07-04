@@ -10,7 +10,7 @@
 }
 
 .discover-header__heading {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-display);
   font-weight: 400;
   color: #0f2b1f;
@@ -21,7 +21,7 @@
 }
 
 .discover-header__sub {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #3d4a44;
@@ -92,7 +92,7 @@
   position: absolute;
   bottom: 32px;
   left: 32px;
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
   font-weight: 600;
   color: #ffffff;
@@ -114,7 +114,7 @@
 }
 
 .discover__card-desc {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle);
   font-weight: 400;
   color: #3d4a44;
@@ -124,7 +124,7 @@
 }
 
 .discover__card-number {
-  font-family: 'Montserrat', system-ui, sans-serif;
+  font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-small);
   font-weight: 600;
   color: rgba(15, 43, 31, 0.4);
