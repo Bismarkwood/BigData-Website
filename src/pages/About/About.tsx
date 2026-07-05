@@ -7,6 +7,12 @@ import HeroCTA from '../../components/HeroCTA'
 import aboutHeroImg from '../../assets/About/About Hero section.jpg'
 import whyBdgImg from '../../assets/Why Big Data Ghana.jpg'
 import missionImg from '../../assets/Mission & Vision/Mission & Vision.jpg'
+import lifeImg1 from '../../assets/Life at Big Data Ghana/007A2148SIMPI26.jpg'
+import lifeImg2 from '../../assets/Life at Big Data Ghana/007A2256SIMPI26.jpg'
+import lifeImg3 from '../../assets/Life at Big Data Ghana/1756482542508.jpg'
+import lifeImg4 from '../../assets/Life at Big Data Ghana/1760444434707.jpg'
+import lifeImg5 from '../../assets/Life at Big Data Ghana/1761132122684.jpg'
+import lifeImg6 from '../../assets/Life at Big Data Ghana/1765533172285.jpg'
 import './About.css'
 
 const values = [
@@ -160,14 +166,19 @@ function About() {
         </div>
         <div className="about-impact__marquee">
           <div className="about-impact__track">
-            <div className="about-impact__card"><div className="about-impact__placeholder" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--2" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--3" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--4" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--2" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--3" /></div>
-            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--4" /></div>
+            <div className="about-impact__card"><img src={lifeImg1} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg2} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg3} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg4} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg5} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg6} alt="" /></div>
+            {/* Duplicate for seamless loop */}
+            <div className="about-impact__card"><img src={lifeImg1} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg2} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg3} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg4} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg5} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg6} alt="" /></div>
           </div>
         </div>
       </section>

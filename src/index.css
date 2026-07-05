@@ -47,3 +47,15 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mobile global fixes */
+@media (max-width: 768px) {
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    overflow-x: hidden;
+  }
+}

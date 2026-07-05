@@ -132,12 +132,26 @@
   100% { top: 42px; opacity: 0; }
 }
 
+@media (max-width: 1024px) {
+  .proof-hero__title {
+    font-size: 56px;
+  }
+}
+
 @media (max-width: 768px) {
   .proof-hero__title {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .proof-hero__grid {
     flex-direction: column;
+  }
+
+  .proof-hero__content {
+    padding: 0 20px;
+  }
+
+  .proof-hero__sub {
+    font-size: 14px;
   }
 }

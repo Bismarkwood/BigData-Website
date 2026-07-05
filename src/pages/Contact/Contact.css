@@ -180,6 +180,12 @@
 }
 
 /* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-hero {
     padding: 140px 20px 40px;

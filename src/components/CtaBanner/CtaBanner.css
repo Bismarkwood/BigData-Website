@@ -69,12 +69,27 @@
   margin: 0 0 32px;
 }
 
+@media (max-width: 1024px) {
+  .cta-banner__content {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .cta-banner__heading {
     font-size: 28px;
   }
 
+  .cta-banner__content {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
   .cta-banner__bg {
     inset: -40px;
+  }
+
+  .cta-banner__desc {
+    font-size: 14px;
   }
 }

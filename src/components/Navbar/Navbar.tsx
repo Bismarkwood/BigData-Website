@@ -32,6 +32,7 @@ const industries = [
 function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,8 +42,18 @@ function Navbar({ light = false }: { light?: boolean }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${dropdownOpen ? 'navbar--dropdown-open' : ''} ${light ? 'navbar--light' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${dropdownOpen ? 'navbar--dropdown-open' : ''} ${light ? 'navbar--light' : ''} ${mobileOpen ? 'navbar--mobile-open' : ''}`}>
       <div className="navbar__inner">
         <Link to="/" className="navbar__logo">
           <div className="navbar__logo-icon">
@@ -52,7 +63,7 @@ function Navbar({ light = false }: { light?: boolean }) {
           <img src={bdgText} alt="BDG" className="navbar__logo-text" />
         </Link>
 
-        {/* Inline nav links */}
+        {/* Inline nav links (desktop) */}
         <div className="navbar__links">
           {navLinks.map((link) =>
             link.hasDropdown ? (
@@ -95,7 +106,17 @@ function Navbar({ light = false }: { light?: boolean }) {
         </div>
 
         <div className="navbar__right">
-          <a href="#contact" className="navbar__cta" aria-label="Contact us">
+          {/* Hamburger button (mobile) */}
+          <button
+            className="navbar__hamburger"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className="navbar__hamburger-line" />
+            <span className="navbar__hamburger-line" />
+            <span className="navbar__hamburger-line" />
+          </button>
+          <a href="/contact" className="navbar__cta" aria-label="Contact us">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
               <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
               <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -103,6 +124,23 @@ function Navbar({ light = false }: { light?: boolean }) {
           </a>
         </div>
       </div>
+
+      {/* Mobile menu overlay */}
+      {mobileOpen && (
+        <div className="navbar__mobile-menu">
+          {navLinks.filter(l => !l.hasDropdown).map((link) =>
+            link.href.startsWith('/') ? (
+              <Link key={link.label} to={link.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.label} href={link.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+                {link.label}
+              </a>
+            )
+          )}
+        </div>
+      )}
     </nav>
   )
 }
