@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import CtaBanner from '../../components/CtaBanner'
 import JoinCta from '../../components/JoinCta'
+import SEO from '../../components/SEO'
 import GeoHeroSection from '../../components/GeoHero'
 import customerProblemImg from '../../assets/Geo intelligence Page/The customer problem.png'
 import betterDecisionImg from '../../assets/Geo intelligence Page/The better decision.png'
@@ -11,8 +12,12 @@ import './Geospatial.css'
 function Geospatial() {
   return (
     <main>
+      <SEO
+        title="Geospatial Intelligence | BigData Ghana — Land Analytics & Earth Observation"
+        description="Turn Ghana's geography into competitive intelligence. Land suitability, flood risk mapping, satellite imagery, boundary detection and custom spatial platforms. 8 years of Ghana-specific data."
+        path="/geospatial"
+      />
       <Navbar />
-      {/* WebGL Globe Hero */}
       <GeoHeroSection />
 
       {/* Overview Section */}

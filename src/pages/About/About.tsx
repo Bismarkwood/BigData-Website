@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
 import JoinCta from '../../components/JoinCta'
 import HeroCTA from '../../components/HeroCTA'
+import SEO from '../../components/SEO'
 import aboutHeroImg from '../../assets/About/About Hero section.jpg'
 import whyBdgImg from '../../assets/Why Big Data Ghana.jpg'
 import missionImg from '../../assets/Mission & Vision/Mission & Vision.jpg'
@@ -103,6 +104,23 @@ function About() {
 
   return (
     <main className="about-page" ref={mainRef}>
+      <SEO
+        title="About Us | BigData Ghana — From Technology to Decision Intelligence"
+        description="A Ghanaian technology and intelligence company. 8+ years of spatial data, AWS-certified, serving government, banking, agriculture and logistics across Ghana and West Africa."
+        path="/about"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          mainEntity: {
+            '@type': 'Organization',
+            name: 'BigData Ghana',
+            foundingDate: '2016',
+            numberOfEmployees: { '@type': 'QuantitativeValue', value: 15 },
+            areaServed: 'Ghana',
+            knowsAbout: ['Geospatial Intelligence', 'Earth Observation', 'Data Analytics', 'Cloud Computing', 'AI'],
+          },
+        }}
+      />
       <Navbar />
 
       {/* Hero */}

@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import InsightsSection from '../../components/InsightsSection'
 import JoinCta from '../../components/JoinCta'
+import SEO from '../../components/SEO'
 import insightHeroImg from '../../assets/Insight/Screenshot_2026-07-02_075619.jpg'
 import './Insights.css'
 
@@ -13,6 +14,11 @@ function Insights() {
 
   return (
     <main>
+      <SEO
+        title="Insights | BigData Ghana — Ghana Through A Data Lens"
+        description="Insights on land, climate risk, urban growth, agriculture, infrastructure, AI, cloud and the decisions shaping Ghana's future. Research and analysis from BigData Ghana."
+        path="/insights"
+      />
       <Navbar light />
       <section className="insights-hero">
         <div className="insights-hero__top">

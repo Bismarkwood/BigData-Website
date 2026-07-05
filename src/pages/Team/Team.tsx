@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import JoinCta from '../../components/JoinCta'
+import SEO from '../../components/SEO'
 import gertrudeImg from '../../assets/Teams/Gertrude Chichi.jpg'
 import henryImg from '../../assets/Teams/Mr. Henry Baffoe.jpg'
 import priscilliaImg from '../../assets/Teams/Priscillia Fianu.jpg'
@@ -93,6 +94,11 @@ const leadership = [
 function Team() {
   return (
     <main className="team-page">
+      <SEO
+        title="Our Team | BigData Ghana — 15+ Intelligence Professionals"
+        description="Meet the engineers, data scientists, geospatial analysts, and strategists building Africa's decision infrastructure at BigData Ghana."
+        path="/team"
+      />
       <Navbar />
 
       {/* Hero */}

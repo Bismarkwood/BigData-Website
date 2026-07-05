@@ -3,6 +3,7 @@ import Footer from '../../components/Footer'
 import CloudStatsBar from '../../components/CloudStatsBar'
 import CtaBanner from '../../components/CtaBanner'
 import JoinCta from '../../components/JoinCta'
+import SEO from '../../components/SEO'
 import CloudHeroSection from '../../components/CloudHero'
 import CloudServices from '../../components/CloudServices'
 import './CloudPlatforms.css'
@@ -10,8 +11,12 @@ import './CloudPlatforms.css'
 function CloudPlatforms() {
   return (
     <main>
+      <SEO
+        title="Cloud Platforms | BigData Ghana — AWS-Certified Infrastructure for Africa"
+        description="Scale faster on cloud infrastructure built for growth. AWS-certified architecture, data platform engineering, security and managed operations for organisations in Ghana."
+        path="/cloud-platforms"
+      />
       <Navbar />
-      {/* WebGL Cloud Architecture Hero */}
       <CloudHeroSection />
 
       <CloudStatsBar />

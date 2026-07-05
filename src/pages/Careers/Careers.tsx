@@ -2,6 +2,8 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import JoinCta from '../../components/JoinCta'
 import HeroCTA from '../../components/HeroCTA'
+import SEO from '../../components/SEO'
+import careerHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
 import './Careers.css'
 
 const openRoles = [
@@ -35,19 +37,32 @@ const openRoles = [
 function Careers() {
   return (
     <main className="careers-page">
-      <Navbar light />
+      <SEO
+        title="Careers | BigData Ghana — Shape the Future of Decision Intelligence"
+        description="Join BigData Ghana. We are hiring cloud engineers, GIS developers, data analysts, and product designers. Build intelligence that matters, from Ghana."
+        path="/careers"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Careers at BigData Ghana',
+          description: 'Open roles at BigData Ghana for cloud engineers, GIS developers, data analysts, and product designers.',
+        }}
+      />
+      <Navbar />
 
       {/* Hero */}
       <section className="careers-hero">
+        <img src={careerHeroBg} alt="" className="careers-hero__bg" />
+        <div className="careers-hero__overlay" />
         <div className="careers-hero__content">
+          <span className="careers-hero__tag">Career</span>
           <h1 className="careers-hero__title">
-            <span>Build what matters.</span>
-            <span>From Ghana.</span>
+            <span>Shape the future</span>
+            <span>of decision intelligence.</span>
           </h1>
           <p className="careers-hero__sub">
-            We are hiring people who want to solve problems that change how organisations decide. If you are curious, technical, and want your work to matter — this is the place.
+            Help us build Ghana's most trusted intelligence company.
           </p>
-          <HeroCTA text="View Open Roles" href="#roles" />
         </div>
       </section>
 

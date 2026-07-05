@@ -3,6 +3,7 @@ import Footer from '../../components/Footer'
 import StatsBar from '../../components/ProofStatsBar'
 import ProofProjects from '../../components/ProofProjects'
 import JoinCta from '../../components/JoinCta'
+import SEO from '../../components/SEO'
 import HeroCTA from '../../components/HeroCTA'
 import card1Img from '../../assets/Proof/card-1.jpg'
 import card2Img from '../../assets/Proof/card-2.jpg'
@@ -14,9 +15,13 @@ import './Proof.css'
 function Proof() {
   return (
     <main>
+      <SEO
+        title="Solutions | BigData Ghana — Proof That Intelligence Changes Decisions"
+        description="National flood intelligence, forest monitoring, BigConnect AI, spatial data infrastructure, and data analytics projects. 5 flagship solutions across 4 sectors in Ghana."
+        path="/proof"
+      />
       <Navbar />
       <section className="proof-hero">
-        {/* Scrolling image cards - infinite loop */}
         <div className="proof-hero__grid">
           <div className="proof-hero__track">
             <div className="proof-hero__card">

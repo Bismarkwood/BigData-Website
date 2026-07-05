@@ -1,10 +1,16 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import SEO from '../../components/SEO'
 import './Contact.css'
 
 function Contact() {
   return (
     <main className="contact-page">
+      <SEO
+        title="Contact | BigData Ghana — Let's Work Together"
+        description="Get in touch with BigData Ghana. Tell us about the decision you need to make and we will show you what the data says. Offices in Accra, Ghana."
+        path="/contact"
+      />
       <Navbar />
 
       {/* Hero */}

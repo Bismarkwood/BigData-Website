@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
+import SEO from '../../components/SEO'
 import ProjectsHeader from '../../components/ProjectsHeader'
 import SolutionsSlider from '../../components/SolutionsSlider'
 import CtaBanner from '../../components/CtaBanner'
@@ -102,6 +103,18 @@ function Services() {
 
   return (
     <main>
+      <SEO
+        title="Services | BigData Ghana — Geospatial, Cloud, AI & Data Analytics"
+        description="Earth observation, data analytics, AI automation, cloud computing and risk intelligence services. Purpose-built for organisations operating in Ghana and West Africa."
+        path="/services"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          provider: { '@type': 'Organization', name: 'BigData Ghana' },
+          areaServed: 'Ghana',
+          serviceType: ['Geospatial Intelligence', 'Data Analytics', 'AI Automation', 'Cloud Computing', 'Risk Intelligence'],
+        }}
+      />
       <Navbar />
       {/* Hero Section */}
       <section className="services-hero">
