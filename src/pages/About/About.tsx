@@ -13,6 +13,13 @@ import lifeImg3 from '../../assets/Life at Big Data Ghana/1756482542508.jpg'
 import lifeImg4 from '../../assets/Life at Big Data Ghana/1760444434707.jpg'
 import lifeImg5 from '../../assets/Life at Big Data Ghana/1761132122684.jpg'
 import lifeImg6 from '../../assets/Life at Big Data Ghana/1765533172285.jpg'
+import teamFace1 from '../../assets/Teams/Mr. Henry Baffoe.jpg'
+import teamFace2 from '../../assets/Teams/Nanayaa Fordjour.jpg'
+import teamFace3 from '../../assets/Teams/Priscillia Fianu.jpg'
+import teamFace4 from '../../assets/Teams/Akwasi Anto Darkwah.jpg'
+import teamFace5 from '../../assets/Teams/Gertrude Chichi.jpg'
+import teamFace6 from '../../assets/Teams/Logan Linford Kojo.jpg'
+import teamFace7 from '../../assets/Teams/Bismark Gyebi Duah.jpg'
 import './About.css'
 
 const values = [
@@ -50,6 +57,29 @@ const timeline = [
 function About() {
   const mainRef = useRef<HTMLElement>(null)
   const heroRef = useRef<HTMLElement>(null)
+
+  // Scroll-triggered animations
+  useEffect(() => {
+    const main = mainRef.current
+    if (!main) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('about-reveal')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+    )
+
+    const elements = main.querySelectorAll('.about-animate')
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
 
   // Parallax scroll effect for hero
   useEffect(() => {
@@ -98,26 +128,26 @@ function About() {
       <StatsBar />
 
       {/* Our Story */}
-      <section className="about-story">
+      <section className="about-story about-animate">
         <div className="about-story__inner">
-          <div className="about-story__text">
+          <div className="about-story__text about-animate about-animate--delay-1">
             <span className="about-story__label">WHO WE ARE</span>
             <h2 className="about-story__heading">A Ghanaian technology and intelligence company.</h2>
             <p className="about-story__desc">
               We combine geospatial intelligence, cloud technologies, data analytics and AI to help organisations understand the places, systems, assets and risks behind their most important decisions.
             </p>
           </div>
-          <div className="about-story__image">
+          <div className="about-story__image about-animate about-animate--delay-2">
             <img src={whyBdgImg} alt="BigData Ghana team at work" />
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="about-mission">
+      <section className="about-mission about-animate">
         <div className="about-mission__divider" />
         <div className="about-mission__grid">
-          <div className="about-mission__card">
+          <div className="about-mission__card about-animate about-animate--delay-1">
             <div className="about-mission__icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E8A00" strokeWidth="1.5">
                 <path d="M4 5h4v14H4z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -130,7 +160,7 @@ function About() {
             </p>
           </div>
           <div className="about-mission__separator" />
-          <div className="about-mission__card">
+          <div className="about-mission__card about-animate about-animate--delay-2">
             <div className="about-mission__icon">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E8A00" strokeWidth="1.5">
                 <circle cx="12" cy="12" r="3"/>
@@ -183,26 +213,46 @@ function About() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="about-values">
-        <h2 className="about-values__title">What drives us</h2>
-        <div className="about-values__grid">
-          {values.map((value) => (
-            <div className="about-values__card" key={value.number}>
-              <span className="about-values__num">({value.number})</span>
-              <h3 className="about-values__card-title">{value.title}</h3>
-              <p className="about-values__card-text">{value.description}</p>
-            </div>
-          ))}
+      {/* Team Faces Section */}
+      <section className="about-team-faces">
+        <div className="about-team-faces__top">
+          <div className="about-team-faces__left">
+            <h2 className="about-team-faces__heading">
+              <span>The people behind</span>
+              <span>Big Data Ghana</span>
+            </h2>
+          </div>
+          <div className="about-team-faces__right">
+            <p className="about-team-faces__sub">A focused, senior team embedded directly into your project. Intelligence built by people who understand Ghana.</p>
+          </div>
+        </div>
+        <div className="about-team-faces__grid">
+          {/* Row 1 */}
+          <div className="about-team-faces__stat">
+            <span className="about-team-faces__stat-num">15+</span>
+            <span className="about-team-faces__stat-label">Team Members...</span>
+          </div>
+          <div className="about-team-faces__face"><img src={teamFace1} alt="" /></div>
+          <div className="about-team-faces__face"><img src={teamFace2} alt="" /></div>
+          <div className="about-team-faces__face"><img src={teamFace3} alt="" /></div>
+          <div className="about-team-faces__face"><img src={teamFace4} alt="" /></div>
+          {/* Row 2 */}
+          <div className="about-team-faces__face"><img src={teamFace5} alt="" /></div>
+          <div className="about-team-faces__face"><img src={teamFace6} alt="" /></div>
+          <div className="about-team-faces__face"><img src={teamFace7} alt="" /></div>
+          <div className="about-team-faces__cta-card">
+            <p className="about-team-faces__cta-text">We're all about hard work, smart solutions, & impossible deadlines. No fluff, just brilliance.</p>
+            <a href="/team" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
+          </div>
         </div>
       </section>
 
       {/* Timeline / Journey */}
-      <section className="about-timeline">
+      <section className="about-timeline about-animate">
         <h2 className="about-timeline__title">Our Journey</h2>
         <div className="about-timeline__list">
-          {timeline.map((item) => (
-            <div className="about-timeline__item" key={item.year}>
+          {timeline.map((item, i) => (
+            <div className="about-timeline__item about-animate" key={item.year} style={{ transitionDelay: `${i * 0.1}s` }}>
               <span className="about-timeline__year">{item.year}</span>
               <div className="about-timeline__line" />
               <p className="about-timeline__event">{item.event}</p>

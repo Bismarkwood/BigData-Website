@@ -33,6 +33,17 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Performance: GPU-accelerate common animations */
+img, video {
+  content-visibility: auto;
+}
+
+/* Lazy decode images */
+img[loading="lazy"] {
+  decoding: async;
 }
 
 body {

@@ -6,5 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1500,
+    assetsInlineLimit: 4096,
+    cssMinify: true,
   },
 })
