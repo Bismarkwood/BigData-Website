@@ -263,7 +263,7 @@ function About() {
             <div className="about-team-faces__face"><img src={teamFace7} alt="" /></div>
             <div className="about-team-faces__cta-card">
               <p className="about-team-faces__cta-text">We're all about hard work, smart solutions, & impossible deadlines. No fluff, just brilliance.</p>
-              <a href="/team" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
+              <a href="/careers" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
             </div>
           </div>
         </div>

@@ -11,26 +11,31 @@ const openRoles = [
     title: 'Cloud Engineer',
     type: 'Full-time',
     location: 'Accra, Ghana',
+    slug: 'cloud-engineer',
   },
   {
     title: 'GIS Developer',
     type: 'Full-time',
     location: 'Accra, Ghana',
+    slug: 'gis-developer',
   },
   {
     title: 'Data Analyst',
     type: 'Full-time',
     location: 'Accra, Ghana',
+    slug: 'data-analyst',
   },
   {
     title: 'Software Engineer',
     type: 'Full-time',
     location: 'Accra, Ghana',
+    slug: 'software-engineer',
   },
   {
     title: 'Product Designer',
     type: 'Full-time',
     location: 'Accra, Ghana',
+    slug: 'product-designer',
   },
 ]
 
@@ -55,7 +60,6 @@ function Careers() {
         <img src={careerHeroBg} alt="" className="careers-hero__bg" />
         <div className="careers-hero__overlay" />
         <div className="careers-hero__content">
-          <span className="careers-hero__tag">Career</span>
           <h1 className="careers-hero__title">
             <span>Shape the future</span>
             <span>of decision intelligence.</span>
@@ -67,59 +71,58 @@ function Careers() {
       </section>
 
       {/* Why BDG */}
-      <section className="careers-why">
-        <div className="careers-why__inner">
-          <div className="careers-why__left">
-            <span className="careers-why__label">WHY BDG</span>
-            <h2 className="careers-why__heading">We build intelligence that compounds.</h2>
+      <section className="careers-interested">
+        <div className="careers-interested__inner">
+          <div className="careers-interested__left">
+            <span className="careers-interested__tag">■ Interested?</span>
           </div>
-          <div className="careers-why__right">
-            <p className="careers-why__text">
-              Every quarter we solve problems that did not exist in our industry five years ago. You will work with eight years of spatial data, national-scale platforms, and AI systems purpose-built for West Africa. The work you do here stays visible.
-            </p>
+          <div className="careers-interested__right">
+            <h2 className="careers-interested__heading">
+              Great talent deserves great challenges. <span className="careers-interested__muted">Join the elite</span>
+            </h2>
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="careers-benefits">
-        <h2 className="careers-benefits__title">What you get</h2>
-        <div className="careers-benefits__grid">
-          <div className="careers-benefits__card">
-            <span className="careers-benefits__icon">🚀</span>
-            <h3>Real impact</h3>
-            <p>Your work protects forests, predicts floods, and strengthens businesses across Ghana.</p>
-          </div>
-          <div className="careers-benefits__card">
-            <span className="careers-benefits__icon">☁️</span>
-            <h3>AWS & cloud-first</h3>
-            <p>Work with enterprise-grade infrastructure, AI tools, and the latest cloud technologies.</p>
-          </div>
-          <div className="careers-benefits__card">
-            <span className="careers-benefits__icon">📈</span>
-            <h3>Growth</h3>
-            <p>Certifications, mentorship, and a team that pushes each other to be better every week.</p>
-          </div>
-          <div className="careers-benefits__card">
-            <span className="careers-benefits__icon">🤝</span>
-            <h3>Culture</h3>
-            <p>No fluff, just brilliance. A small team where your ideas are heard and your contributions visible.</p>
-          </div>
+      {/* Hiring Marquee */}
+      <section className="careers-marquee">
+        <div className="careers-marquee__track">
+          <span className="careers-marquee__item">■ OPEN ROLES</span>
+          <span className="careers-marquee__item">■ WORK WITH US</span>
+          <span className="careers-marquee__item">■ NOW HIRING</span>
+          <span className="careers-marquee__item">■ APPLY TODAY</span>
+          <span className="careers-marquee__item">■ OPEN ROLES</span>
+          <span className="careers-marquee__item">■ WE ARE HIRING</span>
+          <span className="careers-marquee__item">■ WORK WITH US</span>
+          <span className="careers-marquee__item">■ NOW HIRING</span>
+          <span className="careers-marquee__item">■ APPLY TODAY</span>
+          <span className="careers-marquee__item">■ OPEN ROLES</span>
+          <span className="careers-marquee__item">■ WE ARE HIRING</span>
+          <span className="careers-marquee__item">■ WORK WITH US</span>
         </div>
       </section>
 
       {/* Open Roles */}
       <section className="careers-roles" id="roles">
-        <h2 className="careers-roles__title">Open Roles</h2>
-        <p className="careers-roles__sub">We are always looking for exceptional people. If you do not see your role, reach out anyway.</p>
+        <span className="careers-roles__tag">■ Find your next job</span>
+        <h2 className="careers-roles__title">Elevate your career<br /><span className="careers-roles__title-muted">to the next level</span></h2>
+        
+        <div className="careers-roles__filters">
+          <span className="careers-roles__filter careers-roles__filter--active">● Accra</span>
+          <span className="careers-roles__filter">● Remote</span>
+          <span className="careers-roles__filter">● Hybrid</span>
+        </div>
+
         <div className="careers-roles__list">
           {openRoles.map((role, i) => (
-            <a href="/contact" className="careers-roles__item" key={i}>
+            <a href={`/careers/${role.slug}`} className="careers-roles__item" key={i}>
               <div className="careers-roles__item-left">
                 <h3 className="careers-roles__item-title">{role.title}</h3>
-                <span className="careers-roles__item-meta">{role.type} · {role.location}</span>
               </div>
-              <span className="careers-roles__item-arrow">→</span>
+              <span className="careers-roles__item-type">{role.type}</span>
+              <span className="careers-roles__item-dept">Technology</span>
+              <span className="careers-roles__item-location">{role.location}</span>
+              <span className="careers-roles__item-arrow-circle">↗</span>
             </a>
           ))}
         </div>
