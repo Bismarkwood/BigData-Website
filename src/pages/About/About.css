@@ -716,8 +716,18 @@
 }
 
 .about-team-faces__row--2 {
-  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
   transform: translateX(60px);
+}
+
+.about-team-faces__cta-card {
+  background: #0f2b1f;
+  border-radius: 12px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .about-team-faces__row.about-reveal {
@@ -760,17 +770,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.about-team-faces__cta-card {
-  background: #0f2b1f;
-  border-radius: 12px;
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 20px;
-  grid-column: span 2;
 }
 
 .about-team-faces__cta-text {
