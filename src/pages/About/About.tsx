@@ -145,6 +145,33 @@ function About() {
         </div>
       </section>
 
+      {/* Impact Showcase */}
+      <section className="about-impact">
+        <div className="about-impact__divider" />
+        <div className="about-impact__top">
+          <div className="about-impact__left">
+            <h2 className="about-impact__heading">Life at Big Data Ghana</h2>
+          </div>
+          <div className="about-impact__right">
+            <p className="about-impact__sub">
+              We are a company in motion. Every quarter we solve problems that did not exist in our industry five years ago, applying intelligence to decisions that shape how Ghana's private sector grows, invests and builds. We are building something that compounds over time: eight years of spatial data, a growing proof record across real estate, banking, agriculture and logistics, and a client base that returns because the intelligence changes how they act.
+            </p>
+          </div>
+        </div>
+        <div className="about-impact__marquee">
+          <div className="about-impact__track">
+            <div className="about-impact__card"><div className="about-impact__placeholder" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--2" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--3" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--4" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--2" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--3" /></div>
+            <div className="about-impact__card"><div className="about-impact__placeholder about-impact__placeholder--4" /></div>
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="about-values">
         <h2 className="about-values__title">What drives us</h2>

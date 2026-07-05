@@ -1,38 +1,213 @@
+/* ─── Insights Hero ─── */
 .insights-hero {
   width: 100%;
-  padding: 180px 48px 80px;
+  padding: 120px 48px 0;
   background: #ffffff;
+  padding-top: 140px;
 }
 
-.insights-hero__content {
-  max-width: 700px;
+.insights-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.insights-hero__left {
+  max-width: 550px;
+}
+
+.insights-hero__tag {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1E8A00;
+  background: rgba(30, 138, 0, 0.1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 24px;
 }
 
 .insights-hero__title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(48px, 8vw, 100px);
-  font-weight: 600;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
   color: #0f2b1f;
   letter-spacing: -2px;
-  line-height: 1;
-  margin: 0 0 24px;
+  line-height: 1.05;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.insights-hero__title span {
+  display: block;
+}
+
+.insights-hero__right {
+  max-width: 380px;
+  padding-top: 20px;
 }
 
 .insights-hero__sub {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: var(--fs-subtitle);
+  font-size: 15px;
   font-weight: 400;
   color: #5a6b63;
   line-height: 1.7;
   margin: 0;
 }
 
+/* ─── Featured Highlight Card ─── */
+.insights-hero__featured {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5f3f0;
+  min-height: 240px;
+}
+
+.insights-hero__featured-text {
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.insights-hero__featured-badge {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5a6b63;
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: auto;
+}
+
+.insights-hero__featured-date {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca8a1;
+  margin-bottom: 12px;
+}
+
+.insights-hero__featured-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+  color: #0f2b1f;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.insights-hero__featured-image {
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.insights-hero__featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .insights-hero__top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .insights-hero__right {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .insights-hero__featured {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-hero__featured-image {
+    height: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .insights-hero {
-    padding: 140px 20px 60px;
+    padding: 120px 20px 0;
   }
 
   .insights-hero__title {
-    font-size: 48px;
+    font-size: 40px;
   }
+
+  .insights-hero__featured-text {
+    padding: 32px 24px;
+  }
+
+  .insights-hero__featured-image {
+    height: 220px;
+  }
+}
+
+/* ─── Filter Tags in Hero ─── */
+.insights-hero__filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 48px;
+  margin-top: 40px;
+  border-bottom: 1px solid #e8ece9;
+  background: #ffffff;
+}
+
+.insights-hero__search-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a6b63;
+  margin-right: 8px;
+}
+
+.insights-hero__filter-btn {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #5a6b63;
+  background: transparent;
+  border: 1px solid #e8ece9;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.insights-hero__filter-btn:hover {
+  border-color: #0f2b1f;
+  color: #0f2b1f;
+}
+
+.insights-hero__filter-btn--active {
+  background: rgba(30, 138, 0, 0.1);
+  border-color: #1E8A00;
+  color: #1E8A00;
 }

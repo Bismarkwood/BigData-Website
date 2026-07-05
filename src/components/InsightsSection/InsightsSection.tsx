@@ -9,43 +9,56 @@ import './InsightsSection.css'
 const insights = [
   {
     tag: 'Geospatial · Real estate',
+    category: 'Insights',
     title: 'The hidden geography of Ghana\'s investment risk',
     description: 'The land Ghana\'s private sector is betting on is not always the land it thinks it is buying. How spatial blind spots cost developers and investors across Accra\'s fastest-growing corridors.',
     image: insightCard1,
   },
   {
     tag: 'Banking · Climate risk',
+    category: 'Whitepapers',
     title: 'Your loan portfolio has a geography. Most banks do not know what it is.',
     description: 'The Bank of Ghana Climate Related Financial Risk Directive is active. The spatial data that satisfies it does not exist inside any bank\'s current risk system. This is the gap in numbers.',
     image: insightCard2,
   },
   {
     tag: 'Agriculture · Data',
+    category: 'Blog',
     title: 'The yield gap: why Ghana\'s agricultural investments underperform',
     description: 'Most agricultural investment is made without a single spatial data point on the specific land. The gap between projected and actual yield is almost always an information gap.',
     image: insightCard5,
   },
   {
     tag: 'Urban growth · Logistics',
+    category: 'Insights',
     title: 'Where Accra is growing next',
     description: 'Eight years of spatial data reveals the corridors where commercial density is accelerating fastest. The businesses that get there first are reading the geography, not guessing.',
     image: insightCard4,
   },
   {
     tag: 'AI · Competitive intelligence',
+    category: 'Blog',
     title: 'The data-driven organisations quietly winning in Ghana',
     description: 'They are not doing anything complicated. They just know something their competitors do not, and the gap is widening.',
     image: insightCard3,
   },
 ]
 
-function InsightsSection() {
+interface InsightsSectionProps {
+  activeFilter?: string
+}
+
+function InsightsSection({ activeFilter = 'All' }: InsightsSectionProps) {
   const trackRef = useRef<HTMLDivElement>(null)
+
+  const filteredInsights = activeFilter === 'All'
+    ? insights
+    : insights.filter((item) => item.category === activeFilter)
 
   const scroll = (direction: 'left' | 'right') => {
     if (!trackRef.current) return
     const cardWidth = trackRef.current.querySelector('.insights__card')?.clientWidth || 280
-    const scrollAmount = cardWidth + 24 // card width + gap
+    const scrollAmount = cardWidth + 24
     trackRef.current.scrollBy({
       left: direction === 'right' ? scrollAmount : -scrollAmount,
       behavior: 'smooth',
@@ -54,30 +67,9 @@ function InsightsSection() {
 
   return (
     <section className="insights">
-      {/* Header with arrows */}
-      <div className="insights__header">
-        <h2 className="insights__heading">Insights</h2>
-        <div className="insights__nav">
-          <button
-            className="insights__nav-btn"
-            onClick={() => scroll('left')}
-            aria-label="Previous"
-          >
-            ←
-          </button>
-          <button
-            className="insights__nav-btn"
-            onClick={() => scroll('right')}
-            aria-label="Next"
-          >
-            →
-          </button>
-        </div>
-      </div>
-
       {/* Scrollable cards track */}
       <div className="insights__track" ref={trackRef}>
-        {insights.map((item, i) => (
+        {filteredInsights.map((item, i) => (
           <div className="insights__card" key={i}>
             <div className="insights__card-img-wrap">
               {item.image ? (

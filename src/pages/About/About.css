@@ -470,3 +470,124 @@
     grid-template-columns: 60px 20px 1fr;
   }
 }
+
+/* ─── Impact Showcase ─── */
+.about-impact {
+  width: 100%;
+  padding: 80px 48px 60px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.about-impact__divider {
+  width: 100%;
+  height: 1px;
+  background: #d4cfc8;
+  margin-bottom: 60px;
+}
+
+.about-impact__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.about-impact__left {
+  max-width: 500px;
+}
+
+.about-impact__heading {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: #0f2b1f;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.about-impact__right {
+  max-width: 380px;
+  padding-top: 8px;
+}
+
+.about-impact__sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Marquee */
+.about-impact__marquee {
+  width: 100vw;
+  margin-left: -48px;
+  overflow: hidden;
+}
+
+.about-impact__track {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  animation: impactScroll 30s linear infinite;
+}
+
+@keyframes impactScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.about-impact__card {
+  flex-shrink: 0;
+  width: 420px;
+  height: 460px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-impact__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+}
+
+.about-impact__placeholder--2 {
+  background: linear-gradient(135deg, #1a3a2a 0%, #0f2b1f 100%);
+}
+
+.about-impact__placeholder--3 {
+  background: linear-gradient(135deg, #2d5a3f 0%, #1a4030 100%);
+}
+
+.about-impact__placeholder--4 {
+  background: linear-gradient(135deg, #3a6b4a 0%, #2a5040 100%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-impact__top {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-impact__right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-impact {
+    padding: 60px 20px 40px;
+  }
+
+  .about-impact__marquee {
+    margin-left: -20px;
+  }
+
+  .about-impact__card {
+    width: 240px;
+    height: 280px;
+  }
+}

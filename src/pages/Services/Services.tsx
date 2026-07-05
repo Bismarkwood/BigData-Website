@@ -10,6 +10,8 @@ import heroVideo1 from '../../assets/Service Page/20d5a09a9048bcbf8ef4cc35d25a0c
 import heroVideo2 from '../../assets/Service Page/71696-540442444_tiny.mp4'
 import heroVideo3 from '../../assets/Service Page/pinflik.com__Earth.mp4'
 import earthObsVideo from '../../assets/Service Page/Earth observation/ChengYiUniverse888_pindown.io_1782997840.mp4'
+import dataAnalyticsVideo from '../../assets/Service Page/Data analytics/Data Analytics.mp4'
+import riskVideo from '../../assets/Service Page/Risk Inteliigence/RISK Image card.mp4'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
 import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
 import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
@@ -189,7 +191,7 @@ function Services() {
           </div>
         </div>
         <div className="service-block__image">
-          <img src={analyticsImg} alt="Data Analytics" />
+          <video src={dataAnalyticsVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 
@@ -282,7 +284,7 @@ function Services() {
           </div>
         </div>
         <div className="service-block__image">
-          <img src={geospatialImg} alt="Risk Intelligence" />
+          <video src={riskVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 

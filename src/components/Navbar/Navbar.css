@@ -1,3 +1,4 @@
+/* Default state */
 .navbar {
   position: fixed;
   top: 0;
@@ -17,6 +18,22 @@
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
   padding: 16px 48px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Light variant — for pages with white backgrounds */
+.navbar--light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar--light .navbar__link {
+  color: rgba(15, 43, 31, 0.7);
+}
+
+.navbar--light .navbar__link:hover {
+  color: #0f2b1f;
 }
 
 /* When dropdown is open — navbar becomes transparent */

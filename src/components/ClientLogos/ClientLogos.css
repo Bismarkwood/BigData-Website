@@ -1,0 +1,73 @@
+/* ─── Client Logos Section ─── */
+.client-logos {
+  width: 100%;
+  padding: 60px 48px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.client-logos__title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #9ca8a1;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.client-logos__track-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  border-top: 1px solid #e8ece9;
+  border-bottom: 1px solid #e8ece9;
+  padding: 32px 0;
+}
+
+.client-logos__track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  animation: clientScroll 25s linear infinite;
+}
+
+@keyframes clientScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.client-logos__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 160px;
+}
+
+.client-logos__item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .client-logos {
+    padding: 40px 20px;
+  }
+
+  .client-logos__track {
+    gap: 48px;
+  }
+
+  .client-logos__item {
+    height: 36px;
+    width: 90px;
+  }
+}

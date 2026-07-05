@@ -29,7 +29,7 @@ const industries = [
   { title: 'Insurance', desc: 'Climate risk and asset exposure analytics', image: cloudImg },
 ]
 
-function Navbar() {
+function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
@@ -42,7 +42,7 @@ function Navbar() {
   }, [])
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${dropdownOpen ? 'navbar--dropdown-open' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${dropdownOpen ? 'navbar--dropdown-open' : ''} ${light ? 'navbar--light' : ''}`}>
       <div className="navbar__inner">
         <Link to="/" className="navbar__logo">
           <div className="navbar__logo-icon">

@@ -1,7 +1,7 @@
 .insights {
   width: 100%;
-  background: #f5f7f6;
-  padding: 100px 48px 80px;
+  background: #ffffff;
+  padding: 60px 48px 80px;
 }
 
 /* ─── Header ─── */
@@ -80,7 +80,7 @@
 
 .insights__card-img-wrap {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 14px;

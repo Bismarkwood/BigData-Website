@@ -3,6 +3,7 @@ import StatsBar from '../../components/StatsBar'
 import DiscoverSection from '../../components/DiscoverSection'
 import AISection from '../../components/AISection'
 import CapabilitiesSection from '../../components/CapabilitiesSection'
+import ClientLogos from '../../components/ClientLogos'
 import CtaBanner from '../../components/CtaBanner'
 import InsightsSection from '../../components/InsightsSection'
 import JoinCta from '../../components/JoinCta'
@@ -18,6 +19,7 @@ function Homepage() {
       <DiscoverSection />
       <AISection />
       <CapabilitiesSection />
+      <ClientLogos />
       <CtaBanner />
       <InsightsSection />
       <JoinCta />
