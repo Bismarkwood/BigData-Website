@@ -227,22 +227,27 @@ function About() {
           </div>
         </div>
         <div className="about-team-faces__grid">
-          {/* Row 1 */}
-          <div className="about-team-faces__stat">
-            <span className="about-team-faces__stat-num">15+</span>
-            <span className="about-team-faces__stat-label">Team Members...</span>
+          {/* Row 1 - slides from left */}
+          <div className="about-team-faces__row about-team-faces__row--1 about-animate">
+            <div className="about-team-faces__stat">
+              <span className="about-team-faces__stat-num">15+</span>
+              <span className="about-team-faces__stat-label">Team Members...</span>
+            </div>
+            <div className="about-team-faces__face"><img src={teamFace1} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace2} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace3} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace4} alt="" /></div>
           </div>
-          <div className="about-team-faces__face"><img src={teamFace1} alt="" /></div>
-          <div className="about-team-faces__face"><img src={teamFace2} alt="" /></div>
-          <div className="about-team-faces__face"><img src={teamFace3} alt="" /></div>
-          <div className="about-team-faces__face"><img src={teamFace4} alt="" /></div>
-          {/* Row 2 */}
-          <div className="about-team-faces__face"><img src={teamFace5} alt="" /></div>
-          <div className="about-team-faces__face"><img src={teamFace6} alt="" /></div>
-          <div className="about-team-faces__face"><img src={teamFace7} alt="" /></div>
-          <div className="about-team-faces__cta-card">
-            <p className="about-team-faces__cta-text">We're all about hard work, smart solutions, & impossible deadlines. No fluff, just brilliance.</p>
-            <a href="/team" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
+          {/* Row 2 - slides from right */}
+          <div className="about-team-faces__row about-team-faces__row--2 about-animate">
+            <div className="about-team-faces__face"><img src={teamFace5} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace6} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace7} alt="" /></div>
+            <div className="about-team-faces__face"><img src={teamFace4} alt="" /></div>
+            <div className="about-team-faces__cta-card">
+              <p className="about-team-faces__cta-text">We're all about hard work, smart solutions, & impossible deadlines. No fluff, just brilliance.</p>
+              <a href="/team" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
+            </div>
           </div>
         </div>
       </section>
