@@ -3,6 +3,9 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import HeroCTA from '../HeroCTA'
 import ParticleCircle from '../ParticleCircle'
 import heroSlides from './heroSlides'
+import ecursLogo from '../../assets/Aws Partner logo/ECURS.png'
+import odooLogo from '../../assets/Aws Partner logo/odoo_ready_partners_rgb.png'
+import awsLogo from '../../assets/Aws Partner logo/Aws Partner.png'
 import './HeroScrollSection.css'
 
 function HeroScrollSection() {
@@ -103,15 +106,17 @@ function HeroScrollSection() {
           <h1 className="hero-scroll__title">
             You Decide Better With Us
           </h1>
-          <div className="hero-scroll__cta-wrap">
-            <HeroCTA />
-          </div>
-        </div>
-
-        <div className="hero-scroll__right">
           <p className="hero-scroll__desc">
             Big Data Ghana is a technology company that leverages geospatial intelligence to help you plan, develop, invest and execute with confidence.
           </p>
+          <div className="hero-scroll__cta-wrap">
+            <HeroCTA />
+          </div>
+          <div className="hero-scroll__logos">
+            <img src={ecursLogo} alt="ECURS" />
+            <img src={odooLogo} alt="Odoo Partner" />
+            <img src={awsLogo} alt="AWS Partner" />
+          </div>
         </div>
       </div>
     </div>

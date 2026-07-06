@@ -49,13 +49,11 @@ function GeoHeroSection() {
           <Suspense fallback={null}>
             <GeoGlobe />
             <OrbitControls
-              enableZoom={true}
+              enableZoom={false}
               enablePan={false}
               rotateSpeed={0.4}
               autoRotate
               autoRotateSpeed={0.3}
-              minDistance={4}
-              maxDistance={9}
             />
           </Suspense>
         </Canvas>

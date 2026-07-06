@@ -1,7 +1,7 @@
 .cloud-services {
   width: 100%;
   background: #f8f9fa;
-  padding: 120px 48px 80px;
+  padding: 100px 48px 80px;
 }
 
 /* ─── Header ─── */
@@ -10,23 +10,22 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .cloud-services__heading {
   font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-h1);
-  font-weight: 500;
+  font-weight: 600;
   color: #0f2b1f;
   line-height: 1.15;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   margin: 0;
-  max-width: 480px;
   flex-shrink: 0;
 }
 
 .cloud-services__header-right {
-  max-width: 380px;
+  max-width: 400px;
   padding-top: 8px;
 }
 
@@ -36,131 +35,54 @@
   font-weight: 400;
   color: #5a6b63;
   line-height: 1.65;
-  margin: 0 0 20px;
+  margin: 0;
 }
 
-.cloud-services__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  background: #2ea872;
-  padding: 12px 24px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+/* ─── Services Grid (Cards) ─── */
+.cloud-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.cloud-services__cta:hover {
-  background: #259960;
-  transform: scale(1.03);
-}
-
-.cloud-services__cta-icon {
-  font-size: 16px;
-}
-
-/* ─── Scrollable track ─── */
-.cloud-services__track {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 16px;
-  scrollbar-width: none;
-}
-
-.cloud-services__track::-webkit-scrollbar {
-  display: none;
-}
-
-/* ─── Cards ─── */
 .cloud-services__card {
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: 320px;
-  scroll-snap-align: start;
+  background: #ffffff;
+  border: 1px solid #e8ece9;
+  border-radius: 14px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.cloud-services__card-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  margin-bottom: 16px;
+.cloud-services__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: #1E8A00;
 }
 
-.cloud-services__card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.cloud-services__card:hover .cloud-services__card-image {
-  transform: scale(1.03);
-}
-
-.cloud-services__card-placeholder {
-  width: 100%;
-  height: 100%;
-  background: #e8ebe9;
-}
-
-.cloud-services__card-tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-
-.cloud-services__card-tag {
+.cloud-services__card-num {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #2ea872;
-  text-transform: uppercase;
-}
-
-.cloud-services__card-tag::after {
-  content: '  |';
-  color: rgba(0, 0, 0, 0.15);
-  margin-left: 6px;
-}
-
-.cloud-services__card-tag:last-child::after {
-  display: none;
+  color: #1E8A00;
 }
 
 .cloud-services__card-title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: var(--fs-subtitle);
+  font-size: 16px;
   font-weight: 600;
   color: #0f2b1f;
-  margin: 0 0 8px;
-  line-height: 1.3;
-}
-
-.cloud-services__card-desc {
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: var(--fs-body);
-  font-weight: 400;
-  color: #5a6b63;
-  line-height: 1.6;
   margin: 0;
+  line-height: 1.4;
 }
 
 /* ─── Bottom line ─── */
 .cloud-services__line {
   width: 100%;
   height: 2px;
-  background: #2ea872;
+  background: #1E8A00;
   margin-top: 48px;
 }
 
@@ -175,9 +97,8 @@
     gap: 20px;
   }
 
-  .cloud-services__card {
-    flex: 0 0 calc(50% - 12px);
-    min-width: 280px;
+  .cloud-services__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -187,8 +108,7 @@
     padding: 60px 20px 48px;
   }
 
-  .cloud-services__card {
-    flex: 0 0 85%;
-    min-width: 260px;
+  .cloud-services__grid {
+    grid-template-columns: 1fr;
   }
 }

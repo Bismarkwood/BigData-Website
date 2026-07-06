@@ -4,7 +4,7 @@ import './CapabilitiesV2.css'
 
 // Card images
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
-import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
+import awsComputingImg from '../../assets/Service Page/New folder/AWS Computing.jpg'
 import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
 import biImg from '../../assets/capabilities/Business intelligence.jpg'
 
@@ -28,7 +28,7 @@ const defaultCards: CardData[] = [
     tag: 'Cloud · AWS',
     title: 'Cloud and data platforms',
     description: 'Scale on infrastructure built for growth. We design, build and manage cloud and data platforms.',
-    image: cloudImg,
+    image: awsComputingImg,
     link: '/cloud-platforms',
   },
   {

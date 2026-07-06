@@ -67,6 +67,12 @@ function InsightsSection({ activeFilter = 'All' }: InsightsSectionProps) {
 
   return (
     <section className="insights">
+      {/* Header */}
+      <div className="insights__section-header">
+        <h2 className="insights__section-title">Insights</h2>
+        <p className="insights__section-sub">Perspectives on geospatial intelligence, data platforms, and the decisions shaping Ghana's future.</p>
+      </div>
+
       {/* Scrollable cards track */}
       <div className="insights__track" ref={trackRef}>
         {filteredInsights.map((item, i) => (

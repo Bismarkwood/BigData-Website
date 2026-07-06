@@ -4,6 +4,33 @@
   padding: 60px 48px 80px;
 }
 
+/* Section Header */
+.insights__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.insights__section-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  color: #0f2b1f;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.insights__section-sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0;
+}
+
 /* ─── Header ─── */
 .insights__header {
   display: flex;

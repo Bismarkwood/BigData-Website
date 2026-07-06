@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom'
 import bdgWave from '../../assets/intro/bdg-wave.png'
 import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import bdgText from '../../assets/intro/bdg-text.png'
-import geospatialImg from '../../assets/hero/Geospatial.jpg'
-import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
-import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
-import biImg from '../../assets/capabilities/Business intelligence.jpg'
 import './Navbar.css'
 
 const navLinks = [
@@ -22,12 +18,12 @@ const navLinks = [
 ]
 
 const industries = [
-  { title: 'Agriculture', desc: 'Data-driven agriculture intelligence', image: geospatialImg },
-  { title: 'Finance', desc: 'Transform financial services with spatial insights', image: cloudImg },
-  { title: 'Real Estate', desc: 'Location intelligence for investment decisions', image: analyticsImg },
-  { title: 'Government', desc: 'National-scale spatial platforms', image: biImg },
-  { title: 'Logistics', desc: 'Route optimisation and fleet intelligence', image: geospatialImg },
-  { title: 'Insurance', desc: 'Climate risk and asset exposure analytics', image: cloudImg },
+  { title: 'Agriculture' },
+  { title: 'Finance' },
+  { title: 'Real Estate' },
+  { title: 'Government' },
+  { title: 'Logistics' },
+  { title: 'Insurance' },
 ]
 
 function Navbar({ light = false }: { light?: boolean }) {
@@ -79,16 +75,10 @@ function Navbar({ light = false }: { light?: boolean }) {
                 </span>
                 {/* Dropdown */}
                 <div className={`navbar__dropdown ${dropdownOpen ? 'navbar__dropdown--open' : ''}`}>
-                  <div className="navbar__dropdown-grid">
+                  <div className="navbar__dropdown-list">
                     {industries.map((industry) => (
-                      <a href="#" key={industry.title} className="navbar__dropdown-card">
-                        <div className="navbar__dropdown-card-img">
-                          <img src={industry.image} alt={industry.title} />
-                        </div>
-                        <div className="navbar__dropdown-card-text">
-                          <span className="navbar__dropdown-card-title">{industry.title}</span>
-                          <span className="navbar__dropdown-card-desc">{industry.desc}</span>
-                        </div>
+                      <a href="#" key={industry.title} className="navbar__dropdown-item">
+                        {industry.title}
                       </a>
                     ))}
                   </div>

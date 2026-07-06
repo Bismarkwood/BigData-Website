@@ -256,3 +256,154 @@
     padding: 60px 20px 48px;
   }
 }
+
+/* ─── Cloud About Section ─── */
+.cloud-about {
+  width: 100%;
+  padding: 80px 48px;
+  background: #0a0a0a;
+}
+
+.cloud-about__top {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 40px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.cloud-about__tag {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.cloud-about__heading {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.cloud-about__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.cloud-about__card {
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cloud-about__card--green {
+  background: #7aff5c;
+}
+
+.cloud-about__card--green .cloud-about__card-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a0a0a;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.cloud-about__card--green .cloud-about__card-arrow {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+}
+
+.cloud-about__card-btn {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0a0a0a;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 16px;
+  transition: transform 0.2s ease;
+}
+
+.cloud-about__card-btn:hover {
+  transform: translateY(-1px);
+}
+
+.cloud-about__card--image {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  justify-content: flex-end;
+}
+
+.cloud-about__card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cloud-about__card-stat-num {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.cloud-about__card-stat-label {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cloud-about__card--dark {
+  background: linear-gradient(135deg, #1E8A00 0%, #0f5500 100%);
+}
+
+.cloud-about__card--dark .cloud-about__card-stat-num {
+  font-size: 42px;
+}
+
+.cloud-about__card--dark .cloud-about__card-arrow {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cloud-about__top {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-about__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-about {
+    padding: 48px 20px;
+  }
+
+  .cloud-about__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cloud-about__card {
+    min-height: 240px;
+  }
+}

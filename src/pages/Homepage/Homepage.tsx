@@ -1,5 +1,4 @@
 import { HeroScrollSection } from '../../components/HeroSection'
-import StatsBar from '../../components/StatsBar'
 import DiscoverSection from '../../components/DiscoverSection'
 import AISection from '../../components/AISection'
 import CapabilitiesSection from '../../components/CapabilitiesSection'
@@ -34,11 +33,10 @@ function Homepage() {
       />
       <Navbar />
       <HeroScrollSection />
-      <StatsBar />
+      <ClientLogos />
       <DiscoverSection />
       <AISection />
       <CapabilitiesSection />
-      <ClientLogos />
       <CtaBanner />
       <InsightsSection />
       <JoinCta />

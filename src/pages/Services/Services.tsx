@@ -13,6 +13,8 @@ import heroVideo3 from '../../assets/Service Page/pinflik.com__Earth.mp4'
 import earthObsVideo from '../../assets/Service Page/Earth observation/ChengYiUniverse888_pindown.io_1782997840.mp4'
 import dataAnalyticsVideo from '../../assets/Service Page/Data analytics/Data Analytics.mp4'
 import riskVideo from '../../assets/Service Page/Risk Inteliigence/RISK Image card.mp4'
+import awsComputingImg from '../../assets/Service Page/New folder/AWS Computing.jpg'
+import aiAutomationVideo from '../../assets/Service Page/AI and automation/AI and automation.mp4'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
 import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp'
 import analyticsImg from '../../assets/capabilities/Data analytics and AI.png'
@@ -137,7 +139,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/geospatial" className="service-block__cta-primary">Accelerate next level location decision</a>
             <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
@@ -146,34 +148,34 @@ function Services() {
         </div>
       </section>
 
-      {/* 02 — Data Analytics */}
+      {/* 02 — Cloud Computing */}
       <section className="service-block service-block--reversed">
         <div className="service-block__inner">
           <div className="service-block__header">
-            <span className="service-block__num">Analytics</span>
-            <h2 className="service-block__title">Data analytics</h2>
+            <span className="service-block__num">Cloud · AWS</span>
+            <h2 className="service-block__title">Cloud computing</h2>
             <p className="service-block__hero-text">
-              Unlock the growth already sitting in your data.
+              Scale faster on infrastructure built for where you are going.
             </p>
           </div>
           <div className="service-block__body">
             <div className="service-block__outcomes">
               <h3 className="service-block__section-label">What you get</h3>
               <ul className="service-block__outcome-list">
-                <li>Raw data transformed into competitive decisions</li>
-                <li>Patterns and trends visible before your competitors see them</li>
-                <li>Clear, actionable reporting for leadership</li>
+                <li>Cloud infrastructure that processes intelligence at speed</li>
+                <li>Data accessible in real time, not trapped in silos</li>
+                <li>Systems that scale without rebuilding</li>
               </ul>
             </div>
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
-            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
+            <a href="/cloud-platforms" className="service-block__cta-primary">Start your AWS migration</a>
+            <a href="/cloud-platforms" className="service-block__cta-secondary">Learn more →</a>
           </div>
         </div>
         <div className="service-block__image">
-          <video src={dataAnalyticsVideo} autoPlay muted loop playsInline className="service-block__video" />
+          <img src={awsComputingImg} alt="Cloud Computing" />
         </div>
       </section>
 
@@ -199,43 +201,43 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/contact" className="service-block__cta-primary">See what we can automate for you</a>
             <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
-          <img src={biImg} alt="AI and Automation" />
+          <video src={aiAutomationVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 
-      {/* 04 — Cloud Computing */}
+      {/* 04 — Data Analytics */}
       <section className="service-block service-block--reversed">
         <div className="service-block__inner">
           <div className="service-block__header">
-            <span className="service-block__num">Cloud · AWS</span>
-            <h2 className="service-block__title">Cloud computing</h2>
+            <span className="service-block__num">Analytics</span>
+            <h2 className="service-block__title">Data analytics</h2>
             <p className="service-block__hero-text">
-              Scale faster on infrastructure built for where you are going.
+              Unlock the growth already sitting in your data.
             </p>
           </div>
           <div className="service-block__body">
             <div className="service-block__outcomes">
               <h3 className="service-block__section-label">What you get</h3>
               <ul className="service-block__outcome-list">
-                <li>Cloud infrastructure that processes intelligence at speed</li>
-                <li>Data accessible in real time, not trapped in silos</li>
-                <li>Systems that scale without rebuilding</li>
+                <li>Raw data transformed into competitive decisions</li>
+                <li>Patterns and trends visible before your competitors see them</li>
+                <li>Clear, actionable reporting for leadership</li>
               </ul>
             </div>
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
-            <a href="/cloud-platforms" className="service-block__cta-secondary">Learn more →</a>
+            <a href="/contact" className="service-block__cta-primary">See what we can unlock for you</a>
+            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
-          <img src={cloudImg} alt="Cloud Computing" />
+          <video src={dataAnalyticsVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 
@@ -261,7 +263,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Talk to us</a>
+            <a href="/contact" className="service-block__cta-primary">Map your risk</a>
             <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
@@ -306,8 +308,6 @@ function Services() {
           link: '#',
         },
       ]} />
-
-      <CtaBanner />
 
       <JoinCta />
       <Footer />

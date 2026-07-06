@@ -1,123 +1,97 @@
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import locationImg from '../../assets/What we help/Location decisions.png'
-import riskImg from '../../assets/What we help/Risk Descision.png'
 import operationalImg from '../../assets/What we help/Operational decisions.png'
 import './DiscoverSection.css'
 
-gsap.registerPlugin(ScrollTrigger)
-
-interface HelpCard {
-  title: string
-  description: string
-  image: string
-}
-
-const helpCards: HelpCard[] = [
+const steps = [
   {
+    tag: 'LOCATION DECISIONS',
+    icon: '📍',
     title: 'Location decisions',
     description: 'Know where to build, invest, expand or operate.',
     image: locationImg,
+    num: '001',
   },
   {
+    tag: 'RISK DECISIONS',
+    icon: '⚠️',
     title: 'Risk decisions',
     description: 'Identify climate, infrastructure, portfolio and operational risks before they become costly.',
-    image: riskImg,
+    image: '',
+    num: '002',
   },
   {
+    tag: 'OPERATIONAL DECISIONS',
+    icon: '⚙️',
     title: 'Operational decisions',
     description: 'Use cloud, AI, data platforms and analytics to improve visibility, efficiency and performance.',
     image: operationalImg,
+    num: '003',
   },
   {
+    tag: 'INVESTMENT DECISIONS',
+    icon: '📈',
     title: 'Investment decisions',
     description: 'Commit capital with greater confidence and less uncertainty.',
     image: '',
+    num: '004',
   },
 ]
 
 function DiscoverSection() {
-  const cardsWrapRef = useRef<HTMLDivElement>(null)
-  const triggerRef = useRef<ScrollTrigger | null>(null)
-
-  const prefersReducedMotion =
-    typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-  useEffect(() => {
-    if (prefersReducedMotion || !cardsWrapRef.current) return
-
-    const cards = gsap.utils.toArray<HTMLElement>('.discover__card')
-    if (cards.length < 2) return
-
-    // Stack cards: first visible, rest below
-    cards.forEach((card, i) => {
-      gsap.set(card, { zIndex: i + 1, yPercent: i === 0 ? 0 : 100 })
-    })
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: cardsWrapRef.current,
-        start: 'top top',
-        end: `+=${(cards.length - 1) * 200}vh`,
-        pin: true,
-        pinSpacing: true,
-        scrub: 1,
-        anticipatePin: 1,
-      },
-    })
-
-    // Simple: each card slides up to cover the previous — no other effects
-    cards.slice(1).forEach((card) => {
-      tl.to(card, { yPercent: 0, duration: 1, ease: 'none' })
-    })
-
-    triggerRef.current = tl.scrollTrigger as ScrollTrigger
-
-    return () => {
-      if (triggerRef.current) triggerRef.current.kill()
-      tl.kill()
-    }
-  }, [prefersReducedMotion])
-
   return (
-    <>
-      {/* Header — scrolls normally */}
-      <section className="discover-header">
-        <h2 className="discover-header__heading">
-          What we help<br />you do
-        </h2>
-        <p className="discover-header__sub">
-          Whether you are choosing where to build, assessing risk, improving operations or planning growth, BDG turns complex data into insight you can act on.
+    <section className="discover">
+      {/* Header */}
+      <div className="discover__header">
+        <h2 className="discover__heading">What we help<br />you do</h2>
+        <p className="discover__sub">
+          Whether you are choosing where to build, assessing risk, improving operations or planning growth — BDG turns complex data into insight you can act on.
         </p>
-      </section>
+      </div>
 
-      {/* Cards — pins at top, simple overlay */}
-      <div className="discover-cards" ref={cardsWrapRef}>
-        {helpCards.map((card, i) => (
+      {/* Visual row - images with dotted connection */}
+      <div className="discover__visual">
+        <div className="discover__visual-card">
+          <span className="discover__visual-tag">{steps[0].tag}</span>
+          <img src={steps[0].image} alt="" className="discover__visual-img" />
+          <span className="discover__visual-icon">{steps[0].icon}</span>
+        </div>
+
+        <div className="discover__visual-dots" />
+
+        <div className="discover__visual-center">
+          <span className="discover__visual-icon discover__visual-icon--center">{steps[1].icon}</span>
+          <span className="discover__visual-center-tag">{steps[1].tag}</span>
+        </div>
+
+        <div className="discover__visual-dots" />
+
+        <div className="discover__visual-center">
+          <span className="discover__visual-icon discover__visual-icon--center">{steps[2].icon}</span>
+          <span className="discover__visual-center-tag">{steps[2].tag}</span>
+        </div>
+
+        <div className="discover__visual-dots" />
+
+        <div className="discover__visual-card">
+          <span className="discover__visual-tag">{steps[3].tag}</span>
+          <img src={steps[2].image} alt="" className="discover__visual-img" />
+          <span className="discover__visual-icon">{steps[3].icon}</span>
+        </div>
+      </div>
+
+      {/* Bottom cards */}
+      <div className="discover__cards">
+        {steps.map((step, i) => (
           <div className="discover__card" key={i}>
-            <div className="discover__card-inner">
-              <div className="discover__card-image-wrap">
-                {card.image ? (
-                  <img src={card.image} alt={card.title} className="discover__card-image" />
-                ) : (
-                  <div className="discover__card-image-placeholder" />
-                )}
-                <div className="discover__card-image-overlay" />
-                <h3 className="discover__card-title">{card.title}</h3>
-              </div>
-              <div className="discover__card-content">
-                <p className="discover__card-desc">{card.description}</p>
-                <span className="discover__card-number">
-                  {String(i + 1).padStart(2, '0')} / {String(helpCards.length).padStart(2, '0')}
-                </span>
-              </div>
+            <div className="discover__card-top">
+              <h3 className="discover__card-title">{step.title}</h3>
+              <span className="discover__card-num">{step.num}</span>
             </div>
+            <p className="discover__card-desc">{step.description}</p>
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }
 

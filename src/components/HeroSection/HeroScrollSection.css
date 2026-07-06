@@ -266,8 +266,32 @@ video.hero-scroll__circle-img {
   margin-top: 28px;
 }
 
+/* Partner logos in hero */
+.hero-scroll__logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.hero-scroll__logos img {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .hero-scroll__cta-wrap {
     margin-top: 20px;
+  }
+
+  .hero-scroll__logos {
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .hero-scroll__logos img {
+    height: 36px;
   }
 }

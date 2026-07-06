@@ -63,7 +63,7 @@ function Atmosphere() {
 
   return (
     <mesh scale={[1.12, 1.12, 1.12]}>
-      <sphereGeometry args={[2, 64, 64]} />
+      <sphereGeometry args={[2, 48, 48]} />
       <shaderMaterial
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
@@ -78,10 +78,11 @@ function Atmosphere() {
 // Main Earth globe with texture
 function EarthGlobe() {
   const texture = useTexture('https://unpkg.com/three-globe@2.31.1/example/img/earth-blue-marble.jpg')
+  texture.colorSpace = THREE.SRGBColorSpace
 
   return (
     <mesh>
-      <sphereGeometry args={[2, 64, 64]} />
+      <sphereGeometry args={[2, 48, 48]} />
       <meshPhongMaterial
         map={texture}
         bumpScale={0.02}
@@ -261,8 +262,8 @@ function ParticleField() {
   const pointsRef = useRef<THREE.Points>(null)
 
   const particles = useMemo(() => {
-    const positions = new Float32Array(400 * 3)
-    for (let i = 0; i < 400; i++) {
+    const positions = new Float32Array(200 * 3)
+    for (let i = 0; i < 200; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 14
       positions[i * 3 + 1] = (Math.random() - 0.5) * 14
       positions[i * 3 + 2] = (Math.random() - 0.5) * 14
@@ -279,7 +280,7 @@ function ParticleField() {
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={400} array={particles} itemSize={3} />
+        <bufferAttribute attach="attributes-position" count={200} array={particles} itemSize={3} />
       </bufferGeometry>
       <pointsMaterial color="#1a8cff" size={0.012} transparent opacity={0.25} sizeAttenuation />
     </points>
@@ -291,7 +292,7 @@ function RainDroplets() {
   const rainRef = useRef<THREE.Points>(null)
 
   const { positions, velocities } = useMemo(() => {
-    const count = 300
+    const count = 150
     const pos = new Float32Array(count * 3)
     const vel = new Float32Array(count)
     for (let i = 0; i < count; i++) {
