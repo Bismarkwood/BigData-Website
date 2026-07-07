@@ -51,9 +51,9 @@ const leadership = [
     image: loganImg,
   },
   {
-    name: 'Bismark Gyebi Duah',
-    role: 'PRODUCT DESIGNER',
-    image: bismarkImg,
+    name: 'Dzehu Mighty',
+    role: 'ASSOCIATE SOFTWARE DEVELOPER',
+    image: dzehuImg,
   },
   {
     name: 'Yaa Oparebea Acquah',
@@ -81,9 +81,9 @@ const leadership = [
     image: kwakuImg,
   },
   {
-    name: 'Dzehu Mighty',
-    role: 'ASSOCIATE SOFTWARE DEVELOPER',
-    image: dzehuImg,
+    name: 'Bismark Gyebi Duah',
+    role: 'PRODUCT DESIGNER',
+    image: bismarkImg,
   },
   {
     name: 'Nancy Wagun',
