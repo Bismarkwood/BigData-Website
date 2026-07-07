@@ -1,6 +1,6 @@
 .cloud-services {
   width: 100%;
-  background: #f8f9fa;
+  background: #ffffff;
   padding: 100px 48px 80px;
 }
 
@@ -38,44 +38,88 @@
   margin: 0;
 }
 
-/* ─── Services Grid (Cards) ─── */
+/* ─── Grid: 4 columns ─── */
 .cloud-services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 24px;
 }
 
+/* ─── Scroll animation ─── */
+@keyframes cloudCardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Card (Insight style) ─── */
 .cloud-services__card {
-  background: #ffffff;
-  border: 1px solid #e8ece9;
-  border-radius: 14px;
-  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cloud-services__card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  border-color: #1E8A00;
+.cloud-services__card.is-visible {
+  animation: cloudCardFadeUp 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.cloud-services__card-num {
+/* Image wrap — same aspect ratio as insight cards */
+.cloud-services__card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.cloud-services__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cloud-services__card:hover .cloud-services__card-img {
+  transform: scale(1.04);
+}
+
+/* Tag */
+.cloud-services__card-tag {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
-  color: #1E8A00;
+  letter-spacing: 0.05em;
+  color: #2ea872;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
 }
 
+/* Title */
 .cloud-services__card-title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 16px;
+  font-size: var(--fs-body);
   font-weight: 600;
   color: #0f2b1f;
-  margin: 0;
+  margin: 0 0 6px;
   line-height: 1.4;
+}
+
+/* Description */
+.cloud-services__card-desc {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-small);
+  font-weight: 400;
+  color: #5a6b63;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ─── Bottom line ─── */

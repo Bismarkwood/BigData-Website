@@ -42,7 +42,9 @@ function App() {
               <Route path="/geospatial" element={<Geospatial />} />
               <Route path="/cloud-platforms" element={<CloudPlatforms />} />
               <Route path="/proof" element={<Proof />} />
+              <Route path="/project" element={<Proof />} />
               <Route path="/proof/:slug" element={<ProjectDetail />} />
+              <Route path="/project/:slug" element={<ProjectDetail />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/about" element={<About />} />
               <Route path="/team" element={<Team />} />

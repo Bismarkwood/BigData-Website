@@ -5,7 +5,14 @@ import ParticleCircle from '../ParticleCircle'
 import heroSlides from './heroSlides'
 import ecursLogo from '../../assets/Aws Partner logo/ECURS.png'
 import odooLogo from '../../assets/Aws Partner logo/odoo_ready_partners_rgb.png'
-import awsLogo from '../../assets/Aws Partner logo/Aws Partner.png'
+import awsLogo from '../../assets/Aws Partner logo/AWS-Partner-transparent.webp'
+import usaidLogo from '../../assets/Client Logos/USAID Logo.png'
+import parliamentLogo from '../../assets/Client Logos/Parliament of ghana.png'
+import gizLogo from '../../assets/Client Logos/GIZ.png'
+import deaLogo from '../../assets/Client Logos/Digital Earth Africa.png'
+import acadamicCityLogo from '../../assets/Aws Partner logo/Acadamic City.png'
+import apiTechLogo from '../../assets/Aws Partner logo/API technologies.png'
+import agbedusLogo from '../../assets/Aws Partner logo/Agbedus Consult.png'
 import './HeroScrollSection.css'
 
 function HeroScrollSection() {
@@ -112,11 +119,20 @@ function HeroScrollSection() {
           <div className="hero-scroll__cta-wrap">
             <HeroCTA />
           </div>
-          <div className="hero-scroll__logos">
-            <img src={ecursLogo} alt="ECURS" />
-            <img src={odooLogo} alt="Odoo Partner" />
-            <img src={awsLogo} alt="AWS Partner" />
-          </div>
+        </div>
+      </div>
+
+      {/* Floating Bar with Black Glass Transparent BG */}
+      <div className="hero-scroll__floating-bar">
+        <span className="hero-scroll__floating-title">Trusted by</span>
+        <div className="hero-scroll__floating-divider" />
+        <div className="hero-scroll__floating-logos">
+          <img src={awsLogo} alt="AWS" />
+          <img src={odooLogo} alt="Odoo" />
+          <img src={ecursLogo} alt="ECURS" />
+          <img src={acadamicCityLogo} alt="Academic City" />
+          <img src={apiTechLogo} alt="API Technologies" />
+          <img src={agbedusLogo} alt="Agbedus Consult" />
         </div>
       </div>
     </div>

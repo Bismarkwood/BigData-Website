@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/ProofStatsBar'
 import ProofProjects from '../../components/ProofProjects'
+import ClientLogos from '../../components/ClientLogos'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
 import HeroCTA from '../../components/HeroCTA'
@@ -22,6 +23,7 @@ function Proof() {
       />
       <Navbar />
       <section className="proof-hero">
+        {/* Scrolling image cards - infinite loop */}
         <div className="proof-hero__grid">
           <div className="proof-hero__track">
             <div className="proof-hero__card">
@@ -80,6 +82,7 @@ function Proof() {
       </section>
       <StatsBar />
       <ProofProjects />
+      <ClientLogos />
       <JoinCta />
       <Footer />
     </main>

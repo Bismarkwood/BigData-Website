@@ -2,88 +2,87 @@
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 48px 48px;
+  padding: 32px 48px;
 }
 
 .stats-bar__inner {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 32px;
 }
 
-.stats-bar__item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.stats-bar__number {
+.stats-bar__title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: var(--fs-h1);
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: #0f2b1f;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.stats-bar__label {
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: var(--fs-body);
-  font-weight: 500;
-  color: #5a6b63;
-  line-height: 1.3;
-  max-width: 160px;
+  white-space: nowrap;
 }
 
 .stats-bar__divider {
   width: 1px;
-  height: 40px;
+  height: 36px;
   background: rgba(0, 0, 0, 0.1);
 }
 
-.stats-bar__aws-logo {
-  height: 64px;
+.stats-bar__logos {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.stats-bar__logos img {
+  height: 40px;
   width: auto;
   object-fit: contain;
+}
+
+.stats-bar__logos img[alt="AWS"] {
+  height: 56px;
+}
+
+.stats-bar__logos img[alt="Agbedus Consult"] {
+  filter: brightness(0) invert(1);
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
   .stats-bar {
-    padding: 40px 32px;
+    padding: 28px 32px;
   }
 
-  .stats-bar__inner {
-    gap: 40px;
+  .stats-bar__logos {
+    gap: 24px;
+  }
+
+  .stats-bar__logos img {
+    height: 32px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .stats-bar {
-    padding: 36px 20px;
+    padding: 20px 20px;
   }
 
   .stats-bar__inner {
-    flex-direction: column;
-    gap: 28px;
+    gap: 16px;
   }
 
-  .stats-bar__item {
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
+  .stats-bar__title {
+    font-size: 12px;
   }
 
-  .stats-bar__label {
-    max-width: 220px;
+  .stats-bar__logos {
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
-  .stats-bar__divider {
-    width: 60px;
-    height: 1px;
+  .stats-bar__logos img {
+    height: 24px;
   }
 }

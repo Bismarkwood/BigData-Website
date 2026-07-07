@@ -8,13 +8,25 @@
 
 .client-logos__title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #9ca8a1;
   text-align: center;
   margin: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.client-logos__title::before,
+.client-logos__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e8ece9;
 }
 
 .client-logos__track-wrapper {
@@ -59,15 +71,17 @@
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   .client-logos {
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   .client-logos__track {
-    gap: 48px;
+    gap: 16px;
   }
 
   .client-logos__item {
-    height: 36px;
-    width: 90px;
+    height: 56px;
+    width: 120px;
+    padding: 8px 16px;
+    border-radius: 6px;
   }
 }

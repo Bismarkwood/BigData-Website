@@ -10,7 +10,12 @@ import card5Img from '../../assets/Proof/card-5.jpg'
 import bigconnectImg from '../../assets/Proof/Bigconnect AI image card/BigConnectAI-1.png'
 import mlnrImg from '../../assets/Proof/Forest Trace AI/MLNR Spatial Platform.png'
 import './ProjectDetail.css'
-import '../../components/ProofProjects/ProofProjects.css'
+import '../../components/ProofProjects/ProofProjects.css';
+import SolutionsSlider from '../../components/SolutionsSlider';
+import geospatialImg from '../../assets/hero/Geospatial.jpg';
+import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp';
+import analyticsImg from '../../assets/capabilities/Data analytics and AI.png';
+import biImg from '../../assets/capabilities/Business intelligence.jpg';
 
 const projectsData: Record<string, {
   name: string
@@ -219,6 +224,15 @@ function ProjectDetail() {
             </div>
             <div className="proof-projects__card-info">
               <span className="proof-projects__card-tag">Climate Risk Assessment Tool</span>
+            </div>
+          </Link>
+          <Link to="/proof/real-time-logistics-optimisation" className="proof-projects__card">
+            <div className="proof-projects__card-img">
+              <img src={bigconnectImg} alt="BigConnect AI" className="proof-projects__card-image" />
+              <div className="proof-projects__card-overlay" />
+            </div>
+            <div className="proof-projects__card-info">
+              <span className="proof-projects__card-tag">BigConnect AI — Virtual Receptionist</span>
             </div>
           </Link>
         </div>

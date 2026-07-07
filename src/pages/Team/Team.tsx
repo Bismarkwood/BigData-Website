@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
+import careerHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
 import gertrudeImg from '../../assets/Teams/Gertrude Chichi.jpg'
 import henryImg from '../../assets/Teams/Mr. Henry Baffoe.jpg'
 import priscilliaImg from '../../assets/Teams/Priscillia Fianu.jpg'
@@ -103,6 +104,8 @@ function Team() {
 
       {/* Hero */}
       <section className="team-hero">
+        <img src={careerHeroBg} alt="" className="team-hero__bg" />
+        <div className="team-hero__overlay" />
         <div className="team-hero__content">
           <h1 className="team-hero__title">Meet Our Team</h1>
           <p className="team-hero__sub">

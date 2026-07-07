@@ -57,6 +57,8 @@
   inset: -15%;
   width: 130%;
   height: 130%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   filter: brightness(0) invert(1);
   animation: footerWaveSpin 12s linear infinite;
@@ -68,6 +70,8 @@
   top: 50%;
   width: 34%;
   height: 34%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   filter: brightness(0) invert(1);
   transform: translate(-50%, -50%);
@@ -240,9 +244,18 @@
     padding: 48px 20px 24px;
   }
 
+  .footer__brand-icon {
+    width: 80px;
+    height: 80px;
+  }
+
   .footer__brand-name {
     font-size: 48px;
     letter-spacing: -1px;
+  }
+
+  .footer__brand-tagline {
+    margin-left: 0;
   }
 
   .footer__bottom-links {
@@ -251,3 +264,4 @@
     justify-content: center;
   }
 }
+

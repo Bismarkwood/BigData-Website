@@ -11,9 +11,10 @@ import gizLogo from '../../assets/Client Logos/GIZ.png'
 import deaLogo from '../../assets/Client Logos/Digital Earth Africa.png'
 import nitaLogo from '../../assets/Client Logos/NITA logo.png'
 import ugLogo from '../../assets/Client Logos/UG Logo.jpg'
+import acadamicCityLogo from '../../assets/Aws Partner logo/Acadamic City.png'
 import './ClientLogos.css'
 
-const logos = [afcLogo, ecLogo, indomieLogo, ntlLogo, ntmelLogo, parliamentLogo, usaidLogo, wcfLogo, ecomLogo, gizLogo, deaLogo, nitaLogo, ugLogo]
+const logos = [afcLogo, ecLogo, indomieLogo, ntlLogo, ntmelLogo, parliamentLogo, usaidLogo, wcfLogo, ecomLogo, gizLogo, deaLogo, nitaLogo, ugLogo, acadamicCityLogo]
 
 function ClientLogos() {
   return (

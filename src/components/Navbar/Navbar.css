@@ -64,6 +64,8 @@
   inset: -15%;
   width: 130%;
   height: 130%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   animation: navWaveSpin 10s linear infinite;
 }
@@ -74,6 +76,8 @@
   top: 50%;
   width: 34%;
   height: 34%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
@@ -85,10 +89,10 @@
   transition: filter 0.35s ease;
 }
 
-/* On hero (not scrolled) make logo white */
-.navbar:not(.navbar--scrolled) .navbar__logo-wave,
-.navbar:not(.navbar--scrolled) .navbar__logo-center,
-.navbar:not(.navbar--scrolled) .navbar__logo-text {
+/* On hero (not scrolled) make logo white, but only when mobile menu is closed */
+.navbar:not(.navbar--scrolled):not(.navbar--mobile-open) .navbar__logo-wave,
+.navbar:not(.navbar--scrolled):not(.navbar--mobile-open) .navbar__logo-center,
+.navbar:not(.navbar--scrolled):not(.navbar--mobile-open) .navbar__logo-text {
   filter: brightness(0) invert(1);
 }
 
@@ -495,17 +499,18 @@
 /* ─── Mobile Menu Overlay ─── */
 .navbar__mobile-menu {
   position: fixed;
-  top: 70px;
+  top: 68px;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(16px);
+  background: #ffffff;
+  backdrop-filter: none;
   display: flex;
   flex-direction: column;
-  padding: 40px 24px;
-  gap: 8px;
+  padding: 24px 24px;
+  gap: 4px;
   animation: mobileMenuFade 0.3s ease;
+  z-index: 999;
 }
 
 @keyframes mobileMenuFade {
@@ -515,11 +520,11 @@
 
 .navbar__mobile-link {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   color: #0f2b1f;
   text-decoration: none;
-  padding: 16px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #e8ece9;
   transition: color 0.2s ease;
 }
@@ -529,8 +534,11 @@
 }
 
 .navbar--mobile-open {
-  background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(16px) !important;
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  padding: 14px 20px !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #e8ece9 !important;
 }
 
 .navbar--mobile-open .navbar__hamburger-line {

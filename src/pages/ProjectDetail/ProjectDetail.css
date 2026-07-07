@@ -99,7 +99,7 @@ im.project-detail {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-detail__section.project-detail--visible,
@@ -264,7 +264,7 @@ im.project-detail {
   text-decoration: none;
   display: block;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-detail__related-card:hover {
@@ -285,7 +285,7 @@ im.project-detail {
   object-fit: cover;
   display: block;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-              filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-detail__related-card:hover .project-detail__related-card-img img {

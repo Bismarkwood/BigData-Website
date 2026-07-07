@@ -48,37 +48,6 @@ function DiscoverSection() {
         </p>
       </div>
 
-      {/* Visual row - images with dotted connection */}
-      <div className="discover__visual">
-        <div className="discover__visual-card">
-          <span className="discover__visual-tag">{steps[0].tag}</span>
-          <img src={steps[0].image} alt="" className="discover__visual-img" />
-          <span className="discover__visual-icon">{steps[0].icon}</span>
-        </div>
-
-        <div className="discover__visual-dots" />
-
-        <div className="discover__visual-center">
-          <span className="discover__visual-icon discover__visual-icon--center">{steps[1].icon}</span>
-          <span className="discover__visual-center-tag">{steps[1].tag}</span>
-        </div>
-
-        <div className="discover__visual-dots" />
-
-        <div className="discover__visual-center">
-          <span className="discover__visual-icon discover__visual-icon--center">{steps[2].icon}</span>
-          <span className="discover__visual-center-tag">{steps[2].tag}</span>
-        </div>
-
-        <div className="discover__visual-dots" />
-
-        <div className="discover__visual-card">
-          <span className="discover__visual-tag">{steps[3].tag}</span>
-          <img src={steps[2].image} alt="" className="discover__visual-img" />
-          <span className="discover__visual-icon">{steps[3].icon}</span>
-        </div>
-      </div>
-
       {/* Bottom cards */}
       <div className="discover__cards">
         {steps.map((step, i) => (

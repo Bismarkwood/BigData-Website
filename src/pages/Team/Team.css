@@ -1,29 +1,63 @@
 /* ─── Team Hero ─── */
 .team-hero {
   width: 100%;
-  padding: 180px 48px 80px;
-  background: #ffffff;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.team-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: teamHeroPan 20s ease-in-out infinite alternate;
+}
+
+@keyframes teamHeroPan {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.1) translateX(1%); }
+}
+
+.team-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
 }
 
 .team-hero__content {
-  max-width: 750px;
+  position: relative;
+  z-index: 2;
+  padding: 0 48px 80px;
+  max-width: 700px;
 }
 
 .team-hero__title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(48px, 8vw, 100px);
-  font-weight: 600;
-  color: #0f2b1f;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 700;
+  color: #ffffff;
   letter-spacing: -2px;
-  line-height: 1;
-  margin: 0 0 24px;
+  line-height: 1.05;
+  margin: 0 0 16px;
 }
 
 .team-hero__sub {
   font-family: 'Manrope', system-ui, sans-serif;
   font-size: var(--fs-subtitle, 18px);
   font-weight: 400;
-  color: #5a6b63;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   margin: 0;
 }
@@ -31,7 +65,7 @@
 /* ─── Team Grid ─── */
 .team-grid-section {
   width: 100%;
-  padding: 0 48px 100px;
+  padding: 60px 48px 100px;
   background: #ffffff;
 }
 
@@ -45,7 +79,7 @@
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
@@ -218,11 +252,15 @@
 
 @media (max-width: 768px) {
   .team-hero {
-    padding: 140px 20px 60px;
+    min-height: 400px;
+  }
+
+  .team-hero__content {
+    padding: 0 20px 60px;
   }
 
   .team-hero__title {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .team-grid-section {

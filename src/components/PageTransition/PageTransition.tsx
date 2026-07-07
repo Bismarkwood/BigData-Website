@@ -24,13 +24,13 @@ function PageTransition() {
     setPhase('entering')
 
     // Phase 2: Logo gently appears
-    const activeTimer = setTimeout(() => setPhase('active'), 1200)
+    const activeTimer = setTimeout(() => setPhase('active'), 600)
 
     // Phase 3: Panels scroll down to exit
-    const exitTimer = setTimeout(() => setPhase('exiting'), 2800)
+    const exitTimer = setTimeout(() => setPhase('exiting'), 1400)
 
     // Phase 4: Done
-    const doneTimer = setTimeout(() => setPhase('idle'), 4000)
+    const doneTimer = setTimeout(() => setPhase('idle'), 2000)
 
     return () => {
       clearTimeout(activeTimer)

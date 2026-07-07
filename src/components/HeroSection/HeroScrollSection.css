@@ -125,7 +125,7 @@ video.hero-scroll__circle-img {
 /* ─── Content ─── */
 .hero-scroll__content {
   position: absolute;
-  bottom: 80px;
+  bottom: 220px;
   left: 48px;
   right: 48px;
   z-index: 20;
@@ -136,7 +136,7 @@ video.hero-scroll__circle-img {
 }
 
 .hero-scroll__left {
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .hero-scroll__label {
@@ -165,6 +165,7 @@ video.hero-scroll__circle-img {
   line-height: 1.05;
   letter-spacing: -1.5px;
   margin: 0;
+  white-space: nowrap;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -183,7 +184,8 @@ video.hero-scroll__circle-img {
   font-size: var(--fs-subtitle);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
-  margin: 0;
+  margin: 12px 0 0;
+  max-width: 680px;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -266,32 +268,110 @@ video.hero-scroll__circle-img {
   margin-top: 28px;
 }
 
-/* Partner logos in hero */
-.hero-scroll__logos {
+/* Floating Bar with Black Glass transparent bg */
+.hero-scroll__floating-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 25;
   display: flex;
   align-items: center;
-  gap: 24px;
-  margin-top: 32px;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 48px;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
 }
 
-.hero-scroll__logos img {
-  height: 64px;
+.hero-scroll__floating-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.hero-scroll__floating-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-scroll__floating-logos {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-scroll__floating-logos img {
+  height: 44px;
   width: auto;
   object-fit: contain;
-  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.hero-scroll__floating-logos img:hover {
+  transform: scale(1.05);
+}
+
+.hero-scroll__floating-logos img[alt="API Technologies"] {
+  filter: brightness(0) invert(1);
+}
+
+.hero-scroll__floating-logos img[alt="Agbedus Consult"] {
+  filter: brightness(0) invert(1);
+}
+
+.hero-scroll__floating-logos img[alt="AWS"],
+.hero-scroll__floating-logos img[alt="Odoo"] {
+  height: 60px;
+}
+
+.hero-scroll__floating-text-logo {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Responsive updates */
+@media (max-width: 1024px) {
+  .hero-scroll__floating-bar {
+    padding: 20px 32px;
+    gap: 24px;
+  }
+  .hero-scroll__floating-logos {
+    gap: 24px;
+  }
+  .hero-scroll__floating-logos img {
+    height: 30px;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-scroll__cta-wrap {
-    margin-top: 20px;
+  .hero-scroll__floating-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
   }
-
-  .hero-scroll__logos {
-    gap: 16px;
-    margin-top: 24px;
+  .hero-scroll__floating-divider {
+    width: 60px;
+    height: 1px;
   }
-
-  .hero-scroll__logos img {
-    height: 36px;
+  .hero-scroll__floating-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 20px;
+  }
+  .hero-scroll__floating-logos img {
+    height: 24px;
   }
 }
