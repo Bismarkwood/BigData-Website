@@ -246,12 +246,17 @@ video.hero-scroll__circle-img {
   }
 
   .hero-scroll__content {
-    bottom: 40px;
+    bottom: 160px;
     left: 20px;
     right: 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+
+  .hero-scroll__title {
+    white-space: normal;
+    font-size: clamp(32px, 9vw, 48px);
   }
 
   .hero-scroll__right {
@@ -358,20 +363,32 @@ video.hero-scroll__circle-img {
 
 @media (max-width: 768px) {
   .hero-scroll__floating-bar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px;
+    flex-direction: row;
+    gap: 0;
+    padding: 16px 0;
+    overflow: hidden;
+  }
+  .hero-scroll__floating-title {
+    display: none;
   }
   .hero-scroll__floating-divider {
-    width: 60px;
-    height: 1px;
+    display: none;
   }
   .hero-scroll__floating-logos {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px 20px;
+    flex-wrap: nowrap;
+    gap: 40px;
+    animation: floatingLogoScroll 15s linear infinite;
+    width: max-content;
   }
   .hero-scroll__floating-logos img {
-    height: 24px;
+    height: 28px;
   }
+  .hero-scroll__floating-text-logo {
+    font-size: 13px;
+  }
+}
+
+@keyframes floatingLogoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
