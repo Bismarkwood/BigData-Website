@@ -133,13 +133,6 @@ function HeroScrollSection() {
           <img src={acadamicCityLogo} alt="Academic City" />
           <img src={apiTechLogo} alt="API Technologies" />
           <img src={agbedusLogo} alt="Agbedus Consult" />
-          {/* Duplicate for seamless mobile loop */}
-          <img src={awsLogo} alt="AWS" />
-          <img src={odooLogo} alt="Odoo" />
-          <img src={ecursLogo} alt="ECURS" />
-          <img src={acadamicCityLogo} alt="Academic City" />
-          <img src={apiTechLogo} alt="API Technologies" />
-          <img src={agbedusLogo} alt="Agbedus Consult" />
         </div>
       </div>
     </div>
