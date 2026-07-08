@@ -77,7 +77,7 @@ function CapabilitiesV2({ hideHeader = false, customCards }: { hideHeader?: bool
             How we help you decide better
           </h2>
           <p className="capv2__sub">
-            Let's turn your most important decisions into your most confident ones. Concise on the homepage, the full operating narrative lives one click down.
+            Let's turn your most important decisions into your most confident ones.
           </p>
         </div>
       )}

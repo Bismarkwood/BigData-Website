@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import HeroCTA from '../HeroCTA'
 import bdgWave from '../../assets/intro/bdg-wave.png'
 import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import bdgText from '../../assets/intro/bdg-text.png'
@@ -108,12 +109,7 @@ function Navbar({ light = false }: { light?: boolean }) {
             <span className="navbar__hamburger-line" />
             <span className="navbar__hamburger-line" />
           </button>
-          <a href="/contact" className="navbar__cta" aria-label="Contact us">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M2 7l10 7 10-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+          <HeroCTA text="Contact Us" href="/contact" />
         </div>
       </div>
 

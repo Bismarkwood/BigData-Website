@@ -138,47 +138,105 @@
 }
 
 .discover__card {
-  background: #f9f9f9;
-  border-radius: 14px;
-  padding: 36px 28px;
-  border: 1px solid #e8ece9;
-  min-height: 200px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 420px;
+  cursor: pointer;
 }
 
-.discover__card-top {
+.discover__card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.discover__card:hover .discover__card-bg {
+  transform: scale(1.05);
+}
+
+.discover__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.discover__card:hover .discover__card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+.discover__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+  z-index: 2;
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.discover__card-icon {
-  font-size: 18px;
+  flex-direction: column;
+  gap: 0;
 }
 
 .discover__card-title {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  color: #0f2b1f;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
   margin: 0;
-  flex: 1;
+  transition: transform 0.4s ease;
 }
 
-.discover__card-num {
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: #9ca8a1;
+.discover__card:hover .discover__card-title {
+  transform: translateY(-8px);
 }
 
 .discover__card-desc {
   font-family: 'Manrope', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #5a6b63;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
   margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+
+.discover__card:hover .discover__card-desc {
+  max-height: 80px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.discover__card-btn-primary {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1E8A00;
+  text-decoration: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease 0.1s, opacity 0.4s ease 0.1s, margin 0.4s ease 0.1s;
+}
+
+.discover__card:hover .discover__card-btn-primary {
+  max-height: 50px;
+  opacity: 1;
+  margin-top: 14px;
 }
 
 /* ─── Responsive ─── */
@@ -205,10 +263,5 @@
 
   .discover__cards {
     grid-template-columns: 1fr;
-  }
-
-  .discover__visual-card {
-    width: 140px;
-    height: 120px;
   }
 }

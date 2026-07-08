@@ -13,6 +13,7 @@ const insights = [
     title: 'The hidden geography of Ghana\'s investment risk',
     description: 'The land Ghana\'s private sector is betting on is not always the land it thinks it is buying. How spatial blind spots cost developers and investors across Accra\'s fastest-growing corridors.',
     image: insightCard1,
+    slug: 'hidden-geography-ghana-investment-risk',
   },
   {
     tag: 'Banking · Climate risk',
@@ -20,6 +21,7 @@ const insights = [
     title: 'Your loan portfolio has a geography. Most banks do not know what it is.',
     description: 'The Bank of Ghana Climate Related Financial Risk Directive is active. The spatial data that satisfies it does not exist inside any bank\'s current risk system. This is the gap in numbers.',
     image: insightCard2,
+    slug: 'loan-portfolio-geography',
   },
   {
     tag: 'Agriculture · Data',
@@ -27,6 +29,7 @@ const insights = [
     title: 'The yield gap: why Ghana\'s agricultural investments underperform',
     description: 'Most agricultural investment is made without a single spatial data point on the specific land. The gap between projected and actual yield is almost always an information gap.',
     image: insightCard5,
+    slug: 'yield-gap-agricultural-investments',
   },
   {
     tag: 'Urban growth · Logistics',
@@ -34,6 +37,7 @@ const insights = [
     title: 'Where Accra is growing next',
     description: 'Eight years of spatial data reveals the corridors where commercial density is accelerating fastest. The businesses that get there first are reading the geography, not guessing.',
     image: insightCard4,
+    slug: 'where-accra-growing-next',
   },
   {
     tag: 'AI · Competitive intelligence',
@@ -41,6 +45,7 @@ const insights = [
     title: 'The data-driven organisations quietly winning in Ghana',
     description: 'They are not doing anything complicated. They just know something their competitors do not, and the gap is widening.',
     image: insightCard3,
+    slug: 'data-driven-organisations-winning-ghana',
   },
 ]
 
@@ -87,7 +92,7 @@ function InsightsSection({ activeFilter = 'All' }: InsightsSectionProps) {
             {item.tag && <span className="insights__card-tag">{item.tag}</span>}
             {item.title && <h3 className="insights__card-title">{item.title}</h3>}
             {item.description && <p className="insights__card-desc">{item.description}</p>}
-            <a href="#" className="insights__card-cta">
+            <a href={`/insights/${item.slug}`} className="insights__card-cta">
               Read more <span className="insights__card-cta-arrow">→</span>
             </a>
           </div>

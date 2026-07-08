@@ -124,7 +124,7 @@ function HeroScrollSection() {
 
       {/* Floating Bar with Black Glass Transparent BG */}
       <div className="hero-scroll__floating-bar">
-        <span className="hero-scroll__floating-title">Trusted by</span>
+        <span className="hero-scroll__floating-title">Our Partners</span>
         <div className="hero-scroll__floating-divider" />
         <div className="hero-scroll__floating-logos">
           <img src={awsLogo} alt="AWS" />

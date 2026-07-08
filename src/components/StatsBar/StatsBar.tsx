@@ -10,7 +10,7 @@ function StatsBar() {
   return (
     <section className="stats-bar">
       <div className="stats-bar__inner">
-        <span className="stats-bar__title">Trusted by</span>
+        <span className="stats-bar__title">Our Partners</span>
         <div className="stats-bar__divider" />
         <div className="stats-bar__logos">
           <img src={awsLogo} alt="AWS" />

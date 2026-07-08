@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import IntroLoader from './components/IntroLoader'
 import ChatWidget from './components/ChatWidget'
 import PageTransition from './components/PageTransition'
+import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
 import './App.css'
 
@@ -11,13 +12,14 @@ const Services = lazy(() => import('./pages/Services'))
 const Geospatial = lazy(() => import('./pages/Geospatial'))
 const CloudPlatforms = lazy(() => import('./pages/CloudPlatforms'))
 const Proof = lazy(() => import('./pages/Proof'))
-const Insights = lazy(() => import('./pages/Insights'))
-const About = lazy(() => import('./pages/About'))
-const Team = lazy(() => import('./pages/Team'))
-const Careers = lazy(() => import('./pages/Careers'))
-const CareerDetail = lazy(() => import('./pages/CareerDetail'))
-const Contact = lazy(() => import('./pages/Contact'))
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Insights = lazy(() => import('./pages/UnderConstruction'))
+const InsightDetail = lazy(() => import('./pages/UnderConstruction'))
+const About = lazy(() => import('./pages/UnderConstruction'))
+const Team = lazy(() => import('./pages/UnderConstruction'))
+const Careers = lazy(() => import('./pages/UnderConstruction'))
+const CareerDetail = lazy(() => import('./pages/UnderConstruction'))
+const Contact = lazy(() => import('./pages/UnderConstruction'))
+const ProjectDetail = lazy(() => import('./pages/UnderConstruction'))
 
 function App() {
   const [introComplete, setIntroComplete] = useState(false)
@@ -34,6 +36,7 @@ function App() {
       {/* Routes — rendered after intro completes */}
       {introComplete && (
         <>
+          <ScrollToTop />
           <PageTransition />
           <Suspense fallback={null}>
             <Routes>
@@ -46,6 +49,7 @@ function App() {
               <Route path="/proof/:slug" element={<ProjectDetail />} />
               <Route path="/project/:slug" element={<ProjectDetail />} />
               <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<InsightDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/team" element={<Team />} />
               <Route path="/careers" element={<Careers />} />

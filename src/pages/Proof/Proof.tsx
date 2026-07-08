@@ -23,55 +23,64 @@ function Proof() {
       />
       <Navbar />
       <section className="proof-hero">
-        {/* Scrolling image cards - infinite loop */}
-        <div className="proof-hero__grid">
-          <div className="proof-hero__track">
-            <div className="proof-hero__card">
-              <img src={card1Img} alt="" className="proof-hero__card-img" />
+        {/* 3-row marquee background */}
+        <div className="proof-hero__marquee-bg">
+          {/* Row 1 - scrolls left */}
+          <div className="proof-hero__row proof-hero__row--1">
+            <div className="proof-hero__row-track">
+              <img src={card1Img} alt="" />
+              <img src={card2Img} alt="" />
+              <img src={card3Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card5Img} alt="" />
+              <img src={card1Img} alt="" />
+              <img src={card2Img} alt="" />
+              <img src={card3Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card5Img} alt="" />
             </div>
-            <div className="proof-hero__card">
-              <img src={card2Img} alt="" className="proof-hero__card-img" />
+          </div>
+          {/* Row 2 - scrolls right */}
+          <div className="proof-hero__row proof-hero__row--2">
+            <div className="proof-hero__row-track">
+              <img src={card3Img} alt="" />
+              <img src={card5Img} alt="" />
+              <img src={card1Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card2Img} alt="" />
+              <img src={card3Img} alt="" />
+              <img src={card5Img} alt="" />
+              <img src={card1Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card2Img} alt="" />
             </div>
-            <div className="proof-hero__card">
-              <img src={card3Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card4Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card5Img} alt="" className="proof-hero__card-img" />
-            </div>
-            {/* Duplicated for seamless loop */}
-            <div className="proof-hero__card">
-              <img src={card1Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card2Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card3Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card4Img} alt="" className="proof-hero__card-img" />
-            </div>
-            <div className="proof-hero__card">
-              <img src={card5Img} alt="" className="proof-hero__card-img" />
+          </div>
+          {/* Row 3 - scrolls left */}
+          <div className="proof-hero__row proof-hero__row--3">
+            <div className="proof-hero__row-track">
+              <img src={card2Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card5Img} alt="" />
+              <img src={card1Img} alt="" />
+              <img src={card3Img} alt="" />
+              <img src={card2Img} alt="" />
+              <img src={card4Img} alt="" />
+              <img src={card5Img} alt="" />
+              <img src={card1Img} alt="" />
+              <img src={card3Img} alt="" />
             </div>
           </div>
         </div>
 
-        {/* Dark overlay 80% */}
+        {/* Dark overlay */}
         <div className="proof-hero__overlay" />
 
         {/* Content */}
         <div className="proof-hero__content">
-          <h1 className="proof-hero__title">Proof that intelligence<br />changes decisions.</h1>
+          <h1 className="proof-hero__title">Intelligence that shapes<br />better decisions.</h1>
           <p className="proof-hero__sub">
-            Public infrastructure, climate, agriculture, logistics and data platforms.
+            Solutions for infrastructure, climate, agriculture, logistics, and data platforms.
           </p>
-          <div className="proof-hero__cta-wrap">
-            <HeroCTA text="View case studies" href="#projects" />
-          </div>
           <div className="proof-hero__scroll">
             <div className="proof-hero__scroll-line">
               <div className="proof-hero__scroll-dot" />

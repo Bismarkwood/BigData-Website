@@ -19,7 +19,7 @@ const logos = [afcLogo, ecLogo, indomieLogo, ntlLogo, ntmelLogo, parliamentLogo,
 function ClientLogos() {
   return (
     <section className="client-logos">
-      <h3 className="client-logos__title">Clients</h3>
+      <h3 className="client-logos__title">Trusted By</h3>
       <div className="client-logos__track-wrapper">
         <div className="client-logos__track">
           {logos.map((logo, i) => (
