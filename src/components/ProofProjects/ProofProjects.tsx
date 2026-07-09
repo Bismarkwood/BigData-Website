@@ -1,22 +1,14 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import card1Img from '../../assets/Proof/card-1.jpg'
-import card2Img from '../../assets/Proof/card-2.jpg'
-import card3Img from '../../assets/Proof/Card-3.png'
-import card5Img from '../../assets/Proof/card-5.jpg'
-import mlnrImg from '../../assets/Proof/Forest Trace AI/MLNR Spatial Platform.png'
+import card3Img from '../../assets/Our Solutions/BigConnectAI/BigConnect AI.png'
 import sendlineImg from '../../assets/Our Solutions/Sendlinesms/SendlineSMS logo.png'
+import maizeImg from '../../assets/Our Solutions/Maize Intelligence/maizeYield.png'
 import './ProofProjects.css'
 
-const tabs = ['All', 'Our Products', 'Project']
-
 function ProofProjects() {
-  const [activeTab, setActiveTab] = useState('All')
-
   const projects = [
     { title: 'Sendline SMS', tag: 'Product', image: sendlineImg, slug: 'sendline-sms' },
     { title: 'BigConnect AI', tag: 'Product', image: card3Img, slug: 'real-time-logistics-optimisation' },
-    { title: 'Spatial Data Infrastructure for MLNR', tag: 'Project', image: mlnrImg, slug: 'spatial-data-infrastructure-for-mlnr' },
+    { title: 'Maize Intelligence', tag: 'Product', image: maizeImg, slug: 'maize-intelligence' },
   ]
 
   return (

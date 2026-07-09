@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEO from '../../components/SEO'
+import contactHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
 import './Contact.css'
 
 function Contact() {
@@ -15,10 +16,12 @@ function Contact() {
 
       {/* Hero */}
       <section className="contact-hero">
+        <img src={contactHeroBg} alt="" className="contact-hero__bg" />
+        <div className="contact-hero__overlay" />
         <div className="contact-hero__content">
-          <h1 className="contact-hero__title">Get in Touch</h1>
+          <h1 className="contact-hero__title">Tell us the decision you are facing.</h1>
           <p className="contact-hero__sub">
-            Ready to make better decisions? Let's talk about how BDG can help your organisation.
+            Whether you are assessing land, mapping risk, building a data platform, improving operations, exploring AI or funding a deployment, BDG can help you see the decision more clearly.
           </p>
         </div>
       </section>

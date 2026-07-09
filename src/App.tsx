@@ -5,13 +5,14 @@ import ChatWidget from './components/ChatWidget'
 import PageTransition from './components/PageTransition'
 import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
+import Proof from './pages/Proof'
 import './App.css'
 
 // Lazy load pages for better performance
 const Services = lazy(() => import('./pages/Services'))
 const Geospatial = lazy(() => import('./pages/Geospatial'))
 const CloudPlatforms = lazy(() => import('./pages/CloudPlatforms'))
-const Proof = lazy(() => import('./pages/Proof'))
+const Solutions = lazy(() => import('./pages/Solutions'))
 const Insights = lazy(() => import('./pages/Insights'))
 const InsightDetail = lazy(() => import('./pages/InsightDetail'))
 const About = lazy(() => import('./pages/About'))
@@ -22,7 +23,7 @@ const Contact = lazy(() => import('./pages/Contact'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 
 function App() {
-  const [introComplete, setIntroComplete] = useState(false)
+  const [introComplete, setIntroComplete] = useState(true)
 
   const handleIntroComplete = useCallback(() => {
     setIntroComplete(true)
@@ -46,8 +47,10 @@ function App() {
               <Route path="/cloud-platforms" element={<CloudPlatforms />} />
               <Route path="/proof" element={<Proof />} />
               <Route path="/projects" element={<Proof />} />
+              <Route path="/solutions" element={<Solutions />} />
               <Route path="/proof/:slug" element={<ProjectDetail />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/project/:slug" element={<ProjectDetail />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<InsightDetail />} />
               <Route path="/about" element={<About />} />

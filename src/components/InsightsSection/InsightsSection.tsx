@@ -81,7 +81,7 @@ function InsightsSection({ activeFilter = 'All' }: InsightsSectionProps) {
       {/* Scrollable cards track */}
       <div className="insights__track" ref={trackRef}>
         {filteredInsights.map((item, i) => (
-          <div className="insights__card" key={i}>
+          <a href={`/insights/${item.slug}`} className="insights__card" key={i}>
             <div className="insights__card-img-wrap">
               {item.image ? (
                 <img src={item.image} alt={item.title} className="insights__card-img" />
@@ -89,13 +89,10 @@ function InsightsSection({ activeFilter = 'All' }: InsightsSectionProps) {
                 <div className="insights__card-placeholder" />
               )}
             </div>
-            {item.tag && <span className="insights__card-tag">{item.tag}</span>}
-            {item.title && <h3 className="insights__card-title">{item.title}</h3>}
-            {item.description && <p className="insights__card-desc">{item.description}</p>}
-            <a href={`/insights/${item.slug}`} className="insights__card-cta">
-              Read more <span className="insights__card-cta-arrow">→</span>
-            </a>
-          </div>
+            <span className="insights__card-date">Published July 2026</span>
+            <h3 className="insights__card-title">{item.title}</h3>
+            <p className="insights__card-desc">{item.description}</p>
+          </a>
         ))}
       </div>
     </section>

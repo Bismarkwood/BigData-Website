@@ -8,6 +8,15 @@ import SEO from '../../components/SEO'
 import aboutHeroImg from '../../assets/About/About Hero section.jpg'
 import whyBdgImg from '../../assets/Why Big Data Ghana.jpg'
 import missionImg from '../../assets/Mission & Vision/Mission & Vision.jpg'
+import clientLogo1 from '../../assets/Client Logos/AFC.png'
+import clientLogo2 from '../../assets/Client Logos/Indomie.png'
+import clientLogo3 from '../../assets/Client Logos/Parliament of ghana.png'
+import clientLogo4 from '../../assets/Client Logos/USAID Logo.png'
+import clientLogo5 from '../../assets/Client Logos/GIZ.png'
+import clientLogo6 from '../../assets/Client Logos/Digital Earth Africa.png'
+import clientLogo7 from '../../assets/Client Logos/NITA logo.png'
+import clientLogo8 from '../../assets/Client Logos/UG Logo.jpg'
+import clientLogo9 from '../../assets/Client Logos/World Cocoa Foundation.jpg'
 import lifeImg1 from '../../assets/Life at Big Data Ghana/007A2148SIMPI26.jpg'
 import lifeImg2 from '../../assets/Life at Big Data Ghana/007A2256SIMPI26.jpg'
 import lifeImg3 from '../../assets/Life at Big Data Ghana/1756482542508.jpg'
@@ -264,6 +273,48 @@ function About() {
             <div className="about-team-faces__cta-card">
               <p className="about-team-faces__cta-text">We're all about hard work, smart solutions, & impossible deadlines. No fluff, just brilliance.</p>
               <a href="/careers" className="about-team-faces__cta-btn">Careers at Big Data Ghana ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="about-testimonials">
+        <div className="about-testimonials__header">
+          <div className="about-testimonials__header-left">
+            <span className="about-testimonials__label">TESTIMONIALS</span>
+            <h2 className="about-testimonials__heading">
+              CLIENT <span className="about-testimonials__heading-accent">FEEDBACK</span><br />THAT MATTERS
+            </h2>
+          </div>
+          <div className="about-testimonials__nav">
+            <button className="about-testimonials__nav-btn" id="test-prev" aria-label="Previous">←</button>
+            <button className="about-testimonials__nav-btn" id="test-next" aria-label="Next">→</button>
+          </div>
+        </div>
+        <div className="about-testimonials__body">
+          <div className="about-testimonials__logos">
+            <div className="about-testimonials__logo-item"><img src={clientLogo1} alt="AFC" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo2} alt="Indomie" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo3} alt="Parliament" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo4} alt="USAID" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo5} alt="GIZ" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo6} alt="Digital Earth Africa" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo7} alt="NITA" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo8} alt="UG" /></div>
+            <div className="about-testimonials__logo-item"><img src={clientLogo9} alt="World Cocoa Foundation" /></div>
+          </div>
+          <div className="about-testimonials__card">
+            <span className="about-testimonials__card-industry">GEOSPATIAL INTELLIGENCE</span>
+            <p className="about-testimonials__card-quote">
+              "Working with BigData Ghana was transformative. Their team delivered spatial intelligence that completely changed how we assess investment risk across our portfolio."
+            </p>
+            <div className="about-testimonials__card-author">
+              <div className="about-testimonials__card-avatar" />
+              <div className="about-testimonials__card-info">
+                <span className="about-testimonials__card-name">Client Partner</span>
+                <span className="about-testimonials__card-role">Real Estate Development</span>
+              </div>
             </div>
           </div>
         </div>

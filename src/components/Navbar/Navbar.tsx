@@ -9,14 +9,19 @@ import './Navbar.css'
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Solutions', href: '/proof' },
-  { label: 'Industries', href: '#industries', hasDropdown: true },
-  { label: 'Insights', href: '/insights' },
-  { label: 'About', href: '/about' },
-  { label: 'Team', href: '/team' },
-  { label: 'Careers', href: '/careers' },
-  { label: 'Project', href: '/project' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Company', href: '#company', hasDropdown: true },
   { label: 'Contact', href: '/contact' },
+]
+
+const companyDropdown = [
+  { title: 'About Us', desc: 'Our mission, culture & leadership.', href: '/about', icon: 'about' },
+  { title: 'Projects', desc: 'Real results from real clients.', href: '/projects', icon: 'projects' },
+  { title: 'Blog', desc: 'Insights on data, AI & growth.', href: '/insights', icon: 'blog' },
+  { title: 'Careers', desc: 'Join our growing team.', href: '/careers', icon: 'careers' },
+  { title: 'Team', desc: 'Meet the people behind BDG.', href: '/team', icon: 'team' },
+  { title: 'Contact Us', desc: 'Book a free strategy call.', href: '/contact', icon: 'contact' },
 ]
 
 const industries = [
@@ -77,11 +82,22 @@ function Navbar({ light = false }: { light?: boolean }) {
                 </span>
                 {/* Dropdown */}
                 <div className={`navbar__dropdown ${dropdownOpen ? 'navbar__dropdown--open' : ''}`}>
-                  <div className="navbar__dropdown-list">
-                    {industries.map((industry) => (
-                      <a href="#" key={industry.title} className="navbar__dropdown-item">
-                        {industry.title}
-                      </a>
+                  <div className="navbar__dropdown-grid">
+                    {companyDropdown.map((item) => (
+                      <Link to={item.href} key={item.title} className="navbar__dropdown-card" onClick={() => setDropdownOpen(false)}>
+                        <span className="navbar__dropdown-card-icon">
+                          {item.icon === 'about' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>}
+                          {item.icon === 'projects' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>}
+                          {item.icon === 'blog' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M4 4h16v16H4z" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 8h8M8 12h5"/></svg>}
+                          {item.icon === 'careers' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>}
+                          {item.icon === 'team' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><path d="M2 21v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1"/></svg>}
+                          {item.icon === 'contact' && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>}
+                        </span>
+                        <div className="navbar__dropdown-card-text">
+                          <span className="navbar__dropdown-card-title">{item.title}</span>
+                          <span className="navbar__dropdown-card-desc">{item.desc}</span>
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
