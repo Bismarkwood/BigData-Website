@@ -37,7 +37,7 @@ function App() {
       {introComplete && (
         <>
           <ScrollToTop />
-          <PageTransition />
+          {/* <PageTransition /> */}
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Homepage />} />
@@ -45,9 +45,9 @@ function App() {
               <Route path="/geospatial" element={<Geospatial />} />
               <Route path="/cloud-platforms" element={<CloudPlatforms />} />
               <Route path="/proof" element={<Proof />} />
-              <Route path="/project" element={<Proof />} />
+              <Route path="/projects" element={<Proof />} />
               <Route path="/proof/:slug" element={<ProjectDetail />} />
-              <Route path="/project/:slug" element={<ProjectDetail />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/insights" element={<Insights />} />
               <Route path="/insights/:slug" element={<InsightDetail />} />
               <Route path="/about" element={<About />} />

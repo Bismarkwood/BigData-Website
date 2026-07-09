@@ -140,7 +140,6 @@ function Services() {
           </div>
           <div className="service-block__ctas">
             <a href="/geospatial" className="service-block__cta-primary">Accelerate next level location decision</a>
-            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
@@ -171,7 +170,6 @@ function Services() {
           </div>
           <div className="service-block__ctas">
             <a href="/cloud-platforms" className="service-block__cta-primary">Start your AWS migration</a>
-            <a href="/cloud-platforms" className="service-block__cta-secondary">Learn more →</a>
           </div>
         </div>
         <div className="service-block__image">
@@ -202,7 +200,6 @@ function Services() {
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">See what we can automate for you</a>
-            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
@@ -233,7 +230,6 @@ function Services() {
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">See what we can unlock for you</a>
-            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
@@ -264,7 +260,6 @@ function Services() {
           </div>
           <div className="service-block__ctas">
             <a href="/contact" className="service-block__cta-primary">Map your risk</a>
-            <a href="/proof" className="service-block__cta-secondary">See case study →</a>
           </div>
         </div>
         <div className="service-block__image">
