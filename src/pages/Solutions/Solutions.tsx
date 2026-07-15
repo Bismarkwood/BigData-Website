@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import ProofProjects from '../../components/ProofProjects'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
 import card1Img from '../../assets/Proof/card-1.jpg'
@@ -8,7 +8,17 @@ import card2Img from '../../assets/Proof/card-2.jpg'
 import card3Img from '../../assets/Proof/Card-3.png'
 import card4Img from '../../assets/Proof/Card-4.jpg'
 import card5Img from '../../assets/Proof/card-5.jpg'
+import bigconnectImg from '../../assets/Our Solutions/BigConnectAI/BigConnect AI.png'
+import sendlineImg from '../../assets/Our Solutions/Sendlinesms/SendlineSMS logo.png'
+import maizeImg from '../../assets/Our Solutions/Maize Intelligence/maizeYield.png'
+import '../../components/ProofProjects/ProofProjects.css'
 import '../Proof/Proof.css'
+
+const solutions = [
+  { title: 'Sendline SMS', tag: 'Product', image: sendlineImg, slug: 'sendline-sms' },
+  { title: 'BigConnect AI', tag: 'Product', image: bigconnectImg, slug: 'real-time-logistics-optimisation' },
+  { title: 'Maize Intelligence', tag: 'Product', image: maizeImg, slug: 'maize-intelligence' },
+]
 
 function Solutions() {
   return (
@@ -81,7 +91,29 @@ function Solutions() {
           </div>
         </div>
       </section>
-      <ProofProjects />
+
+      {/* Solutions Grid */}
+      <section className="proof-projects">
+        <div className="proof-projects__header">
+          <h2 className="proof-projects__title">Our Products</h2>
+        </div>
+        <div className="proof-projects__content">
+          <div className="proof-projects__grid">
+            {solutions.map((item, i) => (
+              <Link to={`/proof/${item.slug}`} className="proof-projects__card" key={i}>
+                <div className="proof-projects__card-img">
+                  <img src={item.image} alt={item.title} className="proof-projects__card-image" />
+                  <div className="proof-projects__card-overlay" />
+                </div>
+                <div className="proof-projects__card-info">
+                  <span className="proof-projects__card-tag">{item.title}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <JoinCta />
       <Footer />
     </main>

@@ -1,9 +1,9 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import JoinCta from '../../components/JoinCta'
 import HeroCTA from '../../components/HeroCTA'
 import SEO from '../../components/SEO'
 import careerHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
+import teamCtaImg from '../../assets/CTA Banner/CTA Banner 2nd Card.jpg'
 import './Careers.css'
 
 const openRoles = [
@@ -128,7 +128,25 @@ function Careers() {
         </div>
       </section>
 
-      <JoinCta />
+      {/* CTA Banner */}
+      <section className="join-cta">
+        <div className="join-cta__inner">
+          <div className="join-cta__text">
+            <span className="join-cta__label"></span>
+            <h2 className="join-cta__heading">
+              Ready to decide better?
+            </h2>
+            <p className="join-cta__sub">
+              Tell us what you are working on. We will show you what the data says.
+            </p>
+            <HeroCTA text="Let's Work" href="/contact" />
+          </div>
+          <div className="join-cta__person">
+            <img src={teamCtaImg} alt="BigData Ghana Team" className="join-cta__person-img" />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   )

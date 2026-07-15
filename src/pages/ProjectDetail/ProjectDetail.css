@@ -77,6 +77,20 @@ im.project-detail {
   color: #0f0f0f;
 }
 
+.project-detail__meta-link {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: #1E8A00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-detail__meta-link:hover {
+  color: #0f2b1f;
+  text-decoration: underline;
+}
+
 /* ─── Full width image ─── */
 .project-detail__image {
   width: 100%;

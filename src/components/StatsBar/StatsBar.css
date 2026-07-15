@@ -44,9 +44,7 @@
   height: 56px;
 }
 
-.stats-bar__logos img[alt="Agbedus Consult"] {
-  filter: brightness(0) invert(1);
-}
+
 
 /* Tablet */
 @media (max-width: 1024px) {

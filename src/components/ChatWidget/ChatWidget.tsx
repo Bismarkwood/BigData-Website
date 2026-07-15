@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import chatVideo from '../../assets/Chat Widget/Chat Widget animated.mp4'
+import bdgWave from '../../assets/intro/bdg-wave.png'
+import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import './ChatWidget.css'
 
 function ChatWidget() {
@@ -24,14 +25,8 @@ function ChatWidget() {
           </text>
         </svg>
         <div className="chat-widget__avatar">
-          <video
-            src={chatVideo}
-            className="chat-widget__video"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+          <img src={bdgWave} alt="" className="chat-widget__wave" />
+          <img src={bdgCenter} alt="" className="chat-widget__satellite" />
         </div>
       </button>
 

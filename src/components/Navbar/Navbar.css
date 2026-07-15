@@ -115,7 +115,7 @@
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 40px;
 }
 
 .navbar__link {
@@ -124,7 +124,25 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
   transition: color 0.3s ease;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #1E8A00;
+  transition: width 0.3s ease;
+}
+
+.navbar__link:hover::after,
+.navbar__link--active::after {
+  width: 100%;
 }
 
 .navbar__link:hover {
@@ -137,6 +155,10 @@
 
 .navbar--scrolled .navbar__link:hover {
   color: #0f2b1f;
+}
+
+.navbar--scrolled .navbar__link::after {
+  background: #1E8A00;
 }
 
 .navbar__menu-btn {

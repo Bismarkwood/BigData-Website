@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import HeroCTA from '../HeroCTA'
 import bdgWave from '../../assets/intro/bdg-wave.png'
 import bdgCenter from '../../assets/intro/bdg-center-icon.png'
@@ -37,6 +37,7 @@ function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +104,7 @@ function Navbar({ light = false }: { light?: boolean }) {
                 </div>
               </div>
             ) : link.href.startsWith('/') ? (
-              <Link key={link.label} to={link.href} className="navbar__link">
+              <Link key={link.label} to={link.href} className={`navbar__link ${location.pathname === link.href ? 'navbar__link--active' : ''}`}>
                 {link.label}
               </Link>
             ) : (

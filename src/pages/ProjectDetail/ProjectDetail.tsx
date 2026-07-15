@@ -24,6 +24,7 @@ const projectsData: Record<string, {
   year: string
   services: string
   image: string
+  externalUrl?: string
   challenge?: string
   intelligence?: string
   whyItMatters?: string
@@ -54,6 +55,7 @@ const projectsData: Record<string, {
     year: '2025',
     services: 'AI, Cloud Platform, Voice Intelligence',
     image: bigconnectImg,
+    externalUrl: 'https://bigconnectai.bigdataghana.com/',
     challenge: 'Businesses lose valuable customers when calls go unanswered after working hours, during busy periods, or when staff are unavailable. In sectors like banking, healthcare, government, and SMEs, every missed call can mean a lost lead, delayed support request, or poor customer experience.',
     intelligence: 'BigConnect AI acts as an intelligent virtual receptionist that answers calls 24/7. Built on secure AWS infrastructure, it holds natural bilingual conversations in English and French, collects caller details, provides relevant business information, and understands the caller\'s intent. Powered by Amazon Bedrock Nova Pro, BigConnect AI maintains conversation context throughout the call and automatically generates clear, actionable summaries for follow-up.',
     whyItMatters: 'BigConnect AI helps organizations deliver enterprise-level customer service at a much lower cost than traditional call center operations. Purpose-built for West African markets, it supports businesses that need reliable, bilingual, always-available communication. It is ideal for banking, healthcare, government services, insurance, hospitality, education, and SMEs that want to improve response time, capture more leads, and reduce customer service pressure.',
@@ -84,6 +86,7 @@ const projectsData: Record<string, {
     year: '2025',
     services: 'Cloud Platform, API, Communication',
     image: card3Img,
+    externalUrl: 'https://sendlinesms.com/',
     challenge: 'Businesses need to reach customers quickly, but communication is often scattered, slow, or unreliable. Sending alerts, promotions, reminders, and verification codes manually can lead to delays, missed messages, poor tracking, and weak customer engagement.',
     intelligence: 'SendLineSMS provides a powerful and user-friendly messaging platform for fast, secure, and scalable SMS communication. Businesses can send bulk messages, schedule campaigns, create reusable message templates, and track delivery in real time. The platform also supports OTP integration for secure user authentication and offers a robust REST API that connects easily with websites, mobile apps, CRMs, ERPs, and other business systems.',
     whyItMatters: 'SendLineSMS helps businesses communicate faster, improve customer engagement, and support secure digital transactions. With high uptime reliability, local pricing support, delivery tracking, and easy integration, it gives organizations a dependable communication channel at scale. It is ideal for SMEs, banks, schools, churches, hospitals, fintechs, e-commerce platforms, government agencies, NGOs, and service-based businesses that need instant and reliable SMS communication.',
@@ -152,6 +155,14 @@ function ProjectDetail() {
           <span className="project-detail__meta-label">Services</span>
           <span className="project-detail__meta-value">{project.services}</span>
         </div>
+        {project.externalUrl && (
+          <div className="project-detail__meta-item">
+            <span className="project-detail__meta-label">Website</span>
+            <a href={project.externalUrl} target="_blank" rel="noopener noreferrer" className="project-detail__meta-link">
+              Visit {project.name} ↗
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Full width image */}
