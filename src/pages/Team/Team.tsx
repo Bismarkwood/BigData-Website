@@ -36,6 +36,7 @@ const leadership = [
     name: 'Priscillia Fianu',
     role: 'CLOUD ENGINEER',
     image: priscilliaImg,
+    linkedin: 'https://www.linkedin.com/in/priscilla-fianu-849b90227/',
   },
   {
     name: 'Akwasi Anto Darkwah',
@@ -52,6 +53,7 @@ const leadership = [
     name: 'Logan Linford Kojo',
     role: 'MARKETING HEAD',
     image: loganImg,
+    linkedin: 'https://www.linkedin.com/in/linford-logan-709258333/',
   },
   {
     name: 'Dzehu Mighty',
@@ -62,11 +64,13 @@ const leadership = [
     name: 'Yaa Oparebea Acquah',
     role: 'ASSISTANT FINANCE',
     image: yaaImg,
+    linkedin: 'https://www.linkedin.com/in/yaa-oparebea-acquah-368170331/',
   },
   {
     name: 'Afra Owusu-Addo',
     role: 'TECHNICAL WRITER & GEO DEVELOPER',
     image: afraImg,
+    linkedin: 'https://www.linkedin.com/in/nana-akua-afra-owusu-addo/',
   },
   {
     name: 'Amram Afriyie',
@@ -77,11 +81,13 @@ const leadership = [
     name: 'Nii Amon Ashie',
     role: 'MARKETOR',
     image: niiImg,
+    linkedin: 'https://www.linkedin.com/in/nii-amon-ashie-00b020144/',
   },
   {
     name: 'Kwaku Quartey Ansah',
     role: 'ASSOCIATE SOFTWARE DEVELOPER',
     image: kwakuImg,
+    linkedin: 'https://www.linkedin.com/in/quarteyansahofei/',
   },
   {
     name: 'Bismark Gyebi Duah',
@@ -89,14 +95,16 @@ const leadership = [
     image: bismarkImg,
   },
   {
-    name: 'Nancy Wagun',
+    name: 'Nancy Wayua',
     role: 'ASSOCIATE GIS DEVELOPER',
     image: nancyImg,
+    linkedin: 'https://www.linkedin.com/in/nancy-wayua-317905261/',
   },
   {
     name: 'Emmanuel Kyei Baffour',
     role: 'CLOUD ENGINEER',
     image: kyeiImg,
+    linkedin: 'https://www.linkedin.com/in/emmanuelfrimpongkyei-baffour/',
   },
 ]
 

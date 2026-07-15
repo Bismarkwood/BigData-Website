@@ -5,12 +5,12 @@ import bdgCenter from '../../assets/intro/bdg-center-icon.png'
 import './Footer.css'
 
 const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Case Studies', href: '#case-studies' },
-  { label: 'Insights', href: '#insights' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 function Footer() {
@@ -77,9 +77,9 @@ function Footer() {
       {/* Bottom bar */}
       <div className="footer__bottom">
         <div className="footer__bottom-links">
-          <a href="#">Privacy Policy</a>
+          <Link to="/privacy">Privacy Policy</Link>
           <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </footer>

@@ -21,6 +21,8 @@ const Careers = lazy(() => import('./pages/Careers'))
 const CareerDetail = lazy(() => import('./pages/CareerDetail'))
 const Contact = lazy(() => import('./pages/Contact'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function App() {
   const [introComplete, setIntroComplete] = useState(true)
@@ -58,6 +60,8 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/careers/:slug" element={<CareerDetail />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
           <ChatWidget />

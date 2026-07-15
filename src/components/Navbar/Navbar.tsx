@@ -17,11 +17,9 @@ const navLinks = [
 
 const companyDropdown = [
   { title: 'About Us', desc: 'Our mission, culture & leadership.', href: '/about', icon: 'about' },
-  { title: 'Projects', desc: 'Real results from real clients.', href: '/projects', icon: 'projects' },
   { title: 'Blog', desc: 'Insights on data, AI & growth.', href: '/insights', icon: 'blog' },
   { title: 'Careers', desc: 'Join our growing team.', href: '/careers', icon: 'careers' },
   { title: 'Team', desc: 'Meet the people behind BDG.', href: '/team', icon: 'team' },
-  { title: 'Contact Us', desc: 'Book a free strategy call.', href: '/contact', icon: 'contact' },
 ]
 
 const industries = [

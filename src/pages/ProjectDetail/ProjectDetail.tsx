@@ -134,15 +134,15 @@ function ProjectDetail() {
 
   return (
     <main className="project-detail" ref={mainRef}>
-      <Navbar />
+      <Navbar light />
 
       {/* Hero */}
       <section className="project-detail__hero">
-        <p className="project-detail__desc">{project.description}</p>
         <div className="project-detail__title-wrap">
           <h1 className="project-detail__name">{project.name}</h1>
           <h2 className="project-detail__subtitle">{project.subtitle}</h2>
         </div>
+        <p className="project-detail__desc">{project.description}</p>
       </section>
 
       {/* Meta row */}
