@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import SEO from '../../components/SEO'
-import contactHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
+import contactHeroBg from '../../assets/Career/007A2193SIMPI26.jpg'
 import './Contact.css'
 
 function Contact() {

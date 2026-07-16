@@ -1,17 +1,31 @@
-import { Link } from 'react-router-dom'
+import forestTraceImg from '../../assets/Proof/Forest Trace AI/Forest Trace cover page.png'
+import trafficImg from '../../assets/Proof/Development of VEHICLE TRAFFIC ENFORCEMENT Application for Ghana Police Service MTTD/Traffic Tech.png'
+import electionsImg from '../../assets/AI and Automation/GIS-RS Solution IN ELECTIONs.png'
+import nfmsImg from '../../assets/AI and Automation/Development of National Forest Monitoring System.png'
+import indomieImg from '../../assets/Our Projects/Indomie/Indomie.png'
+import erpImg from '../../assets/Our Projects/Development of ERP/Development of ERP.png'
+import mappingImg from '../../assets/Our Projects/Ghana Electronic Mapping and Monitoring System for Project M&E duties/Ghana Electronic Mapping and Monitoring System for Project M&E duties.png'
+import constituencyImg from '../../assets/Our Projects/Production of Regional and Constituency Maps and other Data Services/Production of Regional and Constituency Maps and other Data Services.png'
+import sciledImg from '../../assets/Our Projects/Standardizing City-Level Data-Gathering (SCiLeD)/Standardizing City-Level Data-Gathering (SCiLeD).png'
+import esicomeImg from '../../assets/Our Projects/Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME)/Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME).png'
+import gushieguImg from '../../assets/Our Projects/Digital Mapping Verification for Gushiegu District of the Northern Region/Digital Mapping Verification for Gushiegu District of the Northern Region.png'
+import routeAdvisorImg from '../../assets/Our Projects/Route Advisor/Route Advisor.png'
 import './ProofProjects.css'
 
 function ProofProjects() {
   const projects = [
-    { title: 'ForestTrace AI Ghana', tag: 'Project', image: '', slug: 'foresttrace-ai-ghana' },
-    { title: 'Vehicle Traffic Enforcement Application for Ghana Police Service MTTD', tag: 'Project', image: '', slug: 'vehicle-traffic-enforcement' },
-    { title: 'GIS/RS Solution in Elections', tag: 'Project', image: '', slug: 'gis-rs-solution-elections' },
-    { title: 'Development of ERP', tag: 'Project', image: '', slug: 'development-of-erp' },
-    { title: 'Data Analysis for Indomie', tag: 'Project', image: '', slug: 'climate-risk-assessment-tool' },
-    { title: 'National Forest Monitoring System', tag: 'Project', image: '', slug: 'agricultural-yield-prediction-system' },
-    { title: 'Remote Sensing Based Ghana Agriculture Information Management System (GAIMS)', tag: 'Project', image: '', slug: 'gaims' },
-    { title: 'Ghana Electronic Mapping and Monitoring System for Project M&E', tag: 'Project', image: '', slug: 'electronic-mapping-monitoring' },
-    { title: 'Route Advisor', tag: 'Project', image: '', slug: 'route-advisor' },
+    { title: 'ForestTrace AI Ghana', tag: 'Project', image: forestTraceImg, slug: 'foresttrace-ai-ghana' },
+    { title: 'Vehicle Traffic Enforcement Application for Ghana Police Service MTTD', tag: 'Project', image: trafficImg, slug: 'vehicle-traffic-enforcement' },
+    { title: 'GIS/RS Solution in Elections', tag: 'Project', image: electionsImg, slug: 'gis-rs-solution-elections' },
+    { title: 'Development of ERP', tag: 'Project', image: erpImg, slug: 'development-of-erp' },
+    { title: 'Data Analysis for Indomie', tag: 'Project', image: indomieImg, slug: 'climate-risk-assessment-tool' },
+    { title: 'National Forest Monitoring System', tag: 'Project', image: nfmsImg, slug: 'agricultural-yield-prediction-system' },
+    { title: 'Ghana Electronic Mapping and Monitoring System for Project M&E', tag: 'Project', image: mappingImg, slug: 'electronic-mapping-monitoring' },
+    { title: 'Production of Regional and Constituency Maps and other Data Services', tag: 'Project', image: constituencyImg, slug: 'constituency-maps' },
+    { title: 'Standardizing City-Level Data-Gathering (SCiLeD)', tag: 'Project', image: sciledImg, slug: 'sciled' },
+    { title: 'Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME)', tag: 'Project', image: esicomeImg, slug: 'esicome' },
+    { title: 'Digital Mapping Verification for Gushiegu District of the Northern Region', tag: 'Project', image: gushieguImg, slug: 'gushiegu-mapping' },
+    { title: 'Route Advisor', tag: 'Project', image: routeAdvisorImg, slug: 'route-advisor' },
   ]
 
   return (
@@ -25,19 +39,18 @@ function ProofProjects() {
       <div className="proof-projects__content">
         <div className="proof-projects__grid">
           {projects.map((item, i) => (
-            <Link to={`/proof/${item.slug}`} className="proof-projects__card" key={i}>
+            <div className="proof-projects__card" key={i}>
               <div className="proof-projects__card-img">
                 {item.image ? (
                   <img src={item.image} alt={item.title} className="proof-projects__card-image" />
                 ) : (
                   <div className="proof-projects__card-placeholder" />
                 )}
-                <div className="proof-projects__card-overlay" />
               </div>
               <div className="proof-projects__card-info">
                 <span className="proof-projects__card-tag">{item.title}</span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

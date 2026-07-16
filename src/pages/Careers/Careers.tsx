@@ -2,7 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import HeroCTA from '../../components/HeroCTA'
 import SEO from '../../components/SEO'
-import careerHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
+import careerHeroBg from '../../assets/Career/007A2193SIMPI26.jpg'
 import teamCtaImg from '../../assets/CTA Banner/CTA Banner 2nd Card.jpg'
 import './Careers.css'
 

@@ -3,16 +3,18 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
-import card1Img from '../../assets/Proof/card-1.jpg'
-import card2Img from '../../assets/Proof/card-2.jpg'
-import card3Img from '../../assets/Proof/Card-3.png'
-import card4Img from '../../assets/Proof/Card-4.jpg'
-import card5Img from '../../assets/Proof/card-5.jpg'
 import bigconnectImg from '../../assets/Our Solutions/BigConnectAI/BigConnect AI.png'
 import sendlineImg from '../../assets/Our Solutions/Sendlinesms/SendlineSMS logo.png'
 import maizeImg from '../../assets/Our Solutions/Maize Intelligence/maizeYield.png'
+import forestTraceImg from '../../assets/Proof/Forest Trace AI/Forest Trace cover page.png'
+import trafficImg from '../../assets/Proof/Development of VEHICLE TRAFFIC ENFORCEMENT Application for Ghana Police Service MTTD/Traffic Tech.png'
+import electionsImg from '../../assets/AI and Automation/GIS-RS Solution IN ELECTIONs.png'
+import nfmsImg from '../../assets/AI and Automation/Development of National Forest Monitoring System.png'
+import erpImg from '../../assets/Our Projects/Development of ERP/Development of ERP.png'
+import routeAdvisorImg from '../../assets/Our Projects/Route Advisor/Route Advisor.png'
 import '../../components/ProofProjects/ProofProjects.css'
 import '../Proof/Proof.css'
+import './Solutions.css'
 
 const solutions = [
   { title: 'Sendline SMS', tag: 'Product', image: sendlineImg, slug: 'sendline-sms' },
@@ -22,7 +24,7 @@ const solutions = [
 
 function Solutions() {
   return (
-    <main>
+    <main className="solutions-page">
       <SEO
         title="Our Solutions | BigData Ghana — Products That Drive Decisions"
         description="SendLine SMS, BigConnect AI, and Maize Intelligence. Products built for Ghana's private sector to communicate, automate, and grow with intelligence."
@@ -34,44 +36,44 @@ function Solutions() {
         <div className="proof-hero__marquee-bg">
           <div className="proof-hero__row proof-hero__row--1">
             <div className="proof-hero__row-track">
-              <img src={card1Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
+              <img src={sendlineImg} alt="" />
+              <img src={bigconnectImg} alt="" />
+              <img src={maizeImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={sendlineImg} alt="" />
+              <img src={bigconnectImg} alt="" />
+              <img src={maizeImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={trafficImg} alt="" />
             </div>
           </div>
           <div className="proof-hero__row proof-hero__row--2">
             <div className="proof-hero__row-track">
-              <img src={card3Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card2Img} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={erpImg} alt="" />
+              <img src={routeAdvisorImg} alt="" />
+              <img src={sendlineImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={erpImg} alt="" />
+              <img src={routeAdvisorImg} alt="" />
+              <img src={sendlineImg} alt="" />
             </div>
           </div>
           <div className="proof-hero__row proof-hero__row--3">
             <div className="proof-hero__row-track">
-              <img src={card2Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card3Img} alt="" />
+              <img src={maizeImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={bigconnectImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={maizeImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={bigconnectImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
             </div>
           </div>
         </div>
@@ -100,10 +102,9 @@ function Solutions() {
         <div className="proof-projects__content">
           <div className="proof-projects__grid">
             {solutions.map((item, i) => (
-              <Link to={`/proof/${item.slug}`} className="proof-projects__card" key={i}>
+              <Link to={`/solutions/${item.slug}`} className="proof-projects__card" key={i}>
                 <div className="proof-projects__card-img">
                   <img src={item.image} alt={item.title} className="proof-projects__card-image" />
-                  <div className="proof-projects__card-overlay" />
                 </div>
                 <div className="proof-projects__card-info">
                   <span className="proof-projects__card-tag">{item.title}</span>

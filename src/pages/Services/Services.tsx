@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import StatsBar from '../../components/StatsBar'
@@ -139,7 +140,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/geospatial" className="service-block__cta-primary">Accelerate next level location decision</a>
+            <Link to="/geospatial" className="service-block__cta-primary">Accelerate next level location decision</Link>
           </div>
         </div>
         <div className="service-block__image">
@@ -169,7 +170,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/cloud-platforms" className="service-block__cta-primary">Start your AWS migration</a>
+            <Link to="/cloud-platforms" className="service-block__cta-primary">Start your AWS migration</Link>
           </div>
         </div>
         <div className="service-block__image">
@@ -199,7 +200,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">See what we can automate for you</a>
+            <Link to="/ai-automation" className="service-block__cta-primary">See what we can automate for you</Link>
           </div>
         </div>
         <div className="service-block__image">
@@ -229,7 +230,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">See what we can unlock for you</a>
+            <Link to="/data-analytics" className="service-block__cta-primary">See what we can unlock for you</Link>
           </div>
         </div>
         <div className="service-block__image">
@@ -259,7 +260,7 @@ function Services() {
 
           </div>
           <div className="service-block__ctas">
-            <a href="/contact" className="service-block__cta-primary">Map your risk</a>
+            <Link to="/contact" className="service-block__cta-primary">Map your risk</Link>
           </div>
         </div>
         <div className="service-block__image">

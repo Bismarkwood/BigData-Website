@@ -4,11 +4,15 @@ import StatsBar from '../../components/ProofStatsBar'
 import ProofProjects from '../../components/ProofProjects'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
-import card1Img from '../../assets/Proof/card-1.jpg'
-import card2Img from '../../assets/Proof/card-2.jpg'
-import card3Img from '../../assets/Proof/Card-3.png'
-import card4Img from '../../assets/Proof/Card-4.jpg'
-import card5Img from '../../assets/Proof/card-5.jpg'
+import forestTraceImg from '../../assets/Proof/Forest Trace AI/Forest Trace cover page.png'
+import trafficImg from '../../assets/Proof/Development of VEHICLE TRAFFIC ENFORCEMENT Application for Ghana Police Service MTTD/Traffic Tech.png'
+import electionsImg from '../../assets/AI and Automation/GIS-RS Solution IN ELECTIONs.png'
+import nfmsImg from '../../assets/AI and Automation/Development of National Forest Monitoring System.png'
+import indomieImg from '../../assets/Our Projects/Indomie/Indomie.png'
+import erpImg from '../../assets/Our Projects/Development of ERP/Development of ERP.png'
+import mappingImg from '../../assets/Our Projects/Ghana Electronic Mapping and Monitoring System for Project M&E duties/Ghana Electronic Mapping and Monitoring System for Project M&E duties.png'
+import constituencyImg from '../../assets/Our Projects/Production of Regional and Constituency Maps and other Data Services/Production of Regional and Constituency Maps and other Data Services.png'
+import routeAdvisorImg from '../../assets/Our Projects/Route Advisor/Route Advisor.png'
 import './Proof.css'
 
 function Proof() {
@@ -26,46 +30,46 @@ function Proof() {
           {/* Row 1 - scrolls left */}
           <div className="proof-hero__row proof-hero__row--1">
             <div className="proof-hero__row-track">
-              <img src={card1Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={indomieImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={indomieImg} alt="" />
             </div>
           </div>
           {/* Row 2 - scrolls right */}
           <div className="proof-hero__row proof-hero__row--2">
             <div className="proof-hero__row-track">
-              <img src={card3Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card2Img} alt="" />
+              <img src={erpImg} alt="" />
+              <img src={mappingImg} alt="" />
+              <img src={constituencyImg} alt="" />
+              <img src={routeAdvisorImg} alt="" />
+              <img src={forestTraceImg} alt="" />
+              <img src={erpImg} alt="" />
+              <img src={mappingImg} alt="" />
+              <img src={constituencyImg} alt="" />
+              <img src={routeAdvisorImg} alt="" />
+              <img src={forestTraceImg} alt="" />
             </div>
           </div>
           {/* Row 3 - scrolls left */}
           <div className="proof-hero__row proof-hero__row--3">
             <div className="proof-hero__row-track">
-              <img src={card2Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card3Img} alt="" />
-              <img src={card2Img} alt="" />
-              <img src={card4Img} alt="" />
-              <img src={card5Img} alt="" />
-              <img src={card1Img} alt="" />
-              <img src={card3Img} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={indomieImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={erpImg} alt="" />
+              <img src={nfmsImg} alt="" />
+              <img src={indomieImg} alt="" />
+              <img src={trafficImg} alt="" />
+              <img src={electionsImg} alt="" />
+              <img src={erpImg} alt="" />
             </div>
           </div>
         </div>

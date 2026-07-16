@@ -58,7 +58,7 @@ function CtaBanner() {
         <p className="cta-banner__desc">
           For over eight years BDG has turned geography, infrastructure, climate and operational data into decision-ready intelligence, from flood modelling and yield prediction to real-time logistics and national-scale spatial platforms. We help clients see what others miss.
         </p>
-        <HeroCTA text="About Us" href="#about" />
+        <HeroCTA text="About Us" href="/about" />
       </div>
     </section>
   )

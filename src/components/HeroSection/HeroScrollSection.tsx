@@ -114,7 +114,7 @@ function HeroScrollSection() {
             You Decide Better With Us
           </h1>
           <p className="hero-scroll__desc">
-            Big Data Ghana is a technology company that leverages geospatial intelligence to help you plan, develop, invest and execute with confidence.
+            We leverage geospatial intelligence to help you plan, develop, invest and execute with confidence.
           </p>
           <div className="hero-scroll__cta-wrap">
             <HeroCTA />

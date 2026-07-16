@@ -1,6 +1,7 @@
 import locationImg from '../../assets/What we help/Location decisions.png'
 import riskImg from '../../assets/What we help/Risk Descision.png'
 import operationalImg from '../../assets/What we help/Operational decisions.png'
+import investmentImg from '../../assets/What we help/Investment Decisions.jpg'
 import './DiscoverSection.css'
 
 const steps = [
@@ -33,7 +34,7 @@ const steps = [
     icon: '📈',
     title: 'Investment decisions',
     description: 'Commit capital with greater confidence and less uncertainty.',
-    image: locationImg,
+    image: investmentImg,
     num: '004',
   },
 ]

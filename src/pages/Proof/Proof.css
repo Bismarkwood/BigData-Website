@@ -68,6 +68,13 @@
   100% { transform: translateY(0); }
 }
 
+/* Solid background fallback (when no marquee images) */
+.proof-hero__solid-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f2b1f 0%, #0a1a14 50%, #060d0a 100%);
+}
+
 /* Dark gradient overlay */
 .proof-hero__overlay {
   position: absolute;

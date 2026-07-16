@@ -72,13 +72,10 @@
 /* ─── Card ─── */
 .proof-projects__card {
   position: relative;
-  cursor: pointer;
   overflow: hidden;
   border-radius: 16px;
   text-decoration: none;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .proof-projects__card:hover {
@@ -104,9 +101,10 @@
 .proof-projects__card-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   background: #f5f5f5;
+  padding: 8px;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
               filter 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -155,27 +153,20 @@
 
 /* Card info */
 .proof-projects__card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 24px;
+  position: relative;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 2;
+  background: #ffffff;
 }
 
 .proof-projects__card-tag {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  color: #FFF8F0;
-  padding: 6px 14px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f2b1f;
 }
 
 .proof-projects__card-title {

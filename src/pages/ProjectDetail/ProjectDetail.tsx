@@ -2,20 +2,12 @@ import { useParams, Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import card1Img from '../../assets/Proof/card-1.jpg'
-import card2Img from '../../assets/Proof/card-2.jpg'
-import card3Img from '../../assets/Proof/Card-3.png'
-import card4Img from '../../assets/Proof/Card-4.jpg'
-import card5Img from '../../assets/Proof/card-5.jpg'
-import bigconnectImg from '../../assets/Proof/Bigconnect AI image card/BigConnectAI-1.png'
-import mlnrImg from '../../assets/Proof/Forest Trace AI/MLNR Spatial Platform.png'
+import forestTraceImg from '../../assets/Proof/Forest Trace AI/Forest Trace cover page.png'
+import bigconnectImg from '../../assets/Our Solutions/BigConnectAI/BigConnect AI.png'
+import sendlineImg from '../../assets/Our Solutions/Sendlinesms/SendlineSMS logo.png'
+import maizeImg from '../../assets/Our Solutions/Maize Intelligence/maizeYield.png'
 import './ProjectDetail.css'
-import '../../components/ProofProjects/ProofProjects.css';
-import SolutionsSlider from '../../components/SolutionsSlider';
-import geospatialImg from '../../assets/hero/Geospatial.jpg';
-import cloudImg from '../../assets/capabilities/big-data-data-cloud.webp';
-import analyticsImg from '../../assets/capabilities/Data analytics and AI.png';
-import biImg from '../../assets/capabilities/Business intelligence.jpg';
+import '../../components/ProofProjects/ProofProjects.css'
 
 const projectsData: Record<string, {
   name: string
@@ -35,7 +27,7 @@ const projectsData: Record<string, {
     description: 'A real-time flood monitoring and early warning system built for Ghana\'s National Disaster Management Organisation. Combines satellite data, rainfall intelligence, and spatial modelling to predict and communicate flood risk across all 16 regions.',
     year: '2023',
     services: 'Geospatial Intelligence, Data Platform, AI',
-    image: card1Img,
+    image: forestTraceImg,
   },
   'agricultural-yield-prediction-system': {
     name: 'NFMS',
@@ -43,7 +35,7 @@ const projectsData: Record<string, {
     description: 'Ghana needed a reliable and scalable system to monitor forest cover, track land use changes, and support climate reporting. Traditional forest monitoring processes were often slow, fragmented, and limited in their ability to provide near real-time insights for decision-making across priority forest areas.',
     year: '2023',
     services: 'Geospatial Intelligence, Cloud Platform, AI',
-    image: card2Img,
+    image: forestTraceImg,
     challenge: 'Ghana needed a reliable and scalable system to monitor forest cover, track land use changes, and support climate reporting. Traditional forest monitoring processes were often slow, fragmented, and limited in their ability to provide near real-time insights for decision-making across priority forest areas.',
     intelligence: 'The National Forest Monitoring System was co-developed, trained, and deployed in partnership with the Forestry Commission and key stakeholders in Ghana\'s forestry and climate change sector. Built on Amazon Web Services (AWS), the platform provides cloud-based geospatial processing capabilities for real-time remote sensing analysis. It uses near real-time Sentinel satellite data to support land use and land cover mapping, forest loss and gain tracking, greenhouse gas emissions estimation, and analysis across any selected Area of Interest.',
     whyItMatters: 'The NFMS strengthens Ghana\'s ability to protect forests, support REDD+ reporting, estimate climate-related emissions, and guide sustainable land management decisions. It contributes directly to national climate mitigation goals by helping government agencies and stakeholders detect forest changes early, monitor priority areas, and make data-driven environmental decisions.',
@@ -54,7 +46,7 @@ const projectsData: Record<string, {
     description: 'Businesses lose valuable customers when calls go unanswered after working hours, during busy periods, or when staff are unavailable. In sectors like banking, healthcare, government, and SMEs, every missed call can mean a lost lead, delayed support request, or poor customer experience.',
     year: '2025',
     services: 'AI, Cloud Platform, Voice Intelligence',
-    image: bigconnectImg,
+    image: forestTraceImg,
     externalUrl: 'https://bigconnectai.bigdataghana.com/',
     challenge: 'Businesses lose valuable customers when calls go unanswered after working hours, during busy periods, or when staff are unavailable. In sectors like banking, healthcare, government, and SMEs, every missed call can mean a lost lead, delayed support request, or poor customer experience.',
     intelligence: 'BigConnect AI acts as an intelligent virtual receptionist that answers calls 24/7. Built on secure AWS infrastructure, it holds natural bilingual conversations in English and French, collects caller details, provides relevant business information, and understands the caller\'s intent. Powered by Amazon Bedrock Nova Pro, BigConnect AI maintains conversation context throughout the call and automatically generates clear, actionable summaries for follow-up.',
@@ -66,7 +58,7 @@ const projectsData: Record<string, {
     description: 'A national-scale spatial data infrastructure built for the Ministry of Lands and Natural Resources. Digitises land records, maps boundaries, and provides geospatial decision support for land administration.',
     year: '2022',
     services: 'Geospatial Intelligence, Cloud Platform',
-    image: mlnrImg,
+    image: forestTraceImg,
   },
   'climate-risk-assessment-tool': {
     name: 'Data Analysis',
@@ -74,7 +66,7 @@ const projectsData: Record<string, {
     description: 'Indomie needed a clearer understanding of how customer demand and promotion engagement varied across different regions of Ghana. Without proper analysis, it would be difficult to know which areas had strong participation, where demand was growing, and which regions required more marketing or distribution attention.',
     year: '2024',
     services: 'Data Analytics, Business Intelligence',
-    image: card5Img,
+    image: forestTraceImg,
     challenge: 'Indomie needed a clearer understanding of how customer demand and promotion engagement varied across different regions of Ghana. Without proper analysis, it would be difficult to know which areas had strong participation, where demand was growing, and which regions required more marketing or distribution attention.',
     intelligence: 'The project analyzed scratch card promotion data to identify customer participation patterns, regional demand trends, and areas with high product engagement. The data was organized and studied to reveal where Indomie was receiving the strongest response across Ghana. This helped turn raw promotional entries into meaningful business insights for marketing, sales, and distribution planning.',
     whyItMatters: 'The project helped Indomie understand customer interest by location, improve regional marketing decisions, and identify opportunities for stronger market penetration. These insights can support better campaign planning, product distribution, sales forecasting, and customer engagement strategies across Ghana.',
@@ -85,7 +77,7 @@ const projectsData: Record<string, {
     description: 'Businesses need to reach customers quickly, but communication is often scattered, slow, or unreliable. Sending alerts, promotions, reminders, and verification codes manually can lead to delays, missed messages, poor tracking, and weak customer engagement.',
     year: '2025',
     services: 'Cloud Platform, API, Communication',
-    image: card3Img,
+    image: forestTraceImg,
     externalUrl: 'https://sendlinesms.com/',
     challenge: 'Businesses need to reach customers quickly, but communication is often scattered, slow, or unreliable. Sending alerts, promotions, reminders, and verification codes manually can lead to delays, missed messages, poor tracking, and weak customer engagement.',
     intelligence: 'SendLineSMS provides a powerful and user-friendly messaging platform for fast, secure, and scalable SMS communication. Businesses can send bulk messages, schedule campaigns, create reusable message templates, and track delivery in real time. The platform also supports OTP integration for secure user authentication and offers a robust REST API that connects easily with websites, mobile apps, CRMs, ERPs, and other business systems.',
@@ -212,40 +204,29 @@ function ProjectDetail() {
         </p>
       </section>
 
-      {/* Related projects */}
+      {/* Related Products */}
       <section className="project-detail__related">
         <div className="project-detail__related-header">
-          <h3 className="project-detail__related-title">Related projects</h3>
-          <Link to="/proof" className="project-detail__related-link">All Projects and Products →</Link>
+          <h3 className="project-detail__related-title">Related Products</h3>
+          <Link to="/solutions" className="project-detail__related-link">All Products →</Link>
         </div>
         <div className="proof-projects__grid">
-          <Link to="/proof/agricultural-yield-prediction-system" className="proof-projects__card">
-            <div className="proof-projects__card-img">
-              <img src={card2Img} alt="Agricultural Yield Prediction" className="proof-projects__card-image" />
-              <div className="proof-projects__card-overlay" />
-            </div>
-            <div className="proof-projects__card-info">
-              <span className="proof-projects__card-tag">Agricultural Yield Prediction System</span>
-            </div>
-          </Link>
-          <Link to="/proof/climate-risk-assessment-tool" className="proof-projects__card">
-            <div className="proof-projects__card-img">
-              <img src={card5Img} alt="Climate Risk Assessment" className="proof-projects__card-image" />
-              <div className="proof-projects__card-overlay" />
-            </div>
-            <div className="proof-projects__card-info">
-              <span className="proof-projects__card-tag">Climate Risk Assessment Tool</span>
-            </div>
-          </Link>
-          <Link to="/proof/real-time-logistics-optimisation" className="proof-projects__card">
-            <div className="proof-projects__card-img">
-              <img src={bigconnectImg} alt="BigConnect AI" className="proof-projects__card-image" />
-              <div className="proof-projects__card-overlay" />
-            </div>
-            <div className="proof-projects__card-info">
-              <span className="proof-projects__card-tag">BigConnect AI — Virtual Receptionist</span>
-            </div>
-          </Link>
+          {[
+            { title: 'SendLine SMS', image: sendlineImg, slug: 'sendline-sms' },
+            { title: 'BigConnect AI', image: bigconnectImg, slug: 'real-time-logistics-optimisation' },
+            { title: 'Maize Intelligence', image: maizeImg, slug: 'maize-intelligence' },
+          ]
+            .filter(item => item.slug !== slug)
+            .map((item, i) => (
+              <Link to={`/solutions/${item.slug}`} className="proof-projects__card" key={i}>
+                <div className="proof-projects__card-img">
+                  <img src={item.image} alt={item.title} className="proof-projects__card-image proof-projects__card-image--cover" />
+                </div>
+                <div className="proof-projects__card-info">
+                  <span className="proof-projects__card-tag">{item.title}</span>
+                </div>
+              </Link>
+            ))}
         </div>
       </section>
 

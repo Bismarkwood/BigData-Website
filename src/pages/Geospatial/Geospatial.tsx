@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import CtaBanner from '../../components/CtaBanner'
@@ -89,6 +90,35 @@ function Geospatial() {
       </section>
 
       <CtaBanner />
+
+      {/* Related Projects */}
+      <section className="geo-related">
+        <div className="geo-related__header">
+          <h2 className="geo-related__title">Related Projects</h2>
+          <Link to="/projects" className="geo-related__link">View All Projects →</Link>
+        </div>
+        <div className="geo-related__grid">
+          <Link to="/proof/foresttrace-ai-ghana" className="geo-related__card">
+            <div className="geo-related__card-img">
+              <div className="geo-related__card-placeholder" />
+            </div>
+            <span className="geo-related__card-name">ForestTrace AI Ghana</span>
+          </Link>
+          <Link to="/proof/agricultural-yield-prediction-system" className="geo-related__card">
+            <div className="geo-related__card-img">
+              <div className="geo-related__card-placeholder" />
+            </div>
+            <span className="geo-related__card-name">National Forest Monitoring System</span>
+          </Link>
+          <Link to="/proof/gis-rs-solution-elections" className="geo-related__card">
+            <div className="geo-related__card-img">
+              <div className="geo-related__card-placeholder" />
+            </div>
+            <span className="geo-related__card-name">GIS/RS Solution in Elections</span>
+          </Link>
+        </div>
+      </section>
+
       <JoinCta />
       <Footer />
     </main>

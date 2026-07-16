@@ -2,7 +2,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
-import careerHeroBg from '../../assets/Career/007A1061SIMPI26.jpg'
+import careerHeroBg from '../../assets/Career/007A2193SIMPI26.jpg'
 import gertrudeImg from '../../assets/Teams/Gertrude Chichi.jpg'
 import henryImg from '../../assets/Teams/Mr. Henry Baffoe.jpg'
 import priscilliaImg from '../../assets/Teams/Priscillia Fianu.jpg'
@@ -39,7 +39,7 @@ const leadership = [
     linkedin: 'https://www.linkedin.com/in/priscilla-fianu-849b90227/',
   },
   {
-    name: 'Akwasi Anto Darkwah',
+    name: 'Akwasi Anto Darkwa',
     role: 'SOFTWARE & DATA ENGINEER',
     image: akwasiImg,
     linkedin: 'https://www.linkedin.com/in/akwasi-anto',

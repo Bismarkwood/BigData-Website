@@ -12,7 +12,6 @@ const navLinks = [
   { label: 'Solutions', href: '/solutions' },
   { label: 'Projects', href: '/projects' },
   { label: 'Company', href: '#company', hasDropdown: true },
-  { label: 'Contact', href: '/contact' },
 ]
 
 const companyDropdown = [
@@ -124,15 +123,26 @@ function Navbar({ light = false }: { light?: boolean }) {
             <span className="navbar__hamburger-line" />
             <span className="navbar__hamburger-line" />
           </button>
-          <HeroCTA text="Contact Us" href="/contact" />
+          <div className="navbar__cta-desktop">
+            <HeroCTA text="Contact Us" href="/contact" />
+          </div>
         </div>
       </div>
 
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div className="navbar__mobile-menu">
-          {navLinks.filter(l => !l.hasDropdown).map((link) =>
-            link.href.startsWith('/') ? (
+          {navLinks.map((link) =>
+            link.hasDropdown ? (
+              <div key={link.label} className="navbar__mobile-section">
+                <span className="navbar__mobile-section-label">{link.label}</span>
+                {companyDropdown.map((item) => (
+                  <Link key={item.title} to={item.href} className="navbar__mobile-link navbar__mobile-link--sub" onClick={() => setMobileOpen(false)}>
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            ) : link.href.startsWith('/') ? (
               <Link key={link.label} to={link.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
                 {link.label}
               </Link>
@@ -142,6 +152,9 @@ function Navbar({ light = false }: { light?: boolean }) {
               </a>
             )
           )}
+          <Link to="/contact" className="navbar__mobile-cta" onClick={() => setMobileOpen(false)}>
+            Contact Us
+          </Link>
         </div>
       )}
     </nav>
