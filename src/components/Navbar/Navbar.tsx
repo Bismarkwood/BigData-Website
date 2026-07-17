@@ -21,15 +21,6 @@ const companyDropdown = [
   { title: 'Team', desc: 'Meet the people behind BDG.', href: '/team', icon: 'team' },
 ]
 
-const industries = [
-  { title: 'Agriculture' },
-  { title: 'Finance' },
-  { title: 'Real Estate' },
-  { title: 'Government' },
-  { title: 'Logistics' },
-  { title: 'Insurance' },
-]
-
 function Navbar({ light = false }: { light?: boolean }) {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
