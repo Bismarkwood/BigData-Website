@@ -1,5 +1,6 @@
-import { lazy, Suspense } from 'react'
+import { useState, useCallback, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import IntroLoader from './components/IntroLoader'
 import ChatWidget from './components/ChatWidget'
 import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
@@ -24,11 +25,20 @@ const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 
 function App() {
+  const [introComplete, setIntroComplete] = useState(false)
+
+  const handleIntroComplete = useCallback(() => {
+    setIntroComplete(true)
+  }, [])
+
   return (
     <BrowserRouter>
-      <ScrollToTop />
-      <Suspense fallback={null}>
-        <Routes>
+      {!introComplete && <IntroLoader onComplete={handleIntroComplete} />}
+      {introComplete && (
+        <>
+          <ScrollToTop />
+          <Suspense fallback={null}>
+            <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/services" element={<Services />} />
               <Route path="/geospatial" element={<Geospatial />} />
@@ -48,8 +58,10 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
         </Routes>
-      </Suspense>
-      <ChatWidget />
+          </Suspense>
+          <ChatWidget />
+        </>
+      )}
     </BrowserRouter>
   )
 }

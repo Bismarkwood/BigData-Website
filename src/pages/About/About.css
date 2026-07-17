@@ -462,7 +462,8 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 500px;
+    min-height: 400px;
+    height: 60vh;
   }
 
   .about-hero__title {

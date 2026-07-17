@@ -76,6 +76,11 @@
 }
 
 @media (max-width: 768px) {
+  .cta-banner {
+    height: 60vh;
+    min-height: 360px;
+  }
+
   .cta-banner__heading {
     font-size: 28px;
   }

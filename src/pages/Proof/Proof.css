@@ -164,6 +164,11 @@
 }
 
 @media (max-width: 768px) {
+  .proof-hero {
+    height: 55vh;
+    min-height: 350px;
+  }
+
   .proof-hero__title {
     font-size: 36px;
   }

@@ -260,7 +260,8 @@ a.team-card__icon:hover {
 
 @media (max-width: 768px) {
   .team-hero {
-    min-height: 400px;
+    min-height: 350px;
+    height: 55vh;
   }
 
   .team-hero__content {

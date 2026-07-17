@@ -384,11 +384,12 @@
 
 @media (max-width: 768px) {
   .careers-hero {
-    min-height: 500px;
+    min-height: 350px;
+    height: 55vh;
   }
 
   .careers-hero__content {
-    padding: 0 20px 60px;
+    padding: 0 20px 48px;
   }
 
   .careers-hero__title {

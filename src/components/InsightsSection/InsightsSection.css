@@ -188,8 +188,12 @@
   }
 
   .insights__card {
-    flex: 0 0 70%;
-    min-width: 220px;
+    flex: 0 0 45%;
+    min-width: 160px;
+  }
+
+  .insights__card-desc {
+    display: none;
   }
 
   .insights__nav-btn {

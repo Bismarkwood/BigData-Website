@@ -71,17 +71,23 @@
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
   .client-logos {
-    padding: 30px 20px;
+    padding: 24px 16px;
+  }
+
+  .client-logos__title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
   }
 
   .client-logos__track {
-    gap: 16px;
+    gap: 12px;
   }
 
   .client-logos__item {
-    height: 56px;
-    width: 120px;
-    padding: 8px 16px;
+    height: 44px;
+    width: 100px;
+    padding: 6px 12px;
     border-radius: 6px;
   }
 }

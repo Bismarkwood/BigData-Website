@@ -149,6 +149,11 @@
 
 /* ─── Mobile ─── */
 @media (max-width: 768px) {
+  .services-hero {
+    height: 55vh;
+    min-height: 350px;
+  }
+
   .services-hero__title {
     font-size: 48px;
     letter-spacing: -1px;

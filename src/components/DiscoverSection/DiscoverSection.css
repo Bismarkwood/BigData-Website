@@ -264,4 +264,8 @@
   .discover__cards {
     grid-template-columns: 1fr;
   }
+
+  .discover__card {
+    height: 300px;
+  }
 }
