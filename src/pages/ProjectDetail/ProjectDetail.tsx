@@ -83,6 +83,17 @@ const projectsData: Record<string, {
     intelligence: 'SendLineSMS provides a powerful and user-friendly messaging platform for fast, secure, and scalable SMS communication. Businesses can send bulk messages, schedule campaigns, create reusable message templates, and track delivery in real time. The platform also supports OTP integration for secure user authentication and offers a robust REST API that connects easily with websites, mobile apps, CRMs, ERPs, and other business systems.',
     whyItMatters: 'SendLineSMS helps businesses communicate faster, improve customer engagement, and support secure digital transactions. With high uptime reliability, local pricing support, delivery tracking, and easy integration, it gives organizations a dependable communication channel at scale. It is ideal for SMEs, banks, schools, churches, hospitals, fintechs, e-commerce platforms, government agencies, NGOs, and service-based businesses that need instant and reliable SMS communication.',
   },
+  'maize-intelligence': {
+    name: 'Maize Intelligence',
+    subtitle: 'Know your yield before harvest day',
+    description: 'Enter a few details about your farm and crop and we will give you a production estimate you can actually plan around. Supports multiple crop types. No guesswork, no surprises.',
+    year: '2025',
+    services: 'AI, Data Analytics, Agriculture',
+    image: forestTraceImg,
+    challenge: 'Harvest uncertainty is expensive. Farmers over-store or under-prepare. Agribusinesses miss procurement windows. Institutions report late or inaccurately. Our app gives you reliable yield projections weeks before harvest, so none of that happens.',
+    intelligence: 'Yield estimates based on farm size, crop type, planting data, and field observations. Sample measurement inputs for higher accuracy. Supports multiple crop types in one place. Clean, simple interface that needs no training. Outputs you can share, export, and report on.',
+    whyItMatters: 'Plan how much storage you will need before the harvest rush. Secure buyers and negotiate prices early. Set realistic budgets for the season ahead. Arrange transport and logistics without the last-minute scramble. Submit accurate production reports on time. Built for smallholder farmers, agribusinesses coordinating procurement, researchers tracking production data, and agricultural institutions managing reporting and policy decisions. Estimate. Plan. Grow.',
+  },
 }
 
 function ProjectDetail() {

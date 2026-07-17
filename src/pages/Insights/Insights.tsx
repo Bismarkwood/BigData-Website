@@ -1,16 +1,57 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import InsightsSection from '../../components/InsightsSection'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
-import insightHeroImg from '../../assets/Insight/Screenshot_2026-07-02_075619.jpg'
+import insightHeroImg1 from '../../assets/Insight/Screenshot_2026-07-02_075619.jpg'
+import insightHeroImg2 from '../../assets/Insight/Card 2.jpg'
+import insightHeroImg3 from '../../assets/Insight/Card 3.jpg'
 import './Insights.css'
 
 const filters = ['All', 'Blog', 'Insights', 'Whitepapers']
 
+const heroSlides = [
+  {
+    image: insightHeroImg1,
+    badge: 'FEATURED',
+    date: 'JULY 2026',
+    headline: "The hidden geography of Ghana's investment risk.",
+    excerpt: "The land Ghana's private sector is betting on is not always the land it thinks it is buying. How spatial blind spots cost developers and investors across Accra's fastest-growing corridors.",
+    slug: 'hidden-geography-ghana-investment-risk',
+  },
+  {
+    image: insightHeroImg2,
+    badge: 'RESEARCH',
+    date: 'JUNE 2026',
+    headline: "Why Ghana's loan portfolios carry invisible climate exposure.",
+    excerpt: "Banks are lending against assets in flood zones, erosion corridors, and heat-stressed agricultural belts without a single spatial data point in their risk models.",
+    slug: 'loan-portfolio-geography',
+  },
+  {
+    image: insightHeroImg3,
+    badge: 'ANALYSIS',
+    date: 'MAY 2026',
+    headline: "Where Accra is growing next, and what the data says about it.",
+    excerpt: "Satellite imagery, population density shifts, and infrastructure spend patterns reveal the corridors that will define Greater Accra's next decade of growth.",
+    slug: 'where-accra-growing-next',
+  },
+]
+
 function Insights() {
   const [activeFilter, setActiveFilter] = useState('All')
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % heroSlides.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const slide = heroSlides[currentSlide]
 
   return (
     <main>
@@ -19,34 +60,43 @@ function Insights() {
         description="Insights on land, climate risk, urban growth, agriculture, infrastructure, AI, cloud and the decisions shaping Ghana's future. Research and analysis from BigData Ghana."
         path="/insights"
       />
-      <Navbar light />
+      <Navbar />
       <section className="insights-hero">
-        <div className="insights-hero__top">
-          <div className="insights-hero__left">
-            <h1 className="insights-hero__title">
-              <span>Ghana Through</span>
-              <span>A Data Lens</span>
-            </h1>
+        {heroSlides.map((s, i) => (
+          <img
+            key={i}
+            src={s.image}
+            alt=""
+            className={`insights-hero__bg ${i === currentSlide ? 'insights-hero__bg--active' : ''}`}
+          />
+        ))}
+        <div className="insights-hero__overlay" />
+        <div className="insights-hero__content">
+          <div className="insights-hero__meta">
+            <span className="insights-hero__badge">{slide.badge}</span>
+            <span className="insights-hero__date">{slide.date}</span>
           </div>
-          <div className="insights-hero__right">
-            <p className="insights-hero__sub">
-              Insights on land, climate risk, urban growth, agriculture, infrastructure, AI, cloud and the decisions shaping Ghana's future. Authority is built through what BDG publishes, not what BDG claims.
-            </p>
-          </div>
+          <h1 className="insights-hero__headline">{slide.headline}</h1>
+          <p className="insights-hero__excerpt">{slide.excerpt}</p>
+          <Link to={`/insights/${slide.slug}`} className="insights-hero__read">
+            Read Article →
+          </Link>
         </div>
 
-        {/* Featured highlight card */}
-        <div className="insights-hero__featured">
-          <div className="insights-hero__featured-text">
-            <span className="insights-hero__featured-badge">HIGHLIGHT</span>
-            <span className="insights-hero__featured-date">JULY 2026</span>
-            <h2 className="insights-hero__featured-title">
-              Research: The hidden geography of Ghana's investment risk.
-            </h2>
-          </div>
-          <div className="insights-hero__featured-image">
-            <img src={insightHeroImg} alt="Featured insight" />
-          </div>
+        {/* Carousel indicators */}
+        <div className="insights-hero__indicators">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              className={`insights-hero__dot ${i === currentSlide ? 'insights-hero__dot--active' : ''}`}
+              onClick={() => setCurrentSlide(i)}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="insights-hero__label">
+          <span>INSIGHTS & IDEAS</span>
         </div>
       </section>
 

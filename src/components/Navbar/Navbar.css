@@ -222,6 +222,25 @@
   transform: scale(1.08);
 }
 
+/* ─── 13-inch laptop (1280-1366px) ─── */
+@media (max-width: 1366px) {
+  .navbar {
+    padding: 20px 32px;
+  }
+
+  .navbar--scrolled {
+    padding: 14px 32px;
+  }
+
+  .navbar__links {
+    gap: 28px;
+  }
+
+  .navbar__link {
+    font-size: 13px;
+  }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {

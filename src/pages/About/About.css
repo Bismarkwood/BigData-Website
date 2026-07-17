@@ -417,6 +417,33 @@
   margin: 0;
 }
 
+/* ─── 13-inch laptop ─── */
+@media (max-width: 1366px) {
+  .about-story {
+    padding: 80px 32px;
+  }
+
+  .about-mission {
+    padding: 80px 32px;
+  }
+
+  .about-impact {
+    padding: 60px 32px 48px;
+  }
+
+  .about-team-faces {
+    padding: 60px 32px;
+  }
+
+  .about-testimonials {
+    padding: 80px 32px;
+  }
+
+  .about-timeline {
+    padding: 80px 32px;
+  }
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .about-story__inner {

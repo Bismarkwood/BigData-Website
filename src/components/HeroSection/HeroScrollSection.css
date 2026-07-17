@@ -209,6 +209,28 @@ video.hero-scroll__circle-img {
   display: none;
 }
 
+/* ─── 13-inch laptop (1280-1366px) ─── */
+@media (max-width: 1366px) {
+  .hero-scroll__content {
+    bottom: 180px;
+    left: 32px;
+    right: 32px;
+  }
+
+  .hero-scroll__title {
+    font-size: clamp(40px, 5vw, 64px);
+  }
+
+  .hero-scroll__desc {
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .hero-scroll__left {
+    max-width: 700px;
+  }
+}
+
 /* ─── Tablet ─── */
 @media (max-width: 1024px) {
   .hero-scroll__content {

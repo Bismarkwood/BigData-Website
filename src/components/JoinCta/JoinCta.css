@@ -128,6 +128,21 @@
   font-style: italic;
 }
 
+/* ─── 13-inch laptop ─── */
+@media (max-width: 1366px) {
+  .join-cta {
+    padding: 60px 32px;
+  }
+
+  .join-cta__inner {
+    height: 460px;
+  }
+
+  .join-cta__text {
+    padding: 32px;
+  }
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .join-cta__inner {

@@ -50,6 +50,14 @@ body {
   margin: 0;
 }
 
+/* ─── 13-inch laptop viewport adjustments ─── */
+@media (max-width: 1366px) {
+  :root {
+    --fs-display: clamp(36px, 4.5vw, 64px);
+    --fs-h1: clamp(28px, 4vw, 52px);
+  }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

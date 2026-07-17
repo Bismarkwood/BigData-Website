@@ -1,123 +1,155 @@
 /* ─── Insights Hero ─── */
 .insights-hero {
+  position: relative;
   width: 100%;
-  padding: 120px 48px 0;
-  background: #ffffff;
-  padding-top: 140px;
-}
-
-.insights-hero__top {
+  height: 85vh;
+  min-height: 500px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 40px;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
-.insights-hero__left {
-  max-width: 550px;
+.insights-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  animation: insightsHeroPan 20s ease-in-out infinite alternate;
 }
 
-.insights-hero__tag {
+.insights-hero__bg--active {
+  opacity: 1;
+}
+
+@keyframes insightsHeroPan {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.1) translateX(1%); }
+}
+
+.insights-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 30%,
+    rgba(0, 0, 0, 0.7) 70%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.insights-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 48px 60px;
+  max-width: 700px;
+}
+
+.insights-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.insights-hero__badge {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #1E8A00;
-  background: rgba(30, 138, 0, 0.1);
-  padding: 6px 12px;
+  color: #ffffff;
+  background: #1E8A00;
+  padding: 5px 12px;
   border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 24px;
 }
 
-.insights-hero__title {
+.insights-hero__date {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.insights-hero__headline {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
-  color: #0f2b1f;
-  letter-spacing: -2px;
-  line-height: 1.05;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 0 0 14px;
 }
 
-.insights-hero__title span {
-  display: block;
-}
-
-.insights-hero__right {
-  max-width: 380px;
-  padding-top: 20px;
-}
-
-.insights-hero__sub {
+.insights-hero__excerpt {
   font-family: 'Manrope', system-ui, sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #5a6b63;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
-  margin: 0;
+  margin: 0 0 24px;
 }
 
-/* ─── Featured Highlight Card ─── */
-.insights-hero__featured {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 0;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #f5f3f0;
-  min-height: 160px;
-}
-
-.insights-hero__featured-text {
-  padding: 32px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.insights-hero__featured-badge {
+.insights-hero__read {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E8A00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.insights-hero__read:hover {
+  color: #3fc98a;
+}
+
+.insights-hero__label {
+  position: absolute;
+  top: 140px;
+  right: 48px;
+  z-index: 2;
+}
+
+.insights-hero__label span {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 10px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #5a6b63;
-  background: #ffffff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  display: inline-block;
-  width: fit-content;
-  margin-bottom: auto;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
-.insights-hero__featured-date {
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #9ca8a1;
-  margin-bottom: 12px;
+/* Carousel indicators */
+.insights-hero__indicators {
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
 }
 
-.insights-hero__featured-title {
-  font-family: 'Manrope', system-ui, sans-serif;
-  font-size: clamp(24px, 3vw, 34px);
-  font-weight: 600;
-  color: #0f2b1f;
-  line-height: 1.2;
-  margin: 0;
+.insights-hero__dot {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.3s ease;
+  padding: 0;
 }
 
-.insights-hero__featured-image {
-  position: relative;
-  overflow: hidden;
-  background: #0a0a0a;
+.insights-hero__dot--active {
+  background: #1E8A00;
+  width: 48px;
 }
+
+/* ─── Featured Highlight Card (removed, now using full hero) ─── */
 
 .insights-hero__featured-image img {
   width: 100%;

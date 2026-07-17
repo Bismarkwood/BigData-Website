@@ -177,6 +177,17 @@
   display: none;
 }
 
+/* ─── 13-inch laptop ─── */
+@media (max-width: 1366px) {
+  .proof-projects {
+    padding: 60px 32px 80px;
+  }
+
+  .proof-projects__grid {
+    gap: 20px;
+  }
+}
+
 /* ─── Tablet ─── */
 @media (max-width: 1024px) {
   .proof-projects {
