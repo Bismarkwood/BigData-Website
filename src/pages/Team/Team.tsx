@@ -67,7 +67,7 @@ const leadership = [
     linkedin: 'https://www.linkedin.com/in/yaa-oparebea-acquah-368170331/',
   },
   {
-    name: 'Afra Owusu-Addo',
+    name: 'Nana Akua Afra Owusu-Addo',
     role: 'TECHNICAL WRITER & GEO DEVELOPER',
     image: afraImg,
     linkedin: 'https://www.linkedin.com/in/nana-akua-afra-owusu-addo/',
