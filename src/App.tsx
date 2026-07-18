@@ -5,6 +5,7 @@ import ChatWidget from './components/ChatWidget'
 import CustomCursor from './components/CustomCursor/CustomCursor'
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import ScrollToTop from './components/ScrollToTop'
+import usePageTracking from './hooks/usePageTracking'
 import Homepage from './pages/Homepage'
 import Proof from './pages/Proof'
 import './App.css'
@@ -27,6 +28,11 @@ const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 
+function PageTracker() {
+  usePageTracking()
+  return null
+}
+
 function App() {
   const [introComplete, setIntroComplete] = useState(false)
 
@@ -40,6 +46,7 @@ function App() {
       {introComplete && (
         <>
           <ScrollToTop />
+          <PageTracker />
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Homepage />} />

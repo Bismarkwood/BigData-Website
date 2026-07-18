@@ -3,16 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f2b1f" />
     <meta name="description" content="BigData Ghana - Geospatial intelligence, data analytics, AI and cloud solutions for better decisions across Ghana and West Africa." />
-    <title>BigData Ghana</title>
+    <meta name="keywords" content="BigData Ghana, geospatial intelligence, data analytics, AI, cloud computing, Ghana, West Africa, AWS, satellite, GIS, mapping" />
+    <meta name="author" content="BigData Ghana Limited" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph defaults -->
+    <meta property="og:site_name" content="BigData Ghana" />
+    <meta property="og:locale" content="en_GH" />
+    <meta property="og:image" content="https://bigdataghana.com/favicon.png" />
+
+    <!-- Twitter defaults -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bigdataghana" />
+
+    <title>BigData Ghana — Decision Intelligence for Ghana</title>
+
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://unpkg.com" />
-    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body>
     <div id="root"></div>
