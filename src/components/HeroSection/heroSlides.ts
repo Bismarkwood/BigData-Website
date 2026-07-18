@@ -6,6 +6,7 @@ export interface HeroSlide {
 import heroImg1 from '../../assets/hero/Image 1.jpg'
 import heroImg2 from '../../assets/hero/Image 3.jpg'
 import heroImg3 from '../../assets/hero/432324-Korean_Peninsula_node_full_image_2.jpg'
+import heroImg4 from '../../assets/hero/Geospatial.jpg'
 
 const heroSlides: HeroSlide[] = [
   {
@@ -19,6 +20,10 @@ const heroSlides: HeroSlide[] = [
   {
     backgroundImage: heroImg3,
     circleImage: heroImg3,
+  },
+  {
+    backgroundImage: heroImg4,
+    circleImage: heroImg4,
   },
 ]
 

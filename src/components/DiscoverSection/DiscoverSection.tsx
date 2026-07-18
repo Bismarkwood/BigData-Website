@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import locationImg from '../../assets/What we help/Location decisions.png'
 import riskImg from '../../assets/What we help/Risk Descision.png'
 import operationalImg from '../../assets/What we help/Operational decisions.png'
@@ -12,6 +13,7 @@ const steps = [
     description: 'Know where to build, invest, expand or operate.',
     image: locationImg,
     num: '001',
+    link: '/geospatial',
   },
   {
     tag: 'RISK DECISIONS',
@@ -20,6 +22,7 @@ const steps = [
     description: 'Identify climate, infrastructure, portfolio and operational risks before they become costly.',
     image: riskImg,
     num: '002',
+    link: '/geospatial',
   },
   {
     tag: 'OPERATIONAL DECISIONS',
@@ -28,6 +31,7 @@ const steps = [
     description: 'Use cloud, AI, data platforms and analytics to improve visibility, efficiency and performance.',
     image: operationalImg,
     num: '003',
+    link: '/cloud-platforms',
   },
   {
     tag: 'INVESTMENT DECISIONS',
@@ -36,6 +40,7 @@ const steps = [
     description: 'Commit capital with greater confidence and less uncertainty.',
     image: investmentImg,
     num: '004',
+    link: '/data-analytics',
   },
 ]
 
@@ -59,7 +64,7 @@ function DiscoverSection() {
             <div className="discover__card-content">
               <h3 className="discover__card-title">{step.title}</h3>
               <p className="discover__card-desc">{step.description}</p>
-              <a href="/services" className="discover__card-btn-primary">Learn More →</a>
+              <Link to={step.link} className="discover__card-btn-primary">Learn More →</Link>
             </div>
           </div>
         ))}

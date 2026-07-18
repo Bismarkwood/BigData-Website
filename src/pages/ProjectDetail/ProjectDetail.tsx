@@ -3,9 +3,6 @@ import { useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import forestTraceImg from '../../assets/Proof/Forest Trace AI/Forest Trace cover page.png'
-import bigconnectImg from '../../assets/Our Solutions/BigConnectAI/BigConnect AI.png'
-import sendlineImg from '../../assets/Our Solutions/Sendlinesms/SendlineSMS logo.png'
-import maizeImg from '../../assets/Our Solutions/Maize Intelligence/maizeYield.png'
 import './ProjectDetail.css'
 import '../../components/ProofProjects/ProofProjects.css'
 
@@ -311,23 +308,23 @@ function ProjectDetail() {
         </section>
       )}
 
-      {/* Related Products */}
+      {/* Related Projects */}
       <section className="project-detail__related">
         <div className="project-detail__related-header">
-          <h3 className="project-detail__related-title">Related Products</h3>
-          <Link to="/solutions" className="project-detail__related-link">All Products →</Link>
+          <h3 className="project-detail__related-title">Related Projects</h3>
+          <Link to="/projects" className="project-detail__related-link">All Projects →</Link>
         </div>
         <div className="proof-projects__grid">
           {[
-            { title: 'SendLine SMS', image: sendlineImg, slug: 'sendline-sms' },
-            { title: 'BigConnect AI', image: bigconnectImg, slug: 'real-time-logistics-optimisation' },
-            { title: 'Maize Intelligence', image: maizeImg, slug: 'maize-intelligence' },
+            { title: 'ForestTrace AI Ghana', image: forestTraceImg, slug: 'foresttrace-ai' },
+            { title: 'MTTD Traffic Enforcement', image: forestTraceImg, slug: 'vehicle-traffic-enforcement' },
+            { title: 'GIS Elections Platform', image: forestTraceImg, slug: 'gis-rs-solution-elections' },
           ]
             .filter(item => item.slug !== slug)
             .map((item, i) => (
-              <Link to={`/solutions/${item.slug}`} className="proof-projects__card" key={i}>
+              <Link to={`/projects/${item.slug}`} className="proof-projects__card proof-projects__card--clickable" key={i}>
                 <div className="proof-projects__card-img">
-                  <img src={item.image} alt={item.title} className="proof-projects__card-image proof-projects__card-image--cover" />
+                  <img src={item.image} alt={item.title} className="proof-projects__card-image" />
                 </div>
                 <div className="proof-projects__card-info">
                   <span className="proof-projects__card-tag">{item.title}</span>
