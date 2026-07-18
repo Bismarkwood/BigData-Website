@@ -2,6 +2,7 @@ import { useState, useCallback, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import IntroLoader from './components/IntroLoader'
 import ChatWidget from './components/ChatWidget'
+import CustomCursor from './components/CustomCursor/CustomCursor'
 import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
 import Proof from './pages/Proof'
@@ -61,6 +62,7 @@ function App() {
         </Routes>
           </Suspense>
           <ChatWidget />
+          <CustomCursor />
         </>
       )}
     </BrowserRouter>
