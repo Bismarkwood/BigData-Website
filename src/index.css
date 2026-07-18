@@ -18,6 +18,15 @@
   --fs-cta: 16px;
 }
 
+/* Hide scrollbar */
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;

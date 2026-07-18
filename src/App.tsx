@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import IntroLoader from './components/IntroLoader'
 import ChatWidget from './components/ChatWidget'
 import CustomCursor from './components/CustomCursor/CustomCursor'
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 import ScrollToTop from './components/ScrollToTop'
 import Homepage from './pages/Homepage'
 import Proof from './pages/Proof'
@@ -24,6 +25,7 @@ const CareerDetail = lazy(() => import('./pages/CareerDetail'))
 const Contact = lazy(() => import('./pages/Contact'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Privacy = lazy(() => import('./pages/Privacy'))
+const FAQ = lazy(() => import('./pages/FAQ'))
 
 function App() {
   const [introComplete, setIntroComplete] = useState(false)
@@ -59,9 +61,11 @@ function App() {
               <Route path="/careers/:slug" element={<CareerDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/faq" element={<FAQ />} />
         </Routes>
           </Suspense>
           <ChatWidget />
+          <ScrollToTopButton />
           <CustomCursor />
         </>
       )}
