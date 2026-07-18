@@ -216,7 +216,8 @@ a.team-card__icon:hover {
 
 .team-culture__stats {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 32px;
 }
 
@@ -224,6 +225,12 @@ a.team-card__icon:hover {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.team-culture__stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .team-culture__stat-num {
@@ -253,8 +260,8 @@ a.team-card__icon:hover {
   }
 
   .team-culture__stats {
-    flex-direction: row;
-    gap: 48px;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
 
@@ -285,7 +292,11 @@ a.team-card__icon:hover {
   }
 
   .team-culture__stats {
-    flex-direction: column;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .team-culture__stat-divider {
+    height: 36px;
   }
 }

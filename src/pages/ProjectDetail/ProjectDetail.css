@@ -372,3 +372,58 @@ im.project-detail {
   padding: 0 !important;
   transform: scale(1.2);
 }
+
+/* ─── Project Overview Section ─── */
+.project-detail__overview {
+  padding: 60px 48px;
+  background: #f8faf9;
+  border-top: 1px solid #e8ece9;
+}
+
+.project-detail__overview-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f2b1f;
+  margin: 0 0 32px;
+}
+
+.project-detail__overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.project-detail__overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-detail__overview-label {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca8a1;
+}
+
+.project-detail__overview-value {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f2b1f;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .project-detail__overview {
+    padding: 40px 20px;
+  }
+
+  .project-detail__overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}

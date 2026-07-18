@@ -13,7 +13,6 @@ import heroVideo2 from '../../assets/Service Page/71696-540442444_tiny.mp4'
 import heroVideo3 from '../../assets/Service Page/pinflik.com__Earth.mp4'
 import earthObsVideo from '../../assets/Service Page/Earth observation/ChengYiUniverse888_pindown.io_1782997840.mp4'
 import dataAnalyticsVideo from '../../assets/Service Page/Data analytics/Data Analytics.mp4'
-import riskVideo from '../../assets/Service Page/Risk Inteliigence/RISK Image card.mp4'
 import awsComputingImg from '../../assets/Service Page/New folder/AWS Computing.jpg'
 import aiAutomationVideo from '../../assets/Service Page/AI and automation/AI and automation.mp4'
 import geospatialImg from '../../assets/hero/Geospatial.jpg'
@@ -235,36 +234,6 @@ function Services() {
         </div>
         <div className="service-block__image">
           <video src={dataAnalyticsVideo} autoPlay muted loop playsInline className="service-block__video" />
-        </div>
-      </section>
-
-      {/* 05 — Risk Intelligence */}
-      <section className="service-block">
-        <div className="service-block__inner">
-          <div className="service-block__header">
-            <span className="service-block__num">Cross-service lens</span>
-            <h2 className="service-block__title">Risk intelligence</h2>
-            <p className="service-block__hero-text">
-              See risk before it becomes loss.
-            </p>
-          </div>
-          <div className="service-block__body">
-            <div className="service-block__outcomes">
-              <h3 className="service-block__section-label">What you get</h3>
-              <ul className="service-block__outcome-list">
-                <li>Risk visible across geography, operations and assets</li>
-                <li>Early warning systems that protect before events occur</li>
-                <li>Decision confidence backed by multi-layer intelligence</li>
-              </ul>
-            </div>
-
-          </div>
-          <div className="service-block__ctas">
-            <Link to="/contact" className="service-block__cta-primary">Map your risk</Link>
-          </div>
-        </div>
-        <div className="service-block__image">
-          <video src={riskVideo} autoPlay muted loop playsInline className="service-block__video" />
         </div>
       </section>
 

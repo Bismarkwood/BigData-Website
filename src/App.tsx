@@ -45,6 +45,7 @@ function App() {
               <Route path="/cloud-platforms" element={<CloudPlatforms />} />
               <Route path="/ai-automation" element={<AIAutomation />} />
               <Route path="/data-analytics" element={<DataAnalytics />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/proof" element={<Proof />} />
               <Route path="/projects" element={<Proof />} />
               <Route path="/solutions" element={<Solutions />} />

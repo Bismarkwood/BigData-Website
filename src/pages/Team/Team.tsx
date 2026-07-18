@@ -181,16 +181,18 @@ function Team() {
           </div>
           <div className="team-culture__stats">
             <div className="team-culture__stat">
-              <span className="team-culture__stat-num">20+</span>
-              <span className="team-culture__stat-label">Team members</span>
+              <span className="team-culture__stat-num">15+</span>
+              <span className="team-culture__stat-label">Years together</span>
             </div>
+            <div className="team-culture__stat-divider" />
             <div className="team-culture__stat">
-              <span className="team-culture__stat-num">5+</span>
+              <span className="team-culture__stat-num">4+</span>
               <span className="team-culture__stat-label">Disciplines</span>
             </div>
+            <div className="team-culture__stat-divider" />
             <div className="team-culture__stat">
-              <span className="team-culture__stat-num">8+</span>
-              <span className="team-culture__stat-label">Years together</span>
+              <span className="team-culture__stat-num">15+</span>
+              <span className="team-culture__stat-label">Team members</span>
             </div>
           </div>
         </div>

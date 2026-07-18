@@ -165,11 +165,9 @@
 
 .about-story__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .about-story__text {
@@ -206,9 +204,35 @@
   margin: 0 0 16px;
 }
 
+.about-story__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 560px;
+}
+
 .about-story__image {
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+}
+
+.about-story__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.25) 100%);
+  pointer-events: none;
+}
+
+.about-story__image:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
 }
 
 .about-story__image img {
@@ -216,7 +240,12 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 16px;
+  border-radius: 20px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-story__image:hover img {
+  transform: scale(1.05);
 }
 
 /* ─── Mission & Vision ─── */
@@ -669,12 +698,12 @@
   transform: translateY(0) scale(1);
 }
 
-/* Story image slides from right */
-.about-story__image.about-animate {
+/* Story images slides from right */
+.about-story__images.about-animate {
   transform: translateX(40px);
 }
 
-.about-story__image.about-reveal {
+.about-story__images.about-reveal {
   transform: translateX(0);
 }
 

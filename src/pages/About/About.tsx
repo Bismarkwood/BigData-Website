@@ -155,17 +155,22 @@ function About() {
       <StatsBar />
 
       {/* Our Story */}
-      <section className="about-story about-animate">
+      <section className="about-story">
         <div className="about-story__inner">
-          <div className="about-story__text about-animate about-animate--delay-1">
+          <div className="about-story__text">
             <span className="about-story__label">WHO WE ARE</span>
             <h2 className="about-story__heading">A Ghanaian technology and intelligence company.</h2>
             <p className="about-story__desc">
               We combine geospatial intelligence, cloud technologies, data analytics and AI to help organisations understand the places, systems, assets and risks behind their most important decisions.
             </p>
           </div>
-          <div className="about-story__image about-animate about-animate--delay-2">
-            <img src={whyBdgImg} alt="BigData Ghana team at work" />
+          <div className="about-story__images">
+            <div className="about-story__image">
+              <img src={whyBdgImg} alt="BigData Ghana team at work" />
+            </div>
+            <div className="about-story__image">
+              <img src={lifeImg1} alt="Life at BigData Ghana" />
+            </div>
           </div>
         </div>
       </section>

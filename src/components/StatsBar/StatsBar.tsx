@@ -19,7 +19,12 @@ function StatsBar() {
           <img src={acadamicCityLogo} alt="Academic City" />
           <img src={apiTechLogo} alt="API Technologies" />
           <img src={agbedusLogo} alt="Agbedus Consult" />
-          {/* Duplicate for seamless mobile scroll */}
+          <img src={awsLogo} alt="AWS" />
+          <img src={odooLogo} alt="Odoo" />
+          <img src={ecursLogo} alt="ECURS" />
+          <img src={acadamicCityLogo} alt="Academic City" />
+          <img src={apiTechLogo} alt="API Technologies" />
+          <img src={agbedusLogo} alt="Agbedus Consult" />
           <img src={awsLogo} alt="AWS" />
           <img src={odooLogo} alt="Odoo" />
           <img src={ecursLogo} alt="ECURS" />

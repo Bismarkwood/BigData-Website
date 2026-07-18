@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 .stats-bar__title {
@@ -32,12 +35,15 @@
   display: flex;
   align-items: center;
   gap: 36px;
+  width: max-content;
+  animation: partnerScroll 20s linear infinite;
 }
 
 .stats-bar__logos img {
   height: 40px;
   width: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .stats-bar__logos img[alt="AWS"] {
@@ -155,5 +161,5 @@
 
 @keyframes partnerScroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-33.33%); }
 }
