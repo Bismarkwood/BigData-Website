@@ -8,7 +8,7 @@ import erpImg from '../../assets/Our Projects/Development of ERP/Development of 
 import mappingImg from '../../assets/Our Projects/Ghana Electronic Mapping and Monitoring System for Project M&E duties/Ghana Electronic Mapping and Monitoring System for Project M&E duties.png'
 import constituencyImg from '../../assets/Our Projects/Production of Regional and Constituency Maps and other Data Services/Production of Regional and Constituency Maps and other Data Services.png'
 import sciledImg from '../../assets/Our Projects/Standardizing City-Level Data-Gathering (SCiLeD)/Standardizing City-Level Data-Gathering (SCiLeD).png'
-import esicomeImg from '../../assets/Our Projects/Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME)/Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME).png'
+import esicomeImg from '../../assets/Our Projects/Customization of Mobile and Web-based GIS App for Expanded Sanitary Inspections, Compliance Management and Enforcement (ESICOME)/ESICOME.png'
 import gushieguImg from '../../assets/Our Projects/Digital Mapping Verification for Gushiegu District of the Northern Region/Digital Mapping Verification for Gushiegu District of the Northern Region.png'
 import routeAdvisorImg from '../../assets/Our Projects/Route Advisor/Route Advisor.png'
 import './ProofProjects.css'

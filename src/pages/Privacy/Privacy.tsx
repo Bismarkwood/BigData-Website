@@ -8,7 +8,7 @@ function Privacy() {
     <main className="privacy-page">
       <SEO
         title="Privacy Policy | BigData Ghana"
-        description="BigData Ghana's privacy policy. How we collect, use, protect, and share your information."
+        description="BigData Ghana's privacy policy. How we collect, use, protect, and share your information in accordance with Ghana's Data Protection Act, 2012 (Act 843)."
         path="/privacy"
       />
       <Navbar />
@@ -18,7 +18,7 @@ function Privacy() {
         <div className="privacy-hero__content">
           <span className="privacy-hero__label">LEGAL</span>
           <h1 className="privacy-hero__title">Privacy Policy</h1>
-          <p className="privacy-hero__sub">Last updated: July 2026</p>
+          <p className="privacy-hero__sub">Effective Date: 22 July 2026</p>
         </div>
       </section>
 
@@ -30,142 +30,152 @@ function Privacy() {
             <nav className="privacy-toc__nav">
               <a href="#introduction">Introduction</a>
               <a href="#information-collected">Information We Collect</a>
-              <a href="#how-we-use">How We Use Your Information</a>
-              <a href="#data-sharing">Data Sharing & Disclosure</a>
+              <a href="#technical-data">Technical Data</a>
+              <a href="#how-we-use">How We Use Your Data</a>
               <a href="#data-security">Data Security</a>
+              <a href="#data-sharing">Data Sharing</a>
+              <a href="#international-transfers">International Transfers</a>
+              <a href="#cookies">Cookies</a>
+              <a href="#marketing">Marketing Communications</a>
               <a href="#data-retention">Data Retention</a>
               <a href="#your-rights">Your Rights</a>
-              <a href="#cookies">Cookies</a>
               <a href="#third-party">Third-Party Links</a>
               <a href="#changes">Changes to This Policy</a>
-              <a href="#contact">Contact Us</a>
+              <a href="#contact">Contact & Complaints</a>
             </nav>
           </aside>
 
           <div className="privacy-body">
             <div className="privacy-section" id="introduction">
-              <h2>1. Introduction</h2>
+              <h2>Introduction</h2>
               <p>
-                BigData Ghana ("we," "us," or "our") is committed to protecting the privacy of our clients, partners, and website visitors. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                BigData Ghana Limited respects your privacy and is committed to protecting the personal information you provide when using our website. This Privacy Policy explains how we collect, use, store, share and protect personal data in accordance with Ghana's Data Protection Act, 2012 (Act 843).
               </p>
             </div>
 
             <div className="privacy-section" id="information-collected">
-              <h2>2. Information We Collect</h2>
-              <h3>Personal Information</h3>
-              <p>We may collect personally identifiable information that you voluntarily provide, including:</p>
-              <ul>
-                <li>Name and contact details (email, phone number)</li>
-                <li>Company name and job title</li>
-                <li>Information provided through contact forms or service inquiries</li>
-                <li>Communication history with our team</li>
-              </ul>
+              <h2>Information We Collect</h2>
+              <p>
+                When you visit our website, submit a contact or service enquiry, apply for a job, subscribe to our newsletter or interact with our website, we may collect information such as your name, email address, telephone number, organisation, job title, location and any information included in your message or application.
+              </p>
+              <p>
+                For job applications, we may also collect your curriculum vitae, qualifications, employment history, skills, references and other information relevant to the recruitment process.
+              </p>
+            </div>
 
-              <h3>Automatically Collected Information</h3>
-              <p>When you visit our website, we may automatically collect:</p>
-              <ul>
-                <li>Browser type and version</li>
-                <li>Operating system</li>
-                <li>Pages visited and time spent</li>
-                <li>Referring website addresses</li>
-                <li>IP address and general location data</li>
-              </ul>
+            <div className="privacy-section" id="technical-data">
+              <h2>Technical Data</h2>
+              <p>
+                We may automatically collect limited technical information when you use our website, including your Internet Protocol address, browser type, device type, operating system, pages visited, time of access, referring website and information collected through cookies or website analytics tools.
+              </p>
             </div>
 
             <div className="privacy-section" id="how-we-use">
-              <h2>3. How We Use Your Information</h2>
-              <p>We use collected information to:</p>
-              <ul>
-                <li>Provide and improve our services</li>
-                <li>Respond to inquiries and support requests</li>
-                <li>Send relevant communications about our services</li>
-                <li>Analyse website usage to improve user experience</li>
-                <li>Comply with legal obligations</li>
-                <li>Protect against fraudulent or unauthorized activity</li>
-              </ul>
-            </div>
-
-            <div className="privacy-section" id="data-sharing">
-              <h2>4. Data Sharing & Disclosure</h2>
+              <h2>How We Use Your Data</h2>
               <p>
-                We do not sell, trade, or rent your personal information to third parties. We may share information with:
+                We use personal data only for specific, lawful and appropriate purposes. These may include responding to enquiries, understanding your business requirements, providing information about our services, preparing proposals or quotations, managing client and business relationships, processing job applications, sending newsletters or marketing communications where consent has been provided, maintaining website security, improving website performance and complying with legal or regulatory obligations.
               </p>
-              <ul>
-                <li>Service providers who assist in operating our website and delivering services (e.g., cloud hosting, analytics)</li>
-                <li>Legal authorities when required by law or to protect our rights</li>
-                <li>Business partners with your explicit consent</li>
-              </ul>
+              <p>
+                BigData Ghana Limited will not use personal data for a purpose that is unrelated to the reason it was originally collected unless you have been informed, provided the required consent or the additional use is otherwise permitted or required by law. We aim to collect only information that is relevant and reasonably necessary for the intended purpose.
+              </p>
             </div>
 
             <div className="privacy-section" id="data-security">
-              <h2>5. Data Security</h2>
+              <h2>Data Security</h2>
               <p>
-                We implement appropriate technical and organisational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes encryption, access controls, and regular security assessments. However, no method of transmission over the internet is 100% secure.
+                We do our best to ensure that personal data under our control is handled responsibly and kept secure. We apply reasonable technical and organisational safeguards to protect information against accidental loss, misuse, unauthorised access, disclosure, alteration, damage or destruction. These measures may include access restrictions, password controls, secure hosting, system monitoring, security updates, backups, confidentiality requirements and appropriate security procedures.
+              </p>
+              <p>
+                Although we take reasonable steps to protect personal data, no website, electronic transmission or storage system can be guaranteed to be completely secure. Where a personal-data security incident occurs, we will investigate the matter, take appropriate corrective action and notify affected individuals and the Data Protection Commission where required by law.
               </p>
             </div>
 
-            <div className="privacy-section" id="data-retention">
-              <h2>6. Data Retention</h2>
+            <div className="privacy-section" id="data-sharing">
+              <h2>Data Sharing</h2>
               <p>
-                We retain personal information only for as long as necessary to fulfil the purposes for which it was collected, or as required by applicable laws. When data is no longer needed, it is securely deleted or anonymised.
+                We do not sell or rent personal data. We may share information with authorised employees and trusted service providers who support our website, hosting, cloud services, email communications, analytics, recruitment, security or professional operations. These parties are expected to use personal data only for authorised purposes and to maintain appropriate confidentiality and security measures.
+              </p>
+              <p>
+                We may also disclose personal data where required by law, a court, regulatory authority or law-enforcement agency, or where disclosure is reasonably necessary to protect our legal rights, systems, employees, clients or members of the public.
               </p>
             </div>
 
-            <div className="privacy-section" id="your-rights">
-              <h2>7. Your Rights</h2>
-              <p>Depending on your jurisdiction, you may have the right to:</p>
-              <ul>
-                <li>Access the personal data we hold about you</li>
-                <li>Request correction of inaccurate data</li>
-                <li>Request deletion of your personal data</li>
-                <li>Object to or restrict processing of your data</li>
-                <li>Withdraw consent at any time</li>
-              </ul>
+            <div className="privacy-section" id="international-transfers">
+              <h2>International Transfers</h2>
               <p>
-                To exercise any of these rights, please contact us at <a href="mailto:info@bigdataghana.com">info@bigdataghana.com</a>.
+                Some of our technology or service providers may process information using systems located outside Ghana. Where this occurs, we will take reasonable steps to ensure that the information is processed lawfully and is protected by appropriate contractual, technical or organisational safeguards.
               </p>
             </div>
 
             <div className="privacy-section" id="cookies">
-              <h2>8. Cookies</h2>
+              <h2>Cookies</h2>
               <p>
-                Our website may use cookies and similar tracking technologies to enhance your browsing experience. You can control cookie preferences through your browser settings. Disabling cookies may affect some website functionality.
+                Our website may use cookies and similar technologies to support website functionality, remember user preferences, maintain security, analyse website traffic and improve the user experience. Where required, non-essential cookies will be used only after consent has been provided. Visitors may manage cookie preferences through the website's cookie notice or their browser settings.
+              </p>
+            </div>
+
+            <div className="privacy-section" id="marketing">
+              <h2>Marketing Communications</h2>
+              <p>
+                Marketing communications will only be sent where we have an appropriate legal basis, including consent where required. You may unsubscribe from marketing messages at any time by using the unsubscribe link provided or by contacting us. Unsubscribing from marketing will not prevent us from responding to an enquiry or sending necessary service-related communications.
+              </p>
+            </div>
+
+            <div className="privacy-section" id="data-retention">
+              <h2>Data Retention</h2>
+              <p>
+                We retain personal data only for as long as reasonably necessary to fulfil the purpose for which it was collected, comply with legal or contractual obligations, manage complaints or disputes and protect legitimate business interests. When information is no longer required, it may be securely deleted, destroyed or anonymised.
+              </p>
+            </div>
+
+            <div className="privacy-section" id="your-rights">
+              <h2>Your Rights</h2>
+              <p>
+                Subject to applicable law, you may request access to the personal data we hold about you, ask us to correct inaccurate or incomplete information, withdraw consent, object to direct marketing or request the deletion or restriction of personal data where legally appropriate. We may need to verify your identity before responding to a request.
               </p>
             </div>
 
             <div className="privacy-section" id="third-party">
-              <h2>9. Third-Party Links</h2>
+              <h2>Third-Party Links</h2>
               <p>
-                Our website may contain links to third-party sites. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies before providing any personal information.
+                Our website may contain links to third-party websites. BigData Ghana Limited is not responsible for the privacy or security practices of those websites, and visitors should review the relevant third-party privacy policies before providing personal information.
               </p>
             </div>
 
             <div className="privacy-section" id="changes">
-              <h2>10. Changes to This Policy</h2>
+              <h2>Changes to This Policy</h2>
               <p>
-                We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.
+                We may update this Privacy Policy from time to time to reflect changes in our website, services, security practices, legal obligations or business operations. Any updated version will be published on this page with a revised effective date.
               </p>
             </div>
 
             <div className="privacy-section" id="contact">
-              <h2>11. Contact Us</h2>
-              <p>
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
+              <h2>Contact & Complaints</h2>
               <div className="privacy-contact-card">
+                <div className="privacy-contact-card__item">
+                  <span className="privacy-contact-card__label">Company</span>
+                  <span>BigData Ghana Limited</span>
+                </div>
+                <div className="privacy-contact-card__item">
+                  <span className="privacy-contact-card__label">Address</span>
+                  <span>No. 4 Blewusi Road, Airport Residential Area, Accra, Ghana</span>
+                </div>
+                <div className="privacy-contact-card__item">
+                  <span className="privacy-contact-card__label">Digital Address</span>
+                  <span>GA-117-2050</span>
+                </div>
                 <div className="privacy-contact-card__item">
                   <span className="privacy-contact-card__label">Email</span>
                   <a href="mailto:info@bigdataghana.com">info@bigdataghana.com</a>
                 </div>
                 <div className="privacy-contact-card__item">
-                  <span className="privacy-contact-card__label">Phone</span>
-                  <span>+233 (0) 302 123 456</span>
-                </div>
-                <div className="privacy-contact-card__item">
-                  <span className="privacy-contact-card__label">Address</span>
-                  <span>Accra, Ghana, West Africa</span>
+                  <span className="privacy-contact-card__label">Telephone</span>
+                  <span>+233 54 388 4816</span>
                 </div>
               </div>
+              <p>
+                You may also submit a complaint to the Data Protection Commission of Ghana where you believe your personal data has not been handled in accordance with applicable data-protection law.
+              </p>
             </div>
           </div>
         </div>
