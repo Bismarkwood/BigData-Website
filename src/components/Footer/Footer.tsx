@@ -79,6 +79,7 @@ function Footer() {
         <div className="footer__bottom-links">
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Use</Link>
+          <Link to="/cookies">Cookie Policy</Link>
           <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact</Link>
         </div>

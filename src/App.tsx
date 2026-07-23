@@ -28,6 +28,7 @@ const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const Terms = lazy(() => import('./pages/Terms'))
+const Cookies = lazy(() => import('./pages/Cookies'))
 
 function PageTracker() {
   usePageTracking()
@@ -71,6 +72,7 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
         </Routes>
           </Suspense>
           <ChatWidget />

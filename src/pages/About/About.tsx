@@ -23,6 +23,8 @@ import lifeImg3 from '../../assets/Life at Big Data Ghana/1756482542508.jpg'
 import lifeImg4 from '../../assets/Life at Big Data Ghana/1760444434707.jpg'
 import lifeImg5 from '../../assets/Life at Big Data Ghana/1761132122684.jpg'
 import lifeImg6 from '../../assets/Life at Big Data Ghana/1765533172285.jpg'
+import lifeImg7 from '../../assets/Life at Big Data Ghana/photo_2026-07-23_09-52-24.jpg'
+import lifeImg8 from '../../assets/Life at Big Data Ghana/photo_2026-07-23_09-52-27.jpg'
 import teamFace1 from '../../assets/Teams/Mr. Henry Baffoe.jpg'
 import teamFace2 from '../../assets/Teams/Nanayaa Fordjour.jpg'
 import teamFace3 from '../../assets/Teams/Priscillia Fianu.jpg'
@@ -234,6 +236,8 @@ function About() {
             <div className="about-impact__card"><img src={lifeImg4} alt="" /></div>
             <div className="about-impact__card"><img src={lifeImg5} alt="" /></div>
             <div className="about-impact__card"><img src={lifeImg6} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg7} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg8} alt="" /></div>
             {/* Duplicate for seamless loop */}
             <div className="about-impact__card"><img src={lifeImg1} alt="" /></div>
             <div className="about-impact__card"><img src={lifeImg2} alt="" /></div>
@@ -241,6 +245,8 @@ function About() {
             <div className="about-impact__card"><img src={lifeImg4} alt="" /></div>
             <div className="about-impact__card"><img src={lifeImg5} alt="" /></div>
             <div className="about-impact__card"><img src={lifeImg6} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg7} alt="" /></div>
+            <div className="about-impact__card"><img src={lifeImg8} alt="" /></div>
           </div>
         </div>
       </section>
