@@ -29,6 +29,7 @@ const Privacy = lazy(() => import('./pages/Privacy'))
 const FAQ = lazy(() => import('./pages/FAQ'))
 const Terms = lazy(() => import('./pages/Terms'))
 const Cookies = lazy(() => import('./pages/Cookies'))
+const CSR = lazy(() => import('./pages/CSR'))
 
 function PageTracker() {
   usePageTracking()
@@ -57,7 +58,6 @@ function App() {
               <Route path="/cloud-platforms" element={<CloudPlatforms />} />
               <Route path="/ai-automation" element={<AIAutomation />} />
               <Route path="/data-analytics" element={<DataAnalytics />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/proof" element={<Proof />} />
               <Route path="/projects" element={<Proof />} />
               <Route path="/solutions" element={<Solutions />} />
@@ -73,6 +73,7 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/csr" element={<CSR />} />
         </Routes>
           </Suspense>
           <ChatWidget />

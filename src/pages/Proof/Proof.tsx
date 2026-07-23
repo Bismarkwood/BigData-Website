@@ -1,6 +1,5 @@
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import StatsBar from '../../components/ProofStatsBar'
 import ProofProjects from '../../components/ProofProjects'
 import JoinCta from '../../components/JoinCta'
 import SEO from '../../components/SEO'
@@ -91,8 +90,37 @@ function Proof() {
           </div>
         </div>
       </section>
-      <StatsBar />
       <ProofProjects />
+
+      {/* Impact in Numbers */}
+      <section className="proof-impact">
+        <div className="proof-impact__header">
+          <div className="proof-impact__header-left">
+            <h2 className="proof-impact__heading">Our Impact in Numbers:</h2>
+            <p className="proof-impact__sub">Intelligence that changes decisions across Ghana.</p>
+          </div>
+          <a href="/about" className="proof-impact__link">Mission & Impact →</a>
+        </div>
+        <div className="proof-impact__cards">
+          <div className="proof-impact__card proof-impact__card--green">
+            <span className="proof-impact__card-num">10+</span>
+            <p className="proof-impact__card-desc">National-scale projects delivered across government, agriculture and environment</p>
+          </div>
+          <div className="proof-impact__card proof-impact__card--dark">
+            <span className="proof-impact__card-num">5+</span>
+            <p className="proof-impact__card-desc">Sectors served including banking, agriculture, real estate, logistics and government</p>
+          </div>
+          <div className="proof-impact__card proof-impact__card--accent">
+            <span className="proof-impact__card-num">8+</span>
+            <p className="proof-impact__card-desc">Years of Ghana-specific geospatial data powering every decision we support</p>
+          </div>
+          <div className="proof-impact__card proof-impact__card--mint">
+            <span className="proof-impact__card-num">100%</span>
+            <p className="proof-impact__card-desc">AWS-certified infrastructure behind every platform we build and deploy</p>
+          </div>
+        </div>
+      </section>
+
       <JoinCta />
       <Footer />
     </main>

@@ -69,7 +69,7 @@ function Footer() {
         </div>
 
         <div className="footer__contact">
-          <span>+233 (0) 302 123 456</span>
+          <span>+233 59 943 2731</span>
           <span>info@bigdataghana.com</span>
         </div>
       </div>

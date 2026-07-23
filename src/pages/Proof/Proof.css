@@ -185,3 +185,152 @@
     font-size: 14px;
   }
 }
+
+/* ─── Impact in Numbers ─── */
+.proof-impact {
+  width: 100%;
+  padding: 80px 48px 100px;
+  background: #f9f7f4;
+}
+
+.proof-impact__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.proof-impact__heading {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 600;
+  color: #0f2b1f;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.proof-impact__sub {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #5a6b63;
+  margin: 0;
+}
+
+.proof-impact__link {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f2b1f;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.proof-impact__link:hover {
+  color: #1E8A00;
+}
+
+.proof-impact__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.proof-impact__card {
+  border-radius: 20px;
+  padding: 36px 28px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.proof-impact__card:hover {
+  transform: translateY(-4px);
+}
+
+.proof-impact__card--green {
+  background: #1E8A00;
+}
+
+.proof-impact__card--dark {
+  background: #0f2b1f;
+}
+
+.proof-impact__card--accent {
+  background: #e85d2a;
+}
+
+.proof-impact__card--mint {
+  background: #2a9d8f;
+}
+
+.proof-impact__card-num {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.proof-impact__card-desc {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Decorative shapes on cards */
+.proof-impact__card::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.proof-impact__card::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1024px) {
+  .proof-impact__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .proof-impact {
+    padding: 60px 20px;
+  }
+
+  .proof-impact__header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .proof-impact__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-impact__card {
+    min-height: 180px;
+  }
+}
